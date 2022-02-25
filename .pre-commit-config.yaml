@@ -1,0 +1,51 @@
+default_language_version:
+    python: python3
+
+exclude: |
+    (?x)(
+        ^tests/|
+        ^docs/|
+        ^scripts/|
+        ^fugue_sql_antlr/_parser/
+    )
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v3.2.0
+      hooks:
+          - id: check-ast
+          - id: check-docstring-first
+          - id: check-executables-have-shebangs
+          - id: check-json
+          - id: check-merge-conflict
+          - id: check-yaml
+          - id: debug-statements
+          - id: end-of-file-fixer
+          - id: trailing-whitespace
+          - id: check-vcs-permalinks
+    - repo: https://gitlab.com/pycqa/flake8
+      rev: '3.8.3'
+      hooks:
+          - id: flake8
+            types: [python]
+            additional_dependencies:
+            - flake8-bugbear
+            - flake8-builtins
+            # - flake8-docstrings  # TODO: add back!
+            # - flake8-rst-docstrings
+            - flake8-comprehensions
+            - flake8-tidy-imports
+            - pycodestyle
+    - repo: https://github.com/pre-commit/mirrors-mypy
+      rev: v0.782
+      hooks:
+        - id: mypy
+    - repo: https://github.com/pre-commit/mirrors-pylint
+      rev: v2.6.0
+      hooks:
+        - id: pylint
+    - repo: https://github.com/ambv/black
+      rev: 20.8b1
+      hooks:
+      - id: black
+        types: [python]
+        language_version: python3
