@@ -1343,10 +1343,6 @@ public:
     return visitChildren(ctx);
   }
 
-  virtual antlrcpp::Any visitRealIdent(fugue_sqlParser::RealIdentContext *ctx) override {
-    return visitChildren(ctx);
-  }
-
   virtual antlrcpp::Any visitIdentifier(fugue_sqlParser::IdentifierContext *ctx) override {
     return visitChildren(ctx);
   }

@@ -71,9 +71,9 @@ setup(
     author_email="hello@fugue.ai",
     keywords="distributed spark dask sql dsl domain specific language",
     url="http://github.com/fugue-project/fugue",
-    install_requires=["antlr4-python3-runtime>=4.9.3"],
+    install_requires=["antlr4-python3-runtime>=4.9.3", "jinja2"],
     extras_require={
-        "all": ["antlr4-python3-runtime>=4.9.3"],
+        "test": ["antlr4-python3-runtime>=4.9.3", "jinja2", "speedy_antlr_tool"],
     },
     classifiers=[
         # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"

@@ -1282,13 +1282,13 @@ qualifiedName
 // replace identifier with errorCapturingIdentifier where the immediate follow symbol is not an expression, otherwise
 // valid expressions such as "a-b" can be recognized as an identifier
 errorCapturingIdentifier
-    : identifier errorCapturingIdentifierExtra
+    : identifier
     ;
 
 // extra left-factoring grammar
 errorCapturingIdentifierExtra
     : (MINUS identifier)+    #errorIdent
-    |                        #realIdent
+    //|                        #realIdent
     ;
 
 identifier

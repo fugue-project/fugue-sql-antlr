@@ -343,7 +343,6 @@ SA_fugue_sqlTranslator::~SA_fugue_sqlTranslator() {
     Py_XDECREF(QualifiedNameContext_cls);
     Py_XDECREF(ErrorCapturingIdentifierContext_cls);
     Py_XDECREF(ErrorIdentContext_cls);
-    Py_XDECREF(RealIdentContext_cls);
     Py_XDECREF(IdentifierContext_cls);
     Py_XDECREF(QuotedIdentifierAlternativeContext_cls);
     Py_XDECREF(UnquotedIdentifierContext_cls);
@@ -2917,12 +2916,6 @@ antlrcpp::Any SA_fugue_sqlTranslator::visitErrorCapturingIdentifier(fugue_sqlPar
 antlrcpp::Any SA_fugue_sqlTranslator::visitErrorIdent(fugue_sqlParser::ErrorIdentContext *ctx){
     if(!ErrorIdentContext_cls) ErrorIdentContext_cls = PyObject_GetAttrString(translator->parser_cls, "ErrorIdentContext");
     PyObject *py_ctx = translator->convert_ctx(this, ctx, ErrorIdentContext_cls);
-    return py_ctx;
-}
-
-antlrcpp::Any SA_fugue_sqlTranslator::visitRealIdent(fugue_sqlParser::RealIdentContext *ctx){
-    if(!RealIdentContext_cls) RealIdentContext_cls = PyObject_GetAttrString(translator->parser_cls, "RealIdentContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, RealIdentContext_cls);
     return py_ctx;
 }
 

@@ -683,8 +683,6 @@ public:
 
     virtual antlrcpp::Any visitErrorIdent(fugue_sqlParser::ErrorIdentContext *context) = 0;
 
-    virtual antlrcpp::Any visitRealIdent(fugue_sqlParser::RealIdentContext *context) = 0;
-
     virtual antlrcpp::Any visitIdentifier(fugue_sqlParser::IdentifierContext *context) = 0;
 
     virtual antlrcpp::Any visitUnquotedIdentifier(fugue_sqlParser::UnquotedIdentifierContext *context) = 0;

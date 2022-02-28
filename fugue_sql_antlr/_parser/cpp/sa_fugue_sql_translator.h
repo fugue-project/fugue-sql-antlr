@@ -344,7 +344,6 @@ class SA_fugue_sqlTranslator : public fugue_sqlBaseVisitor {
     PyObject *QualifiedNameContext_cls = NULL;
     PyObject *ErrorCapturingIdentifierContext_cls = NULL;
     PyObject *ErrorIdentContext_cls = NULL;
-    PyObject *RealIdentContext_cls = NULL;
     PyObject *IdentifierContext_cls = NULL;
     PyObject *QuotedIdentifierAlternativeContext_cls = NULL;
     PyObject *UnquotedIdentifierContext_cls = NULL;
@@ -1029,8 +1028,6 @@ class SA_fugue_sqlTranslator : public fugue_sqlBaseVisitor {
     antlrcpp::Any visitErrorCapturingIdentifier(fugue_sqlParser::ErrorCapturingIdentifierContext *ctx);
 
     antlrcpp::Any visitErrorIdent(fugue_sqlParser::ErrorIdentContext *ctx);
-
-    antlrcpp::Any visitRealIdent(fugue_sqlParser::RealIdentContext *ctx);
 
     antlrcpp::Any visitIdentifier(fugue_sqlParser::IdentifierContext *ctx);
 

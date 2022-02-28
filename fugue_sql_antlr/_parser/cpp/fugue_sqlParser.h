@@ -5969,7 +5969,6 @@ public:
     ErrorCapturingIdentifierContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     IdentifierContext *identifier();
-    ErrorCapturingIdentifierExtraContext *errorCapturingIdentifierExtra();
 
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
@@ -5999,14 +5998,6 @@ public:
     antlr4::tree::TerminalNode* MINUS(size_t i);
     std::vector<IdentifierContext *> identifier();
     IdentifierContext* identifier(size_t i);
-
-    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
-  };
-
-  class  RealIdentContext : public ErrorCapturingIdentifierExtraContext {
-  public:
-    RealIdentContext(ErrorCapturingIdentifierExtraContext *ctx);
-
 
     virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
   };

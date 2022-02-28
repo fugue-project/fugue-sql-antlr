@@ -12,7 +12,7 @@ else:
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\u0155")
-        buf.write("\u0f00\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u0efc\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
@@ -428,45 +428,44 @@ def serializedATN():
         buf.write("\u0ea4\13\u00cb\3\u00cc\3\u00cc\3\u00cc\3\u00cc\5\u00cc")
         buf.write("\u0eaa\n\u00cc\3\u00cd\3\u00cd\3\u00cd\7\u00cd\u0eaf\n")
         buf.write("\u00cd\f\u00cd\16\u00cd\u0eb2\13\u00cd\3\u00ce\3\u00ce")
-        buf.write("\3\u00ce\3\u00cf\3\u00cf\6\u00cf\u0eb9\n\u00cf\r\u00cf")
-        buf.write("\16\u00cf\u0eba\3\u00cf\5\u00cf\u0ebe\n\u00cf\3\u00d0")
-        buf.write("\3\u00d0\5\u00d0\u0ec2\n\u00d0\3\u00d1\3\u00d1\3\u00d1")
-        buf.write("\5\u00d1\u0ec7\n\u00d1\3\u00d2\3\u00d2\3\u00d3\5\u00d3")
-        buf.write("\u0ecc\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0ed0\n\u00d3\3")
-        buf.write("\u00d3\3\u00d3\5\u00d3\u0ed4\n\u00d3\3\u00d3\3\u00d3\5")
-        buf.write("\u00d3\u0ed8\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0edc\n\u00d3")
-        buf.write("\3\u00d3\3\u00d3\5\u00d3\u0ee0\n\u00d3\3\u00d3\3\u00d3")
-        buf.write("\5\u00d3\u0ee4\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0ee8\n")
-        buf.write("\u00d3\3\u00d3\3\u00d3\5\u00d3\u0eec\n\u00d3\3\u00d3\5")
-        buf.write("\u00d3\u0eef\n\u00d3\3\u00d4\3\u00d4\3\u00d4\3\u00d4\3")
-        buf.write("\u00d4\3\u00d4\3\u00d4\5\u00d4\u0ef8\n\u00d4\3\u00d5\3")
-        buf.write("\u00d5\3\u00d6\3\u00d6\3\u00d7\3\u00d7\3\u00d7\7\u06da")
-        buf.write("\u0718\u0722\u0729\u0731\7`\u00e8\u0156\u015a\u015c\u00d8")
-        buf.write("\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62")
-        buf.write("\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082")
-        buf.write("\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094")
-        buf.write("\u0096\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6")
-        buf.write("\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4\u00b6\u00b8")
-        buf.write("\u00ba\u00bc\u00be\u00c0\u00c2\u00c4\u00c6\u00c8\u00ca")
-        buf.write("\u00cc\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc")
-        buf.write("\u00de\u00e0\u00e2\u00e4\u00e6\u00e8\u00ea\u00ec\u00ee")
-        buf.write("\u00f0\u00f2\u00f4\u00f6\u00f8\u00fa\u00fc\u00fe\u0100")
-        buf.write("\u0102\u0104\u0106\u0108\u010a\u010c\u010e\u0110\u0112")
-        buf.write("\u0114\u0116\u0118\u011a\u011c\u011e\u0120\u0122\u0124")
-        buf.write("\u0126\u0128\u012a\u012c\u012e\u0130\u0132\u0134\u0136")
-        buf.write("\u0138\u013a\u013c\u013e\u0140\u0142\u0144\u0146\u0148")
-        buf.write("\u014a\u014c\u014e\u0150\u0152\u0154\u0156\u0158\u015a")
-        buf.write("\u015c\u015e\u0160\u0162\u0164\u0166\u0168\u016a\u016c")
-        buf.write("\u016e\u0170\u0172\u0174\u0176\u0178\u017a\u017c\u017e")
-        buf.write("\u0180\u0182\u0184\u0186\u0188\u018a\u018c\u018e\u0190")
-        buf.write("\u0192\u0194\u0196\u0198\u019a\u019c\u019e\u01a0\u01a2")
-        buf.write("\u01a4\u01a6\u01a8\u01aa\u01ac\2\67\4\299>>\3\2\u00c5")
-        buf.write("\u00c6\3\2\u00f5\u00f6\4\2\u0089\u0089\u00aa\u00aa\5\2")
-        buf.write("&&\u00d4\u00d4\u0115\u0115\3\2\')\4\2\4\4\u0133\u0133")
-        buf.write("\4\2\u014b\u014b\u014d\u014d\3\2\25\27\3\2\u013c\u013f")
-        buf.write("\4\2BBpp\4\2\u013d\u013d\u0142\u0142\5\2\f\r\u0084\u0084")
-        buf.write("\u011c\u011c\4\2\16\16\u00c5\u00c5\4\2ll\u00df\u00df\4")
-        buf.write("\2KK\u00ed\u00ed\4\2jj\u00c1\u00c1\4\2\u008f\u008f\u009c")
+        buf.write("\3\u00cf\3\u00cf\6\u00cf\u0eb8\n\u00cf\r\u00cf\16\u00cf")
+        buf.write("\u0eb9\3\u00d0\3\u00d0\5\u00d0\u0ebe\n\u00d0\3\u00d1\3")
+        buf.write("\u00d1\3\u00d1\5\u00d1\u0ec3\n\u00d1\3\u00d2\3\u00d2\3")
+        buf.write("\u00d3\5\u00d3\u0ec8\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0ecc")
+        buf.write("\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0ed0\n\u00d3\3\u00d3")
+        buf.write("\3\u00d3\5\u00d3\u0ed4\n\u00d3\3\u00d3\3\u00d3\5\u00d3")
+        buf.write("\u0ed8\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0edc\n\u00d3\3")
+        buf.write("\u00d3\3\u00d3\5\u00d3\u0ee0\n\u00d3\3\u00d3\3\u00d3\5")
+        buf.write("\u00d3\u0ee4\n\u00d3\3\u00d3\3\u00d3\5\u00d3\u0ee8\n\u00d3")
+        buf.write("\3\u00d3\5\u00d3\u0eeb\n\u00d3\3\u00d4\3\u00d4\3\u00d4")
+        buf.write("\3\u00d4\3\u00d4\3\u00d4\3\u00d4\5\u00d4\u0ef4\n\u00d4")
+        buf.write("\3\u00d5\3\u00d5\3\u00d6\3\u00d6\3\u00d7\3\u00d7\3\u00d7")
+        buf.write("\7\u06da\u0718\u0722\u0729\u0731\7`\u00e8\u0156\u015a")
+        buf.write("\u015c\u00d8\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"")
+        buf.write("$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz")
+        buf.write("|~\u0080\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090")
+        buf.write("\u0092\u0094\u0096\u0098\u009a\u009c\u009e\u00a0\u00a2")
+        buf.write("\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4")
+        buf.write("\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4\u00c6")
+        buf.write("\u00c8\u00ca\u00cc\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8")
+        buf.write("\u00da\u00dc\u00de\u00e0\u00e2\u00e4\u00e6\u00e8\u00ea")
+        buf.write("\u00ec\u00ee\u00f0\u00f2\u00f4\u00f6\u00f8\u00fa\u00fc")
+        buf.write("\u00fe\u0100\u0102\u0104\u0106\u0108\u010a\u010c\u010e")
+        buf.write("\u0110\u0112\u0114\u0116\u0118\u011a\u011c\u011e\u0120")
+        buf.write("\u0122\u0124\u0126\u0128\u012a\u012c\u012e\u0130\u0132")
+        buf.write("\u0134\u0136\u0138\u013a\u013c\u013e\u0140\u0142\u0144")
+        buf.write("\u0146\u0148\u014a\u014c\u014e\u0150\u0152\u0154\u0156")
+        buf.write("\u0158\u015a\u015c\u015e\u0160\u0162\u0164\u0166\u0168")
+        buf.write("\u016a\u016c\u016e\u0170\u0172\u0174\u0176\u0178\u017a")
+        buf.write("\u017c\u017e\u0180\u0182\u0184\u0186\u0188\u018a\u018c")
+        buf.write("\u018e\u0190\u0192\u0194\u0196\u0198\u019a\u019c\u019e")
+        buf.write("\u01a0\u01a2\u01a4\u01a6\u01a8\u01aa\u01ac\2\67\4\299")
+        buf.write(">>\3\2\u00c5\u00c6\3\2\u00f5\u00f6\4\2\u0089\u0089\u00aa")
+        buf.write("\u00aa\5\2&&\u00d4\u00d4\u0115\u0115\3\2\')\4\2\4\4\u0133")
+        buf.write("\u0133\4\2\u014b\u014b\u014d\u014d\3\2\25\27\3\2\u013c")
+        buf.write("\u013f\4\2BBpp\4\2\u013d\u013d\u0142\u0142\5\2\f\r\u0084")
+        buf.write("\u0084\u011c\u011c\4\2\16\16\u00c5\u00c5\4\2ll\u00df\u00df")
+        buf.write("\4\2KK\u00ed\u00ed\4\2jj\u00c1\u00c1\4\2\u008f\u008f\u009c")
         buf.write("\u009c\3\2VW\4\2\u010e\u010e\u012c\u012c\4\2::NN\7\2S")
         buf.write("S__\u0081\u0081\u008e\u008e\u00b8\u00b8\3\2pq\4\2\u0081")
         buf.write("\u0081\u008e\u008e\4\2\u00c5\u00c5\u0147\u0147\4\2\67")
@@ -494,7 +493,7 @@ def serializedATN():
         buf.write("\u0100\u0122\u0122\u012a\u012a\23\2\67<>`b{}\u008f\u0091")
         buf.write("\u009e\u00a0\u00a2\u00a4\u00a7\u00a9\u00ad\u00af\u00c1")
         buf.write("\u00c3\u00c7\u00c9\u00ee\u00f0\u00f9\u00fb\u00ff\u0101")
-        buf.write("\u0121\u0123\u0129\u012b\u0132\u0141\u0141\2\u1129\2\u01af")
+        buf.write("\u0121\u0123\u0129\u012b\u0132\u0141\u0141\2\u1124\2\u01af")
         buf.write("\3\2\2\2\4\u01b5\3\2\2\2\6\u01be\3\2\2\2\b\u01c1\3\2\2")
         buf.write("\2\n\u01db\3\2\2\2\f\u01dd\3\2\2\2\16\u01e9\3\2\2\2\20")
         buf.write("\u01f2\3\2\2\2\22\u0206\3\2\2\2\24\u020d\3\2\2\2\26\u0214")
@@ -564,10 +563,10 @@ def serializedATN():
         buf.write("\3\2\2\2\u018a\u0e45\3\2\2\2\u018c\u0e4e\3\2\2\2\u018e")
         buf.write("\u0e80\3\2\2\2\u0190\u0e92\3\2\2\2\u0192\u0e9b\3\2\2\2")
         buf.write("\u0194\u0e9d\3\2\2\2\u0196\u0ea9\3\2\2\2\u0198\u0eab\3")
-        buf.write("\2\2\2\u019a\u0eb3\3\2\2\2\u019c\u0ebd\3\2\2\2\u019e\u0ec1")
-        buf.write("\3\2\2\2\u01a0\u0ec6\3\2\2\2\u01a2\u0ec8\3\2\2\2\u01a4")
-        buf.write("\u0eee\3\2\2\2\u01a6\u0ef7\3\2\2\2\u01a8\u0ef9\3\2\2\2")
-        buf.write("\u01aa\u0efb\3\2\2\2\u01ac\u0efd\3\2\2\2\u01ae\u01b0\5")
+        buf.write("\2\2\2\u019a\u0eb3\3\2\2\2\u019c\u0eb7\3\2\2\2\u019e\u0ebd")
+        buf.write("\3\2\2\2\u01a0\u0ec2\3\2\2\2\u01a2\u0ec4\3\2\2\2\u01a4")
+        buf.write("\u0eea\3\2\2\2\u01a6\u0ef3\3\2\2\2\u01a8\u0ef5\3\2\2\2")
+        buf.write("\u01aa\u0ef7\3\2\2\2\u01ac\u0ef9\3\2\2\2\u01ae\u01b0\5")
         buf.write("\6\4\2\u01af\u01ae\3\2\2\2\u01b0\u01b1\3\2\2\2\u01b1\u01af")
         buf.write("\3\2\2\2\u01b1\u01b2\3\2\2\2\u01b2\u01b3\3\2\2\2\u01b3")
         buf.write("\u01b4\7\2\2\3\u01b4\3\3\2\2\2\u01b5\u01b6\5\6\4\2\u01b6")
@@ -2157,46 +2156,44 @@ def serializedATN():
         buf.write("\u0eaf\5\u019e\u00d0\2\u0eae\u0eac\3\2\2\2\u0eaf\u0eb2")
         buf.write("\3\2\2\2\u0eb0\u0eae\3\2\2\2\u0eb0\u0eb1\3\2\2\2\u0eb1")
         buf.write("\u0199\3\2\2\2\u0eb2\u0eb0\3\2\2\2\u0eb3\u0eb4\5\u019e")
-        buf.write("\u00d0\2\u0eb4\u0eb5\5\u019c\u00cf\2\u0eb5\u019b\3\2\2")
-        buf.write("\2\u0eb6\u0eb7\7\u013d\2\2\u0eb7\u0eb9\5\u019e\u00d0\2")
-        buf.write("\u0eb8\u0eb6\3\2\2\2\u0eb9\u0eba\3\2\2\2\u0eba\u0eb8\3")
-        buf.write("\2\2\2\u0eba\u0ebb\3\2\2\2\u0ebb\u0ebe\3\2\2\2\u0ebc\u0ebe")
-        buf.write("\3\2\2\2\u0ebd\u0eb8\3\2\2\2\u0ebd\u0ebc\3\2\2\2\u0ebe")
-        buf.write("\u019d\3\2\2\2\u0ebf\u0ec2\5\u01a0\u00d1\2\u0ec0\u0ec2")
-        buf.write("\5\u01aa\u00d6\2\u0ec1\u0ebf\3\2\2\2\u0ec1\u0ec0\3\2\2")
-        buf.write("\2\u0ec2\u019f\3\2\2\2\u0ec3\u0ec7\7\u0150\2\2\u0ec4\u0ec7")
-        buf.write("\5\u01a2\u00d2\2\u0ec5\u0ec7\5\u01ac\u00d7\2\u0ec6\u0ec3")
-        buf.write("\3\2\2\2\u0ec6\u0ec4\3\2\2\2\u0ec6\u0ec5\3\2\2\2\u0ec7")
-        buf.write("\u01a1\3\2\2\2\u0ec8\u0ec9\7\u0151\2\2\u0ec9\u01a3\3\2")
+        buf.write("\u00d0\2\u0eb4\u019b\3\2\2\2\u0eb5\u0eb6\7\u013d\2\2\u0eb6")
+        buf.write("\u0eb8\5\u019e\u00d0\2\u0eb7\u0eb5\3\2\2\2\u0eb8\u0eb9")
+        buf.write("\3\2\2\2\u0eb9\u0eb7\3\2\2\2\u0eb9\u0eba\3\2\2\2\u0eba")
+        buf.write("\u019d\3\2\2\2\u0ebb\u0ebe\5\u01a0\u00d1\2\u0ebc\u0ebe")
+        buf.write("\5\u01aa\u00d6\2\u0ebd\u0ebb\3\2\2\2\u0ebd\u0ebc\3\2\2")
+        buf.write("\2\u0ebe\u019f\3\2\2\2\u0ebf\u0ec3\7\u0150\2\2\u0ec0\u0ec3")
+        buf.write("\5\u01a2\u00d2\2\u0ec1\u0ec3\5\u01ac\u00d7\2\u0ec2\u0ebf")
+        buf.write("\3\2\2\2\u0ec2\u0ec0\3\2\2\2\u0ec2\u0ec1\3\2\2\2\u0ec3")
+        buf.write("\u01a1\3\2\2\2\u0ec4\u0ec5\7\u0151\2\2\u0ec5\u01a3\3\2")
+        buf.write("\2\2\u0ec6\u0ec8\7\u013d\2\2\u0ec7\u0ec6\3\2\2\2\u0ec7")
+        buf.write("\u0ec8\3\2\2\2\u0ec8\u0ec9\3\2\2\2\u0ec9\u0eeb\7\u014c")
         buf.write("\2\2\u0eca\u0ecc\7\u013d\2\2\u0ecb\u0eca\3\2\2\2\u0ecb")
-        buf.write("\u0ecc\3\2\2\2\u0ecc\u0ecd\3\2\2\2\u0ecd\u0eef\7\u014c")
+        buf.write("\u0ecc\3\2\2\2\u0ecc\u0ecd\3\2\2\2\u0ecd\u0eeb\7\u014d")
         buf.write("\2\2\u0ece\u0ed0\7\u013d\2\2\u0ecf\u0ece\3\2\2\2\u0ecf")
-        buf.write("\u0ed0\3\2\2\2\u0ed0\u0ed1\3\2\2\2\u0ed1\u0eef\7\u014d")
-        buf.write("\2\2\u0ed2\u0ed4\7\u013d\2\2\u0ed3\u0ed2\3\2\2\2\u0ed3")
-        buf.write("\u0ed4\3\2\2\2\u0ed4\u0ed5\3\2\2\2\u0ed5\u0eef\t\62\2")
-        buf.write("\2\u0ed6\u0ed8\7\u013d\2\2\u0ed7\u0ed6\3\2\2\2\u0ed7\u0ed8")
-        buf.write("\3\2\2\2\u0ed8\u0ed9\3\2\2\2\u0ed9\u0eef\7\u014b\2\2\u0eda")
+        buf.write("\u0ed0\3\2\2\2\u0ed0\u0ed1\3\2\2\2\u0ed1\u0eeb\t\62\2")
+        buf.write("\2\u0ed2\u0ed4\7\u013d\2\2\u0ed3\u0ed2\3\2\2\2\u0ed3\u0ed4")
+        buf.write("\3\2\2\2\u0ed4\u0ed5\3\2\2\2\u0ed5\u0eeb\7\u014b\2\2\u0ed6")
+        buf.write("\u0ed8\7\u013d\2\2\u0ed7\u0ed6\3\2\2\2\u0ed7\u0ed8\3\2")
+        buf.write("\2\2\u0ed8\u0ed9\3\2\2\2\u0ed9\u0eeb\7\u0148\2\2\u0eda")
         buf.write("\u0edc\7\u013d\2\2\u0edb\u0eda\3\2\2\2\u0edb\u0edc\3\2")
-        buf.write("\2\2\u0edc\u0edd\3\2\2\2\u0edd\u0eef\7\u0148\2\2\u0ede")
+        buf.write("\2\2\u0edc\u0edd\3\2\2\2\u0edd\u0eeb\7\u0149\2\2\u0ede")
         buf.write("\u0ee0\7\u013d\2\2\u0edf\u0ede\3\2\2\2\u0edf\u0ee0\3\2")
-        buf.write("\2\2\u0ee0\u0ee1\3\2\2\2\u0ee1\u0eef\7\u0149\2\2\u0ee2")
+        buf.write("\2\2\u0ee0\u0ee1\3\2\2\2\u0ee1\u0eeb\7\u014a\2\2\u0ee2")
         buf.write("\u0ee4\7\u013d\2\2\u0ee3\u0ee2\3\2\2\2\u0ee3\u0ee4\3\2")
-        buf.write("\2\2\u0ee4\u0ee5\3\2\2\2\u0ee5\u0eef\7\u014a\2\2\u0ee6")
+        buf.write("\2\2\u0ee4\u0ee5\3\2\2\2\u0ee5\u0eeb\7\u014e\2\2\u0ee6")
         buf.write("\u0ee8\7\u013d\2\2\u0ee7\u0ee6\3\2\2\2\u0ee7\u0ee8\3\2")
-        buf.write("\2\2\u0ee8\u0ee9\3\2\2\2\u0ee9\u0eef\7\u014e\2\2\u0eea")
-        buf.write("\u0eec\7\u013d\2\2\u0eeb\u0eea\3\2\2\2\u0eeb\u0eec\3\2")
-        buf.write("\2\2\u0eec\u0eed\3\2\2\2\u0eed\u0eef\7\u014f\2\2\u0eee")
-        buf.write("\u0ecb\3\2\2\2\u0eee\u0ecf\3\2\2\2\u0eee\u0ed3\3\2\2\2")
-        buf.write("\u0eee\u0ed7\3\2\2\2\u0eee\u0edb\3\2\2\2\u0eee\u0edf\3")
-        buf.write("\2\2\2\u0eee\u0ee3\3\2\2\2\u0eee\u0ee7\3\2\2\2\u0eee\u0eeb")
-        buf.write("\3\2\2\2\u0eef\u01a5\3\2\2\2\u0ef0\u0ef1\7\u011e\2\2\u0ef1")
-        buf.write("\u0ef8\5\u017a\u00be\2\u0ef2\u0ef8\5\u00b4[\2\u0ef3\u0ef8")
-        buf.write("\5\u0178\u00bd\2\u0ef4\u0ef5\t\63\2\2\u0ef5\u0ef6\7\u00c4")
-        buf.write("\2\2\u0ef6\u0ef8\7\u00c5\2\2\u0ef7\u0ef0\3\2\2\2\u0ef7")
-        buf.write("\u0ef2\3\2\2\2\u0ef7\u0ef3\3\2\2\2\u0ef7\u0ef4\3\2\2\2")
-        buf.write("\u0ef8\u01a7\3\2\2\2\u0ef9\u0efa\t\64\2\2\u0efa\u01a9")
-        buf.write("\3\2\2\2\u0efb\u0efc\t\65\2\2\u0efc\u01ab\3\2\2\2\u0efd")
-        buf.write("\u0efe\t\66\2\2\u0efe\u01ad\3\2\2\2\u0209\u01b1\u01be")
+        buf.write("\2\2\u0ee8\u0ee9\3\2\2\2\u0ee9\u0eeb\7\u014f\2\2\u0eea")
+        buf.write("\u0ec7\3\2\2\2\u0eea\u0ecb\3\2\2\2\u0eea\u0ecf\3\2\2\2")
+        buf.write("\u0eea\u0ed3\3\2\2\2\u0eea\u0ed7\3\2\2\2\u0eea\u0edb\3")
+        buf.write("\2\2\2\u0eea\u0edf\3\2\2\2\u0eea\u0ee3\3\2\2\2\u0eea\u0ee7")
+        buf.write("\3\2\2\2\u0eeb\u01a5\3\2\2\2\u0eec\u0eed\7\u011e\2\2\u0eed")
+        buf.write("\u0ef4\5\u017a\u00be\2\u0eee\u0ef4\5\u00b4[\2\u0eef\u0ef4")
+        buf.write("\5\u0178\u00bd\2\u0ef0\u0ef1\t\63\2\2\u0ef1\u0ef2\7\u00c4")
+        buf.write("\2\2\u0ef2\u0ef4\7\u00c5\2\2\u0ef3\u0eec\3\2\2\2\u0ef3")
+        buf.write("\u0eee\3\2\2\2\u0ef3\u0eef\3\2\2\2\u0ef3\u0ef0\3\2\2\2")
+        buf.write("\u0ef4\u01a7\3\2\2\2\u0ef5\u0ef6\t\64\2\2\u0ef6\u01a9")
+        buf.write("\3\2\2\2\u0ef7\u0ef8\t\65\2\2\u0ef8\u01ab\3\2\2\2\u0ef9")
+        buf.write("\u0efa\t\66\2\2\u0efa\u01ad\3\2\2\2\u0208\u01b1\u01be")
         buf.write("\u01c1\u01c5\u01c8\u01cb\u01db\u01df\u01e2\u01e7\u01eb")
         buf.write("\u01ee\u01f6\u01f9\u01fd\u0200\u0204\u020b\u0212\u0219")
         buf.write("\u021d\u0226\u022a\u0231\u0235\u023a\u023e\u0243\u0247")
@@ -2252,9 +2249,9 @@ def serializedATN():
         buf.write("\u0dc9\u0dd1\u0dd5\u0dde\u0de3\u0df4\u0df8\u0e01\u0e05")
         buf.write("\u0e07\u0e0e\u0e15\u0e18\u0e1b\u0e22\u0e29\u0e2c\u0e33")
         buf.write("\u0e3b\u0e3e\u0e4b\u0e5f\u0e69\u0e6c\u0e75\u0e78\u0e7a")
-        buf.write("\u0e7d\u0e80\u0e92\u0e9b\u0ea2\u0ea9\u0eb0\u0eba\u0ebd")
-        buf.write("\u0ec1\u0ec6\u0ecb\u0ecf\u0ed3\u0ed7\u0edb\u0edf\u0ee3")
-        buf.write("\u0ee7\u0eeb\u0eee\u0ef7")
+        buf.write("\u0e7d\u0e80\u0e92\u0e9b\u0ea2\u0ea9\u0eb0\u0eb9\u0ebd")
+        buf.write("\u0ec2\u0ec7\u0ecb\u0ecf\u0ed3\u0ed7\u0edb\u0edf\u0ee3")
+        buf.write("\u0ee7\u0eea\u0ef3")
         return buf.getvalue()
 
 
@@ -26131,10 +26128,6 @@ class fugue_sqlParser ( Parser ):
             return self.getTypedRuleContext(fugue_sqlParser.IdentifierContext,0)
 
 
-        def errorCapturingIdentifierExtra(self):
-            return self.getTypedRuleContext(fugue_sqlParser.ErrorCapturingIdentifierExtraContext,0)
-
-
         def getRuleIndex(self):
             return fugue_sqlParser.RULE_errorCapturingIdentifier
 
@@ -26155,8 +26148,6 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 3761
             self.identifier()
-            self.state = 3762
-            self.errorCapturingIdentifierExtra()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -26208,56 +26199,28 @@ class fugue_sqlParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
-    class RealIdentContext(ErrorCapturingIdentifierExtraContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a fugue_sqlParser.ErrorCapturingIdentifierExtraContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRealIdent" ):
-                return visitor.visitRealIdent(self)
-            else:
-                return visitor.visitChildren(self)
-
-
 
     def errorCapturingIdentifierExtra(self):
 
         localctx = fugue_sqlParser.ErrorCapturingIdentifierExtraContext(self, self._ctx, self.state)
         self.enterRule(localctx, 410, self.RULE_errorCapturingIdentifierExtra)
+        self._la = 0 # Token type
         try:
-            self.state = 3771
+            localctx = fugue_sqlParser.ErrorIdentContext(self, localctx)
+            self.enterOuterAlt(localctx, 1)
+            self.state = 3765 
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,505,self._ctx)
-            if la_ == 1:
-                localctx = fugue_sqlParser.ErrorIdentContext(self, localctx)
-                self.enterOuterAlt(localctx, 1)
-                self.state = 3766 
+            _la = self._input.LA(1)
+            while True:
+                self.state = 3763
+                self.match(fugue_sqlParser.MINUS)
+                self.state = 3764
+                self.identifier()
+                self.state = 3767 
                 self._errHandler.sync(self)
-                _alt = 1
-                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
-                    if _alt == 1:
-                        self.state = 3764
-                        self.match(fugue_sqlParser.MINUS)
-                        self.state = 3765
-                        self.identifier()
-
-                    else:
-                        raise NoViableAltException(self)
-                    self.state = 3768 
-                    self._errHandler.sync(self)
-                    _alt = self._interp.adaptivePredict(self._input,504,self._ctx)
-
-                pass
-
-            elif la_ == 2:
-                localctx = fugue_sqlParser.RealIdentContext(self, localctx)
-                self.enterOuterAlt(localctx, 2)
-
-                pass
-
+                _la = self._input.LA(1)
+                if not (_la==fugue_sqlParser.MINUS):
+                    break
 
         except RecognitionException as re:
             localctx.exception = re
@@ -26300,17 +26263,17 @@ class fugue_sqlParser ( Parser ):
         localctx = fugue_sqlParser.IdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 412, self.RULE_identifier)
         try:
-            self.state = 3775
+            self.state = 3771
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [fugue_sqlParser.ADD, fugue_sqlParser.AFTER, fugue_sqlParser.ALL, fugue_sqlParser.ALTER, fugue_sqlParser.ANALYZE, fugue_sqlParser.AND, fugue_sqlParser.ANY, fugue_sqlParser.ARCHIVE, fugue_sqlParser.ARRAY, fugue_sqlParser.AS, fugue_sqlParser.ASC, fugue_sqlParser.AT, fugue_sqlParser.AUTHORIZATION, fugue_sqlParser.BETWEEN, fugue_sqlParser.BOTH, fugue_sqlParser.BUCKET, fugue_sqlParser.BUCKETS, fugue_sqlParser.BY, fugue_sqlParser.CACHE, fugue_sqlParser.CASCADE, fugue_sqlParser.CASE, fugue_sqlParser.CAST, fugue_sqlParser.CHANGE, fugue_sqlParser.CHECK, fugue_sqlParser.CLEAR, fugue_sqlParser.CLUSTER, fugue_sqlParser.CLUSTERED, fugue_sqlParser.CODEGEN, fugue_sqlParser.COLLATE, fugue_sqlParser.COLLECTION, fugue_sqlParser.COLUMN, fugue_sqlParser.COLUMNS, fugue_sqlParser.COMMENT, fugue_sqlParser.COMMIT, fugue_sqlParser.COMPACT, fugue_sqlParser.COMPACTIONS, fugue_sqlParser.COMPUTE, fugue_sqlParser.CONCATENATE, fugue_sqlParser.CONSTRAINT, fugue_sqlParser.COST, fugue_sqlParser.CREATE, fugue_sqlParser.CUBE, fugue_sqlParser.CURRENT, fugue_sqlParser.CURRENT_DATE, fugue_sqlParser.CURRENT_TIME, fugue_sqlParser.CURRENT_TIMESTAMP, fugue_sqlParser.CURRENT_USER, fugue_sqlParser.DATA, fugue_sqlParser.DATABASE, fugue_sqlParser.DATABASES, fugue_sqlParser.DAY, fugue_sqlParser.DBPROPERTIES, fugue_sqlParser.DEFINED, fugue_sqlParser.DELETE, fugue_sqlParser.DELIMITED, fugue_sqlParser.DESC, fugue_sqlParser.DESCRIBE, fugue_sqlParser.DFS, fugue_sqlParser.DIRECTORIES, fugue_sqlParser.DIRECTORY, fugue_sqlParser.DISTINCT, fugue_sqlParser.DISTRIBUTE, fugue_sqlParser.DROP, fugue_sqlParser.ELSE, fugue_sqlParser.END, fugue_sqlParser.ESCAPE, fugue_sqlParser.ESCAPED, fugue_sqlParser.EXCHANGE, fugue_sqlParser.EXISTS, fugue_sqlParser.EXPLAIN, fugue_sqlParser.EXPORT, fugue_sqlParser.EXTENDED, fugue_sqlParser.EXTERNAL, fugue_sqlParser.EXTRACT, fugue_sqlParser.FALSE, fugue_sqlParser.FETCH, fugue_sqlParser.FIELDS, fugue_sqlParser.FILTER, fugue_sqlParser.FILEFORMAT, fugue_sqlParser.FIRST, fugue_sqlParser.FOLLOWING, fugue_sqlParser.FOR, fugue_sqlParser.FOREIGN, fugue_sqlParser.FORMAT, fugue_sqlParser.FORMATTED, fugue_sqlParser.FROM, fugue_sqlParser.FUNCTION, fugue_sqlParser.FUNCTIONS, fugue_sqlParser.GLOBAL, fugue_sqlParser.GRANT, fugue_sqlParser.GROUP, fugue_sqlParser.GROUPING, fugue_sqlParser.HAVING, fugue_sqlParser.HOUR, fugue_sqlParser.IF, fugue_sqlParser.IGNORE, fugue_sqlParser.IMPORT, fugue_sqlParser.IN, fugue_sqlParser.INDEX, fugue_sqlParser.INDEXES, fugue_sqlParser.INPATH, fugue_sqlParser.INPUTFORMAT, fugue_sqlParser.INSERT, fugue_sqlParser.INTERVAL, fugue_sqlParser.INTO, fugue_sqlParser.IS, fugue_sqlParser.ITEMS, fugue_sqlParser.KEYS, fugue_sqlParser.LAST, fugue_sqlParser.LATERAL, fugue_sqlParser.LAZY, fugue_sqlParser.LEADING, fugue_sqlParser.LIKE, fugue_sqlParser.LIMIT, fugue_sqlParser.LINES, fugue_sqlParser.LIST, fugue_sqlParser.LOAD, fugue_sqlParser.LOCAL, fugue_sqlParser.LOCATION, fugue_sqlParser.LOCK, fugue_sqlParser.LOCKS, fugue_sqlParser.LOGICAL, fugue_sqlParser.MACRO, fugue_sqlParser.MAP, fugue_sqlParser.MATCHED, fugue_sqlParser.MERGE, fugue_sqlParser.MINUTE, fugue_sqlParser.MONTH, fugue_sqlParser.MSCK, fugue_sqlParser.NAMESPACE, fugue_sqlParser.NAMESPACES, fugue_sqlParser.NO, fugue_sqlParser.NOT, fugue_sqlParser.THENULL, fugue_sqlParser.THENULLS, fugue_sqlParser.OF, fugue_sqlParser.ONLY, fugue_sqlParser.OPTION, fugue_sqlParser.OPTIONS, fugue_sqlParser.OR, fugue_sqlParser.ORDER, fugue_sqlParser.OUT, fugue_sqlParser.OUTER, fugue_sqlParser.OUTPUTFORMAT, fugue_sqlParser.OVER, fugue_sqlParser.OVERLAPS, fugue_sqlParser.OVERLAY, fugue_sqlParser.OVERWRITE, fugue_sqlParser.PARTITION, fugue_sqlParser.PARTITIONED, fugue_sqlParser.PARTITIONS, fugue_sqlParser.PERCENTLIT, fugue_sqlParser.PIVOT, fugue_sqlParser.PLACING, fugue_sqlParser.POSITION, fugue_sqlParser.PRECEDING, fugue_sqlParser.PRIMARY, fugue_sqlParser.PRINCIPALS, fugue_sqlParser.PROPERTIES, fugue_sqlParser.PURGE, fugue_sqlParser.QUERY, fugue_sqlParser.RANGE, fugue_sqlParser.RECORDREADER, fugue_sqlParser.RECORDWRITER, fugue_sqlParser.RECOVER, fugue_sqlParser.REDUCE, fugue_sqlParser.REFERENCES, fugue_sqlParser.REFRESH, fugue_sqlParser.RENAME, fugue_sqlParser.REPAIR, fugue_sqlParser.REPLACE, fugue_sqlParser.RESET, fugue_sqlParser.RESTRICT, fugue_sqlParser.REVOKE, fugue_sqlParser.RLIKE, fugue_sqlParser.ROLE, fugue_sqlParser.ROLES, fugue_sqlParser.ROLLBACK, fugue_sqlParser.ROLLUP, fugue_sqlParser.ROW, fugue_sqlParser.ROWS, fugue_sqlParser.SCHEMA, fugue_sqlParser.SECOND, fugue_sqlParser.SELECT, fugue_sqlParser.SEPARATED, fugue_sqlParser.SERDE, fugue_sqlParser.SERDEPROPERTIES, fugue_sqlParser.SESSION_USER, fugue_sqlParser.SET, fugue_sqlParser.SETS, fugue_sqlParser.SHOW, fugue_sqlParser.SKEWED, fugue_sqlParser.SOME, fugue_sqlParser.SORT, fugue_sqlParser.SORTED, fugue_sqlParser.START, fugue_sqlParser.STATISTICS, fugue_sqlParser.STORED, fugue_sqlParser.STRATIFY, fugue_sqlParser.STRUCT, fugue_sqlParser.SUBSTR, fugue_sqlParser.SUBSTRING, fugue_sqlParser.TABLE, fugue_sqlParser.TABLES, fugue_sqlParser.TABLESAMPLE, fugue_sqlParser.TBLPROPERTIES, fugue_sqlParser.TEMPORARY, fugue_sqlParser.TERMINATED, fugue_sqlParser.THEN, fugue_sqlParser.TO, fugue_sqlParser.TOUCH, fugue_sqlParser.TRAILING, fugue_sqlParser.TRANSACTION, fugue_sqlParser.TRANSACTIONS, fugue_sqlParser.TRANSFORM, fugue_sqlParser.TRIM, fugue_sqlParser.TRUE, fugue_sqlParser.TRUNCATE, fugue_sqlParser.TYPE, fugue_sqlParser.UNARCHIVE, fugue_sqlParser.UNBOUNDED, fugue_sqlParser.UNCACHE, fugue_sqlParser.UNIQUE, fugue_sqlParser.UNKNOWN, fugue_sqlParser.UNLOCK, fugue_sqlParser.UNSET, fugue_sqlParser.UPDATE, fugue_sqlParser.USE, fugue_sqlParser.USER, fugue_sqlParser.VALUES, fugue_sqlParser.VIEW, fugue_sqlParser.VIEWS, fugue_sqlParser.WHEN, fugue_sqlParser.WHERE, fugue_sqlParser.WINDOW, fugue_sqlParser.WITH, fugue_sqlParser.YEAR, fugue_sqlParser.DIV, fugue_sqlParser.IDENTIFIER, fugue_sqlParser.BACKQUOTED_IDENTIFIER]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 3773
+                self.state = 3769
                 self.strictIdentifier()
                 pass
             elif token in [fugue_sqlParser.ANTI, fugue_sqlParser.CROSS, fugue_sqlParser.EXCEPT, fugue_sqlParser.FULL, fugue_sqlParser.INNER, fugue_sqlParser.INTERSECT, fugue_sqlParser.JOIN, fugue_sqlParser.LEFT, fugue_sqlParser.NATURAL, fugue_sqlParser.ON, fugue_sqlParser.RIGHT, fugue_sqlParser.SEMI, fugue_sqlParser.SETMINUS, fugue_sqlParser.UNION, fugue_sqlParser.USING]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 3774
+                self.state = 3770
                 self.strictNonReserved()
                 pass
             else:
@@ -26384,25 +26347,25 @@ class fugue_sqlParser ( Parser ):
         localctx = fugue_sqlParser.StrictIdentifierContext(self, self._ctx, self.state)
         self.enterRule(localctx, 414, self.RULE_strictIdentifier)
         try:
-            self.state = 3780
+            self.state = 3776
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [fugue_sqlParser.IDENTIFIER]:
                 localctx = fugue_sqlParser.UnquotedIdentifierContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 3777
+                self.state = 3773
                 self.match(fugue_sqlParser.IDENTIFIER)
                 pass
             elif token in [fugue_sqlParser.BACKQUOTED_IDENTIFIER]:
                 localctx = fugue_sqlParser.QuotedIdentifierAlternativeContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 3778
+                self.state = 3774
                 self.quotedIdentifier()
                 pass
             elif token in [fugue_sqlParser.ADD, fugue_sqlParser.AFTER, fugue_sqlParser.ALL, fugue_sqlParser.ALTER, fugue_sqlParser.ANALYZE, fugue_sqlParser.AND, fugue_sqlParser.ANY, fugue_sqlParser.ARCHIVE, fugue_sqlParser.ARRAY, fugue_sqlParser.AS, fugue_sqlParser.ASC, fugue_sqlParser.AT, fugue_sqlParser.AUTHORIZATION, fugue_sqlParser.BETWEEN, fugue_sqlParser.BOTH, fugue_sqlParser.BUCKET, fugue_sqlParser.BUCKETS, fugue_sqlParser.BY, fugue_sqlParser.CACHE, fugue_sqlParser.CASCADE, fugue_sqlParser.CASE, fugue_sqlParser.CAST, fugue_sqlParser.CHANGE, fugue_sqlParser.CHECK, fugue_sqlParser.CLEAR, fugue_sqlParser.CLUSTER, fugue_sqlParser.CLUSTERED, fugue_sqlParser.CODEGEN, fugue_sqlParser.COLLATE, fugue_sqlParser.COLLECTION, fugue_sqlParser.COLUMN, fugue_sqlParser.COLUMNS, fugue_sqlParser.COMMENT, fugue_sqlParser.COMMIT, fugue_sqlParser.COMPACT, fugue_sqlParser.COMPACTIONS, fugue_sqlParser.COMPUTE, fugue_sqlParser.CONCATENATE, fugue_sqlParser.CONSTRAINT, fugue_sqlParser.COST, fugue_sqlParser.CREATE, fugue_sqlParser.CUBE, fugue_sqlParser.CURRENT, fugue_sqlParser.CURRENT_DATE, fugue_sqlParser.CURRENT_TIME, fugue_sqlParser.CURRENT_TIMESTAMP, fugue_sqlParser.CURRENT_USER, fugue_sqlParser.DATA, fugue_sqlParser.DATABASE, fugue_sqlParser.DATABASES, fugue_sqlParser.DAY, fugue_sqlParser.DBPROPERTIES, fugue_sqlParser.DEFINED, fugue_sqlParser.DELETE, fugue_sqlParser.DELIMITED, fugue_sqlParser.DESC, fugue_sqlParser.DESCRIBE, fugue_sqlParser.DFS, fugue_sqlParser.DIRECTORIES, fugue_sqlParser.DIRECTORY, fugue_sqlParser.DISTINCT, fugue_sqlParser.DISTRIBUTE, fugue_sqlParser.DROP, fugue_sqlParser.ELSE, fugue_sqlParser.END, fugue_sqlParser.ESCAPE, fugue_sqlParser.ESCAPED, fugue_sqlParser.EXCHANGE, fugue_sqlParser.EXISTS, fugue_sqlParser.EXPLAIN, fugue_sqlParser.EXPORT, fugue_sqlParser.EXTENDED, fugue_sqlParser.EXTERNAL, fugue_sqlParser.EXTRACT, fugue_sqlParser.FALSE, fugue_sqlParser.FETCH, fugue_sqlParser.FIELDS, fugue_sqlParser.FILTER, fugue_sqlParser.FILEFORMAT, fugue_sqlParser.FIRST, fugue_sqlParser.FOLLOWING, fugue_sqlParser.FOR, fugue_sqlParser.FOREIGN, fugue_sqlParser.FORMAT, fugue_sqlParser.FORMATTED, fugue_sqlParser.FROM, fugue_sqlParser.FUNCTION, fugue_sqlParser.FUNCTIONS, fugue_sqlParser.GLOBAL, fugue_sqlParser.GRANT, fugue_sqlParser.GROUP, fugue_sqlParser.GROUPING, fugue_sqlParser.HAVING, fugue_sqlParser.HOUR, fugue_sqlParser.IF, fugue_sqlParser.IGNORE, fugue_sqlParser.IMPORT, fugue_sqlParser.IN, fugue_sqlParser.INDEX, fugue_sqlParser.INDEXES, fugue_sqlParser.INPATH, fugue_sqlParser.INPUTFORMAT, fugue_sqlParser.INSERT, fugue_sqlParser.INTERVAL, fugue_sqlParser.INTO, fugue_sqlParser.IS, fugue_sqlParser.ITEMS, fugue_sqlParser.KEYS, fugue_sqlParser.LAST, fugue_sqlParser.LATERAL, fugue_sqlParser.LAZY, fugue_sqlParser.LEADING, fugue_sqlParser.LIKE, fugue_sqlParser.LIMIT, fugue_sqlParser.LINES, fugue_sqlParser.LIST, fugue_sqlParser.LOAD, fugue_sqlParser.LOCAL, fugue_sqlParser.LOCATION, fugue_sqlParser.LOCK, fugue_sqlParser.LOCKS, fugue_sqlParser.LOGICAL, fugue_sqlParser.MACRO, fugue_sqlParser.MAP, fugue_sqlParser.MATCHED, fugue_sqlParser.MERGE, fugue_sqlParser.MINUTE, fugue_sqlParser.MONTH, fugue_sqlParser.MSCK, fugue_sqlParser.NAMESPACE, fugue_sqlParser.NAMESPACES, fugue_sqlParser.NO, fugue_sqlParser.NOT, fugue_sqlParser.THENULL, fugue_sqlParser.THENULLS, fugue_sqlParser.OF, fugue_sqlParser.ONLY, fugue_sqlParser.OPTION, fugue_sqlParser.OPTIONS, fugue_sqlParser.OR, fugue_sqlParser.ORDER, fugue_sqlParser.OUT, fugue_sqlParser.OUTER, fugue_sqlParser.OUTPUTFORMAT, fugue_sqlParser.OVER, fugue_sqlParser.OVERLAPS, fugue_sqlParser.OVERLAY, fugue_sqlParser.OVERWRITE, fugue_sqlParser.PARTITION, fugue_sqlParser.PARTITIONED, fugue_sqlParser.PARTITIONS, fugue_sqlParser.PERCENTLIT, fugue_sqlParser.PIVOT, fugue_sqlParser.PLACING, fugue_sqlParser.POSITION, fugue_sqlParser.PRECEDING, fugue_sqlParser.PRIMARY, fugue_sqlParser.PRINCIPALS, fugue_sqlParser.PROPERTIES, fugue_sqlParser.PURGE, fugue_sqlParser.QUERY, fugue_sqlParser.RANGE, fugue_sqlParser.RECORDREADER, fugue_sqlParser.RECORDWRITER, fugue_sqlParser.RECOVER, fugue_sqlParser.REDUCE, fugue_sqlParser.REFERENCES, fugue_sqlParser.REFRESH, fugue_sqlParser.RENAME, fugue_sqlParser.REPAIR, fugue_sqlParser.REPLACE, fugue_sqlParser.RESET, fugue_sqlParser.RESTRICT, fugue_sqlParser.REVOKE, fugue_sqlParser.RLIKE, fugue_sqlParser.ROLE, fugue_sqlParser.ROLES, fugue_sqlParser.ROLLBACK, fugue_sqlParser.ROLLUP, fugue_sqlParser.ROW, fugue_sqlParser.ROWS, fugue_sqlParser.SCHEMA, fugue_sqlParser.SECOND, fugue_sqlParser.SELECT, fugue_sqlParser.SEPARATED, fugue_sqlParser.SERDE, fugue_sqlParser.SERDEPROPERTIES, fugue_sqlParser.SESSION_USER, fugue_sqlParser.SET, fugue_sqlParser.SETS, fugue_sqlParser.SHOW, fugue_sqlParser.SKEWED, fugue_sqlParser.SOME, fugue_sqlParser.SORT, fugue_sqlParser.SORTED, fugue_sqlParser.START, fugue_sqlParser.STATISTICS, fugue_sqlParser.STORED, fugue_sqlParser.STRATIFY, fugue_sqlParser.STRUCT, fugue_sqlParser.SUBSTR, fugue_sqlParser.SUBSTRING, fugue_sqlParser.TABLE, fugue_sqlParser.TABLES, fugue_sqlParser.TABLESAMPLE, fugue_sqlParser.TBLPROPERTIES, fugue_sqlParser.TEMPORARY, fugue_sqlParser.TERMINATED, fugue_sqlParser.THEN, fugue_sqlParser.TO, fugue_sqlParser.TOUCH, fugue_sqlParser.TRAILING, fugue_sqlParser.TRANSACTION, fugue_sqlParser.TRANSACTIONS, fugue_sqlParser.TRANSFORM, fugue_sqlParser.TRIM, fugue_sqlParser.TRUE, fugue_sqlParser.TRUNCATE, fugue_sqlParser.TYPE, fugue_sqlParser.UNARCHIVE, fugue_sqlParser.UNBOUNDED, fugue_sqlParser.UNCACHE, fugue_sqlParser.UNIQUE, fugue_sqlParser.UNKNOWN, fugue_sqlParser.UNLOCK, fugue_sqlParser.UNSET, fugue_sqlParser.UPDATE, fugue_sqlParser.USE, fugue_sqlParser.USER, fugue_sqlParser.VALUES, fugue_sqlParser.VIEW, fugue_sqlParser.VIEWS, fugue_sqlParser.WHEN, fugue_sqlParser.WHERE, fugue_sqlParser.WINDOW, fugue_sqlParser.WITH, fugue_sqlParser.YEAR, fugue_sqlParser.DIV]:
                 localctx = fugue_sqlParser.UnquotedIdentifierContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 3779
+                self.state = 3775
                 self.nonReserved()
                 pass
             else:
@@ -26445,7 +26408,7 @@ class fugue_sqlParser ( Parser ):
         self.enterRule(localctx, 416, self.RULE_quotedIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 3782
+            self.state = 3778
             self.match(fugue_sqlParser.BACKQUOTED_IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -26644,12 +26607,27 @@ class fugue_sqlParser ( Parser ):
         self.enterRule(localctx, 418, self.RULE_number)
         self._la = 0 # Token type
         try:
-            self.state = 3820
+            self.state = 3816
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,517,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,516,self._ctx)
             if la_ == 1:
                 localctx = fugue_sqlParser.ExponentLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
+                self.state = 3781
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==fugue_sqlParser.MINUS:
+                    self.state = 3780
+                    self.match(fugue_sqlParser.MINUS)
+
+
+                self.state = 3783
+                self.match(fugue_sqlParser.EXPONENT_VALUE)
+                pass
+
+            elif la_ == 2:
+                localctx = fugue_sqlParser.DecimalLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
                 self.state = 3785
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26659,12 +26637,12 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3787
-                self.match(fugue_sqlParser.EXPONENT_VALUE)
+                self.match(fugue_sqlParser.DECIMAL_VALUE)
                 pass
 
-            elif la_ == 2:
-                localctx = fugue_sqlParser.DecimalLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 2)
+            elif la_ == 3:
+                localctx = fugue_sqlParser.LegacyDecimalLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 3)
                 self.state = 3789
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26674,21 +26652,6 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3791
-                self.match(fugue_sqlParser.DECIMAL_VALUE)
-                pass
-
-            elif la_ == 3:
-                localctx = fugue_sqlParser.LegacyDecimalLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 3)
-                self.state = 3793
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==fugue_sqlParser.MINUS:
-                    self.state = 3792
-                    self.match(fugue_sqlParser.MINUS)
-
-
-                self.state = 3795
                 _la = self._input.LA(1)
                 if not(_la==fugue_sqlParser.EXPONENT_VALUE or _la==fugue_sqlParser.DECIMAL_VALUE):
                     self._errHandler.recoverInline(self)
@@ -26700,6 +26663,21 @@ class fugue_sqlParser ( Parser ):
             elif la_ == 4:
                 localctx = fugue_sqlParser.IntegerLiteralContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
+                self.state = 3793
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==fugue_sqlParser.MINUS:
+                    self.state = 3792
+                    self.match(fugue_sqlParser.MINUS)
+
+
+                self.state = 3795
+                self.match(fugue_sqlParser.INTEGER_VALUE)
+                pass
+
+            elif la_ == 5:
+                localctx = fugue_sqlParser.BigIntLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 5)
                 self.state = 3797
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26709,12 +26687,12 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3799
-                self.match(fugue_sqlParser.INTEGER_VALUE)
+                self.match(fugue_sqlParser.BIGINT_LITERAL)
                 pass
 
-            elif la_ == 5:
-                localctx = fugue_sqlParser.BigIntLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 5)
+            elif la_ == 6:
+                localctx = fugue_sqlParser.SmallIntLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 6)
                 self.state = 3801
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26724,12 +26702,12 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3803
-                self.match(fugue_sqlParser.BIGINT_LITERAL)
+                self.match(fugue_sqlParser.SMALLINT_LITERAL)
                 pass
 
-            elif la_ == 6:
-                localctx = fugue_sqlParser.SmallIntLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 6)
+            elif la_ == 7:
+                localctx = fugue_sqlParser.TinyIntLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 7)
                 self.state = 3805
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26739,12 +26717,12 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3807
-                self.match(fugue_sqlParser.SMALLINT_LITERAL)
+                self.match(fugue_sqlParser.TINYINT_LITERAL)
                 pass
 
-            elif la_ == 7:
-                localctx = fugue_sqlParser.TinyIntLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 7)
+            elif la_ == 8:
+                localctx = fugue_sqlParser.DoubleLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 8)
                 self.state = 3809
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26754,12 +26732,12 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3811
-                self.match(fugue_sqlParser.TINYINT_LITERAL)
+                self.match(fugue_sqlParser.DOUBLE_LITERAL)
                 pass
 
-            elif la_ == 8:
-                localctx = fugue_sqlParser.DoubleLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 8)
+            elif la_ == 9:
+                localctx = fugue_sqlParser.BigDecimalLiteralContext(self, localctx)
+                self.enterOuterAlt(localctx, 9)
                 self.state = 3813
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -26769,21 +26747,6 @@ class fugue_sqlParser ( Parser ):
 
 
                 self.state = 3815
-                self.match(fugue_sqlParser.DOUBLE_LITERAL)
-                pass
-
-            elif la_ == 9:
-                localctx = fugue_sqlParser.BigDecimalLiteralContext(self, localctx)
-                self.enterOuterAlt(localctx, 9)
-                self.state = 3817
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                if _la==fugue_sqlParser.MINUS:
-                    self.state = 3816
-                    self.match(fugue_sqlParser.MINUS)
-
-
-                self.state = 3819
                 self.match(fugue_sqlParser.BIGDECIMAL_LITERAL)
                 pass
 
@@ -26850,29 +26813,29 @@ class fugue_sqlParser ( Parser ):
         self.enterRule(localctx, 420, self.RULE_alterColumnAction)
         self._la = 0 # Token type
         try:
-            self.state = 3829
+            self.state = 3825
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [fugue_sqlParser.TYPE]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 3822
+                self.state = 3818
                 self.match(fugue_sqlParser.TYPE)
-                self.state = 3823
+                self.state = 3819
                 self.dataType()
                 pass
             elif token in [fugue_sqlParser.COMMENT]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 3824
+                self.state = 3820
                 self.commentSpec()
                 pass
             elif token in [fugue_sqlParser.AFTER, fugue_sqlParser.FIRST]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 3825
+                self.state = 3821
                 self.colPosition()
                 pass
             elif token in [fugue_sqlParser.DROP, fugue_sqlParser.SET]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 3826
+                self.state = 3822
                 localctx.setOrDrop = self._input.LT(1)
                 _la = self._input.LA(1)
                 if not(_la==fugue_sqlParser.DROP or _la==fugue_sqlParser.SET):
@@ -26880,9 +26843,9 @@ class fugue_sqlParser ( Parser ):
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 3827
+                self.state = 3823
                 self.match(fugue_sqlParser.NOT)
-                self.state = 3828
+                self.state = 3824
                 self.match(fugue_sqlParser.THENULL)
                 pass
             else:
@@ -27448,7 +27411,7 @@ class fugue_sqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 3831
+            self.state = 3827
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << fugue_sqlParser.ADD) | (1 << fugue_sqlParser.AFTER) | (1 << fugue_sqlParser.ALTER) | (1 << fugue_sqlParser.ANALYZE) | (1 << fugue_sqlParser.ARCHIVE) | (1 << fugue_sqlParser.ARRAY))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (fugue_sqlParser.ASC - 64)) | (1 << (fugue_sqlParser.AT - 64)) | (1 << (fugue_sqlParser.BETWEEN - 64)) | (1 << (fugue_sqlParser.BUCKET - 64)) | (1 << (fugue_sqlParser.BUCKETS - 64)) | (1 << (fugue_sqlParser.BY - 64)) | (1 << (fugue_sqlParser.CACHE - 64)) | (1 << (fugue_sqlParser.CASCADE - 64)) | (1 << (fugue_sqlParser.CHANGE - 64)) | (1 << (fugue_sqlParser.CLEAR - 64)) | (1 << (fugue_sqlParser.CLUSTER - 64)) | (1 << (fugue_sqlParser.CLUSTERED - 64)) | (1 << (fugue_sqlParser.CODEGEN - 64)) | (1 << (fugue_sqlParser.COLLECTION - 64)) | (1 << (fugue_sqlParser.COLUMNS - 64)) | (1 << (fugue_sqlParser.COMMENT - 64)) | (1 << (fugue_sqlParser.COMMIT - 64)) | (1 << (fugue_sqlParser.COMPACT - 64)) | (1 << (fugue_sqlParser.COMPACTIONS - 64)) | (1 << (fugue_sqlParser.COMPUTE - 64)) | (1 << (fugue_sqlParser.CONCATENATE - 64)) | (1 << (fugue_sqlParser.COST - 64)) | (1 << (fugue_sqlParser.CUBE - 64)) | (1 << (fugue_sqlParser.CURRENT - 64)) | (1 << (fugue_sqlParser.DATA - 64)) | (1 << (fugue_sqlParser.DATABASE - 64)) | (1 << (fugue_sqlParser.DATABASES - 64)) | (1 << (fugue_sqlParser.DBPROPERTIES - 64)) | (1 << (fugue_sqlParser.DEFINED - 64)) | (1 << (fugue_sqlParser.DELETE - 64)) | (1 << (fugue_sqlParser.DELIMITED - 64)) | (1 << (fugue_sqlParser.DESC - 64)) | (1 << (fugue_sqlParser.DESCRIBE - 64)) | (1 << (fugue_sqlParser.DFS - 64)) | (1 << (fugue_sqlParser.DIRECTORIES - 64)) | (1 << (fugue_sqlParser.DIRECTORY - 64)) | (1 << (fugue_sqlParser.DISTRIBUTE - 64)) | (1 << (fugue_sqlParser.DROP - 64)) | (1 << (fugue_sqlParser.ESCAPED - 64)) | (1 << (fugue_sqlParser.EXCHANGE - 64)) | (1 << (fugue_sqlParser.EXISTS - 64)) | (1 << (fugue_sqlParser.EXPLAIN - 64)) | (1 << (fugue_sqlParser.EXPORT - 64)) | (1 << (fugue_sqlParser.EXTENDED - 64)))) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & ((1 << (fugue_sqlParser.EXTERNAL - 128)) | (1 << (fugue_sqlParser.EXTRACT - 128)) | (1 << (fugue_sqlParser.FIELDS - 128)) | (1 << (fugue_sqlParser.FILEFORMAT - 128)) | (1 << (fugue_sqlParser.FIRST - 128)) | (1 << (fugue_sqlParser.FOLLOWING - 128)) | (1 << (fugue_sqlParser.FORMAT - 128)) | (1 << (fugue_sqlParser.FORMATTED - 128)) | (1 << (fugue_sqlParser.FUNCTION - 128)) | (1 << (fugue_sqlParser.FUNCTIONS - 128)) | (1 << (fugue_sqlParser.GLOBAL - 128)) | (1 << (fugue_sqlParser.GROUPING - 128)) | (1 << (fugue_sqlParser.IF - 128)) | (1 << (fugue_sqlParser.IGNORE - 128)) | (1 << (fugue_sqlParser.IMPORT - 128)) | (1 << (fugue_sqlParser.INDEX - 128)) | (1 << (fugue_sqlParser.INDEXES - 128)) | (1 << (fugue_sqlParser.INPATH - 128)) | (1 << (fugue_sqlParser.INPUTFORMAT - 128)) | (1 << (fugue_sqlParser.INSERT - 128)) | (1 << (fugue_sqlParser.INTERVAL - 128)) | (1 << (fugue_sqlParser.ITEMS - 128)) | (1 << (fugue_sqlParser.KEYS - 128)) | (1 << (fugue_sqlParser.LAST - 128)) | (1 << (fugue_sqlParser.LATERAL - 128)) | (1 << (fugue_sqlParser.LAZY - 128)) | (1 << (fugue_sqlParser.LIKE - 128)) | (1 << (fugue_sqlParser.LIMIT - 128)) | (1 << (fugue_sqlParser.LINES - 128)) | (1 << (fugue_sqlParser.LIST - 128)) | (1 << (fugue_sqlParser.LOAD - 128)) | (1 << (fugue_sqlParser.LOCAL - 128)) | (1 << (fugue_sqlParser.LOCATION - 128)) | (1 << (fugue_sqlParser.LOCK - 128)) | (1 << (fugue_sqlParser.LOCKS - 128)) | (1 << (fugue_sqlParser.LOGICAL - 128)) | (1 << (fugue_sqlParser.MACRO - 128)) | (1 << (fugue_sqlParser.MAP - 128)) | (1 << (fugue_sqlParser.MATCHED - 128)) | (1 << (fugue_sqlParser.MERGE - 128)) | (1 << (fugue_sqlParser.MSCK - 128)) | (1 << (fugue_sqlParser.NAMESPACE - 128)) | (1 << (fugue_sqlParser.NAMESPACES - 128)))) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & ((1 << (fugue_sqlParser.NO - 193)) | (1 << (fugue_sqlParser.THENULLS - 193)) | (1 << (fugue_sqlParser.OF - 193)) | (1 << (fugue_sqlParser.OPTION - 193)) | (1 << (fugue_sqlParser.OPTIONS - 193)) | (1 << (fugue_sqlParser.OUT - 193)) | (1 << (fugue_sqlParser.OUTPUTFORMAT - 193)) | (1 << (fugue_sqlParser.OVER - 193)) | (1 << (fugue_sqlParser.OVERLAY - 193)) | (1 << (fugue_sqlParser.OVERWRITE - 193)) | (1 << (fugue_sqlParser.PARTITION - 193)) | (1 << (fugue_sqlParser.PARTITIONED - 193)) | (1 << (fugue_sqlParser.PARTITIONS - 193)) | (1 << (fugue_sqlParser.PERCENTLIT - 193)) | (1 << (fugue_sqlParser.PIVOT - 193)) | (1 << (fugue_sqlParser.PLACING - 193)) | (1 << (fugue_sqlParser.POSITION - 193)) | (1 << (fugue_sqlParser.PRECEDING - 193)) | (1 << (fugue_sqlParser.PRINCIPALS - 193)) | (1 << (fugue_sqlParser.PROPERTIES - 193)) | (1 << (fugue_sqlParser.PURGE - 193)) | (1 << (fugue_sqlParser.QUERY - 193)) | (1 << (fugue_sqlParser.RANGE - 193)) | (1 << (fugue_sqlParser.RECORDREADER - 193)) | (1 << (fugue_sqlParser.RECORDWRITER - 193)) | (1 << (fugue_sqlParser.RECOVER - 193)) | (1 << (fugue_sqlParser.REDUCE - 193)) | (1 << (fugue_sqlParser.REFRESH - 193)) | (1 << (fugue_sqlParser.RENAME - 193)) | (1 << (fugue_sqlParser.REPAIR - 193)) | (1 << (fugue_sqlParser.REPLACE - 193)) | (1 << (fugue_sqlParser.RESET - 193)) | (1 << (fugue_sqlParser.RESTRICT - 193)) | (1 << (fugue_sqlParser.REVOKE - 193)) | (1 << (fugue_sqlParser.RLIKE - 193)) | (1 << (fugue_sqlParser.ROLE - 193)) | (1 << (fugue_sqlParser.ROLES - 193)) | (1 << (fugue_sqlParser.ROLLBACK - 193)) | (1 << (fugue_sqlParser.ROLLUP - 193)) | (1 << (fugue_sqlParser.ROW - 193)) | (1 << (fugue_sqlParser.ROWS - 193)) | (1 << (fugue_sqlParser.SCHEMA - 193)) | (1 << (fugue_sqlParser.SEPARATED - 193)) | (1 << (fugue_sqlParser.SERDE - 193)) | (1 << (fugue_sqlParser.SERDEPROPERTIES - 193)) | (1 << (fugue_sqlParser.SET - 193)) | (1 << (fugue_sqlParser.SETS - 193)) | (1 << (fugue_sqlParser.SHOW - 193)))) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & ((1 << (fugue_sqlParser.SKEWED - 257)) | (1 << (fugue_sqlParser.SORT - 257)) | (1 << (fugue_sqlParser.SORTED - 257)) | (1 << (fugue_sqlParser.START - 257)) | (1 << (fugue_sqlParser.STATISTICS - 257)) | (1 << (fugue_sqlParser.STORED - 257)) | (1 << (fugue_sqlParser.STRATIFY - 257)) | (1 << (fugue_sqlParser.STRUCT - 257)) | (1 << (fugue_sqlParser.SUBSTR - 257)) | (1 << (fugue_sqlParser.SUBSTRING - 257)) | (1 << (fugue_sqlParser.TABLES - 257)) | (1 << (fugue_sqlParser.TABLESAMPLE - 257)) | (1 << (fugue_sqlParser.TBLPROPERTIES - 257)) | (1 << (fugue_sqlParser.TEMPORARY - 257)) | (1 << (fugue_sqlParser.TERMINATED - 257)) | (1 << (fugue_sqlParser.TOUCH - 257)) | (1 << (fugue_sqlParser.TRANSACTION - 257)) | (1 << (fugue_sqlParser.TRANSACTIONS - 257)) | (1 << (fugue_sqlParser.TRANSFORM - 257)) | (1 << (fugue_sqlParser.TRIM - 257)) | (1 << (fugue_sqlParser.TRUE - 257)) | (1 << (fugue_sqlParser.TRUNCATE - 257)) | (1 << (fugue_sqlParser.UNARCHIVE - 257)) | (1 << (fugue_sqlParser.UNBOUNDED - 257)) | (1 << (fugue_sqlParser.UNCACHE - 257)) | (1 << (fugue_sqlParser.UNLOCK - 257)) | (1 << (fugue_sqlParser.UNSET - 257)) | (1 << (fugue_sqlParser.UPDATE - 257)) | (1 << (fugue_sqlParser.USE - 257)) | (1 << (fugue_sqlParser.VALUES - 257)) | (1 << (fugue_sqlParser.VIEW - 257)) | (1 << (fugue_sqlParser.VIEWS - 257)) | (1 << (fugue_sqlParser.WINDOW - 257)) | (1 << (fugue_sqlParser.DIV - 257)))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -27535,7 +27498,7 @@ class fugue_sqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 3833
+            self.state = 3829
             _la = self._input.LA(1)
             if not(((((_la - 59)) & ~0x3f) == 0 and ((1 << (_la - 59)) & ((1 << (fugue_sqlParser.ANTI - 59)) | (1 << (fugue_sqlParser.CROSS - 59)) | (1 << (fugue_sqlParser.EXCEPT - 59)))) != 0) or ((((_la - 142)) & ~0x3f) == 0 and ((1 << (_la - 142)) & ((1 << (fugue_sqlParser.FULL - 142)) | (1 << (fugue_sqlParser.INNER - 142)) | (1 << (fugue_sqlParser.INTERSECT - 142)) | (1 << (fugue_sqlParser.JOIN - 142)) | (1 << (fugue_sqlParser.LEFT - 142)) | (1 << (fugue_sqlParser.NATURAL - 142)) | (1 << (fugue_sqlParser.ON - 142)))) != 0) or ((((_la - 237)) & ~0x3f) == 0 and ((1 << (_la - 237)) & ((1 << (fugue_sqlParser.RIGHT - 237)) | (1 << (fugue_sqlParser.SEMI - 237)) | (1 << (fugue_sqlParser.SETMINUS - 237)) | (1 << (fugue_sqlParser.UNION - 237)) | (1 << (fugue_sqlParser.USING - 237)))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -28291,7 +28254,7 @@ class fugue_sqlParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 3835
+            self.state = 3831
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << fugue_sqlParser.ADD) | (1 << fugue_sqlParser.AFTER) | (1 << fugue_sqlParser.ALL) | (1 << fugue_sqlParser.ALTER) | (1 << fugue_sqlParser.ANALYZE) | (1 << fugue_sqlParser.AND) | (1 << fugue_sqlParser.ANY) | (1 << fugue_sqlParser.ARCHIVE) | (1 << fugue_sqlParser.ARRAY) | (1 << fugue_sqlParser.AS))) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & ((1 << (fugue_sqlParser.ASC - 64)) | (1 << (fugue_sqlParser.AT - 64)) | (1 << (fugue_sqlParser.AUTHORIZATION - 64)) | (1 << (fugue_sqlParser.BETWEEN - 64)) | (1 << (fugue_sqlParser.BOTH - 64)) | (1 << (fugue_sqlParser.BUCKET - 64)) | (1 << (fugue_sqlParser.BUCKETS - 64)) | (1 << (fugue_sqlParser.BY - 64)) | (1 << (fugue_sqlParser.CACHE - 64)) | (1 << (fugue_sqlParser.CASCADE - 64)) | (1 << (fugue_sqlParser.CASE - 64)) | (1 << (fugue_sqlParser.CAST - 64)) | (1 << (fugue_sqlParser.CHANGE - 64)) | (1 << (fugue_sqlParser.CHECK - 64)) | (1 << (fugue_sqlParser.CLEAR - 64)) | (1 << (fugue_sqlParser.CLUSTER - 64)) | (1 << (fugue_sqlParser.CLUSTERED - 64)) | (1 << (fugue_sqlParser.CODEGEN - 64)) | (1 << (fugue_sqlParser.COLLATE - 64)) | (1 << (fugue_sqlParser.COLLECTION - 64)) | (1 << (fugue_sqlParser.COLUMN - 64)) | (1 << (fugue_sqlParser.COLUMNS - 64)) | (1 << (fugue_sqlParser.COMMENT - 64)) | (1 << (fugue_sqlParser.COMMIT - 64)) | (1 << (fugue_sqlParser.COMPACT - 64)) | (1 << (fugue_sqlParser.COMPACTIONS - 64)) | (1 << (fugue_sqlParser.COMPUTE - 64)) | (1 << (fugue_sqlParser.CONCATENATE - 64)) | (1 << (fugue_sqlParser.CONSTRAINT - 64)) | (1 << (fugue_sqlParser.COST - 64)) | (1 << (fugue_sqlParser.CREATE - 64)) | (1 << (fugue_sqlParser.CUBE - 64)) | (1 << (fugue_sqlParser.CURRENT - 64)) | (1 << (fugue_sqlParser.CURRENT_DATE - 64)) | (1 << (fugue_sqlParser.CURRENT_TIME - 64)) | (1 << (fugue_sqlParser.CURRENT_TIMESTAMP - 64)) | (1 << (fugue_sqlParser.CURRENT_USER - 64)) | (1 << (fugue_sqlParser.DATA - 64)) | (1 << (fugue_sqlParser.DATABASE - 64)) | (1 << (fugue_sqlParser.DATABASES - 64)) | (1 << (fugue_sqlParser.DAY - 64)) | (1 << (fugue_sqlParser.DBPROPERTIES - 64)) | (1 << (fugue_sqlParser.DEFINED - 64)) | (1 << (fugue_sqlParser.DELETE - 64)) | (1 << (fugue_sqlParser.DELIMITED - 64)) | (1 << (fugue_sqlParser.DESC - 64)) | (1 << (fugue_sqlParser.DESCRIBE - 64)) | (1 << (fugue_sqlParser.DFS - 64)) | (1 << (fugue_sqlParser.DIRECTORIES - 64)) | (1 << (fugue_sqlParser.DIRECTORY - 64)) | (1 << (fugue_sqlParser.DISTINCT - 64)) | (1 << (fugue_sqlParser.DISTRIBUTE - 64)) | (1 << (fugue_sqlParser.DROP - 64)) | (1 << (fugue_sqlParser.ELSE - 64)) | (1 << (fugue_sqlParser.END - 64)) | (1 << (fugue_sqlParser.ESCAPE - 64)) | (1 << (fugue_sqlParser.ESCAPED - 64)) | (1 << (fugue_sqlParser.EXCHANGE - 64)) | (1 << (fugue_sqlParser.EXISTS - 64)) | (1 << (fugue_sqlParser.EXPLAIN - 64)) | (1 << (fugue_sqlParser.EXPORT - 64)) | (1 << (fugue_sqlParser.EXTENDED - 64)))) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & ((1 << (fugue_sqlParser.EXTERNAL - 128)) | (1 << (fugue_sqlParser.EXTRACT - 128)) | (1 << (fugue_sqlParser.FALSE - 128)) | (1 << (fugue_sqlParser.FETCH - 128)) | (1 << (fugue_sqlParser.FIELDS - 128)) | (1 << (fugue_sqlParser.FILTER - 128)) | (1 << (fugue_sqlParser.FILEFORMAT - 128)) | (1 << (fugue_sqlParser.FIRST - 128)) | (1 << (fugue_sqlParser.FOLLOWING - 128)) | (1 << (fugue_sqlParser.FOR - 128)) | (1 << (fugue_sqlParser.FOREIGN - 128)) | (1 << (fugue_sqlParser.FORMAT - 128)) | (1 << (fugue_sqlParser.FORMATTED - 128)) | (1 << (fugue_sqlParser.FROM - 128)) | (1 << (fugue_sqlParser.FUNCTION - 128)) | (1 << (fugue_sqlParser.FUNCTIONS - 128)) | (1 << (fugue_sqlParser.GLOBAL - 128)) | (1 << (fugue_sqlParser.GRANT - 128)) | (1 << (fugue_sqlParser.GROUP - 128)) | (1 << (fugue_sqlParser.GROUPING - 128)) | (1 << (fugue_sqlParser.HAVING - 128)) | (1 << (fugue_sqlParser.HOUR - 128)) | (1 << (fugue_sqlParser.IF - 128)) | (1 << (fugue_sqlParser.IGNORE - 128)) | (1 << (fugue_sqlParser.IMPORT - 128)) | (1 << (fugue_sqlParser.IN - 128)) | (1 << (fugue_sqlParser.INDEX - 128)) | (1 << (fugue_sqlParser.INDEXES - 128)) | (1 << (fugue_sqlParser.INPATH - 128)) | (1 << (fugue_sqlParser.INPUTFORMAT - 128)) | (1 << (fugue_sqlParser.INSERT - 128)) | (1 << (fugue_sqlParser.INTERVAL - 128)) | (1 << (fugue_sqlParser.INTO - 128)) | (1 << (fugue_sqlParser.IS - 128)) | (1 << (fugue_sqlParser.ITEMS - 128)) | (1 << (fugue_sqlParser.KEYS - 128)) | (1 << (fugue_sqlParser.LAST - 128)) | (1 << (fugue_sqlParser.LATERAL - 128)) | (1 << (fugue_sqlParser.LAZY - 128)) | (1 << (fugue_sqlParser.LEADING - 128)) | (1 << (fugue_sqlParser.LIKE - 128)) | (1 << (fugue_sqlParser.LIMIT - 128)) | (1 << (fugue_sqlParser.LINES - 128)) | (1 << (fugue_sqlParser.LIST - 128)) | (1 << (fugue_sqlParser.LOAD - 128)) | (1 << (fugue_sqlParser.LOCAL - 128)) | (1 << (fugue_sqlParser.LOCATION - 128)) | (1 << (fugue_sqlParser.LOCK - 128)) | (1 << (fugue_sqlParser.LOCKS - 128)) | (1 << (fugue_sqlParser.LOGICAL - 128)) | (1 << (fugue_sqlParser.MACRO - 128)) | (1 << (fugue_sqlParser.MAP - 128)) | (1 << (fugue_sqlParser.MATCHED - 128)) | (1 << (fugue_sqlParser.MERGE - 128)) | (1 << (fugue_sqlParser.MINUTE - 128)) | (1 << (fugue_sqlParser.MONTH - 128)) | (1 << (fugue_sqlParser.MSCK - 128)) | (1 << (fugue_sqlParser.NAMESPACE - 128)) | (1 << (fugue_sqlParser.NAMESPACES - 128)))) != 0) or ((((_la - 193)) & ~0x3f) == 0 and ((1 << (_la - 193)) & ((1 << (fugue_sqlParser.NO - 193)) | (1 << (fugue_sqlParser.NOT - 193)) | (1 << (fugue_sqlParser.THENULL - 193)) | (1 << (fugue_sqlParser.THENULLS - 193)) | (1 << (fugue_sqlParser.OF - 193)) | (1 << (fugue_sqlParser.ONLY - 193)) | (1 << (fugue_sqlParser.OPTION - 193)) | (1 << (fugue_sqlParser.OPTIONS - 193)) | (1 << (fugue_sqlParser.OR - 193)) | (1 << (fugue_sqlParser.ORDER - 193)) | (1 << (fugue_sqlParser.OUT - 193)) | (1 << (fugue_sqlParser.OUTER - 193)) | (1 << (fugue_sqlParser.OUTPUTFORMAT - 193)) | (1 << (fugue_sqlParser.OVER - 193)) | (1 << (fugue_sqlParser.OVERLAPS - 193)) | (1 << (fugue_sqlParser.OVERLAY - 193)) | (1 << (fugue_sqlParser.OVERWRITE - 193)) | (1 << (fugue_sqlParser.PARTITION - 193)) | (1 << (fugue_sqlParser.PARTITIONED - 193)) | (1 << (fugue_sqlParser.PARTITIONS - 193)) | (1 << (fugue_sqlParser.PERCENTLIT - 193)) | (1 << (fugue_sqlParser.PIVOT - 193)) | (1 << (fugue_sqlParser.PLACING - 193)) | (1 << (fugue_sqlParser.POSITION - 193)) | (1 << (fugue_sqlParser.PRECEDING - 193)) | (1 << (fugue_sqlParser.PRIMARY - 193)) | (1 << (fugue_sqlParser.PRINCIPALS - 193)) | (1 << (fugue_sqlParser.PROPERTIES - 193)) | (1 << (fugue_sqlParser.PURGE - 193)) | (1 << (fugue_sqlParser.QUERY - 193)) | (1 << (fugue_sqlParser.RANGE - 193)) | (1 << (fugue_sqlParser.RECORDREADER - 193)) | (1 << (fugue_sqlParser.RECORDWRITER - 193)) | (1 << (fugue_sqlParser.RECOVER - 193)) | (1 << (fugue_sqlParser.REDUCE - 193)) | (1 << (fugue_sqlParser.REFERENCES - 193)) | (1 << (fugue_sqlParser.REFRESH - 193)) | (1 << (fugue_sqlParser.RENAME - 193)) | (1 << (fugue_sqlParser.REPAIR - 193)) | (1 << (fugue_sqlParser.REPLACE - 193)) | (1 << (fugue_sqlParser.RESET - 193)) | (1 << (fugue_sqlParser.RESTRICT - 193)) | (1 << (fugue_sqlParser.REVOKE - 193)) | (1 << (fugue_sqlParser.RLIKE - 193)) | (1 << (fugue_sqlParser.ROLE - 193)) | (1 << (fugue_sqlParser.ROLES - 193)) | (1 << (fugue_sqlParser.ROLLBACK - 193)) | (1 << (fugue_sqlParser.ROLLUP - 193)) | (1 << (fugue_sqlParser.ROW - 193)) | (1 << (fugue_sqlParser.ROWS - 193)) | (1 << (fugue_sqlParser.SCHEMA - 193)) | (1 << (fugue_sqlParser.SECOND - 193)) | (1 << (fugue_sqlParser.SELECT - 193)) | (1 << (fugue_sqlParser.SEPARATED - 193)) | (1 << (fugue_sqlParser.SERDE - 193)) | (1 << (fugue_sqlParser.SERDEPROPERTIES - 193)) | (1 << (fugue_sqlParser.SESSION_USER - 193)) | (1 << (fugue_sqlParser.SET - 193)) | (1 << (fugue_sqlParser.SETS - 193)) | (1 << (fugue_sqlParser.SHOW - 193)))) != 0) or ((((_la - 257)) & ~0x3f) == 0 and ((1 << (_la - 257)) & ((1 << (fugue_sqlParser.SKEWED - 257)) | (1 << (fugue_sqlParser.SOME - 257)) | (1 << (fugue_sqlParser.SORT - 257)) | (1 << (fugue_sqlParser.SORTED - 257)) | (1 << (fugue_sqlParser.START - 257)) | (1 << (fugue_sqlParser.STATISTICS - 257)) | (1 << (fugue_sqlParser.STORED - 257)) | (1 << (fugue_sqlParser.STRATIFY - 257)) | (1 << (fugue_sqlParser.STRUCT - 257)) | (1 << (fugue_sqlParser.SUBSTR - 257)) | (1 << (fugue_sqlParser.SUBSTRING - 257)) | (1 << (fugue_sqlParser.TABLE - 257)) | (1 << (fugue_sqlParser.TABLES - 257)) | (1 << (fugue_sqlParser.TABLESAMPLE - 257)) | (1 << (fugue_sqlParser.TBLPROPERTIES - 257)) | (1 << (fugue_sqlParser.TEMPORARY - 257)) | (1 << (fugue_sqlParser.TERMINATED - 257)) | (1 << (fugue_sqlParser.THEN - 257)) | (1 << (fugue_sqlParser.TO - 257)) | (1 << (fugue_sqlParser.TOUCH - 257)) | (1 << (fugue_sqlParser.TRAILING - 257)) | (1 << (fugue_sqlParser.TRANSACTION - 257)) | (1 << (fugue_sqlParser.TRANSACTIONS - 257)) | (1 << (fugue_sqlParser.TRANSFORM - 257)) | (1 << (fugue_sqlParser.TRIM - 257)) | (1 << (fugue_sqlParser.TRUE - 257)) | (1 << (fugue_sqlParser.TRUNCATE - 257)) | (1 << (fugue_sqlParser.TYPE - 257)) | (1 << (fugue_sqlParser.UNARCHIVE - 257)) | (1 << (fugue_sqlParser.UNBOUNDED - 257)) | (1 << (fugue_sqlParser.UNCACHE - 257)) | (1 << (fugue_sqlParser.UNIQUE - 257)) | (1 << (fugue_sqlParser.UNKNOWN - 257)) | (1 << (fugue_sqlParser.UNLOCK - 257)) | (1 << (fugue_sqlParser.UNSET - 257)) | (1 << (fugue_sqlParser.UPDATE - 257)) | (1 << (fugue_sqlParser.USE - 257)) | (1 << (fugue_sqlParser.USER - 257)) | (1 << (fugue_sqlParser.VALUES - 257)) | (1 << (fugue_sqlParser.VIEW - 257)) | (1 << (fugue_sqlParser.VIEWS - 257)) | (1 << (fugue_sqlParser.WHEN - 257)) | (1 << (fugue_sqlParser.WHERE - 257)) | (1 << (fugue_sqlParser.WINDOW - 257)) | (1 << (fugue_sqlParser.WITH - 257)) | (1 << (fugue_sqlParser.YEAR - 257)) | (1 << (fugue_sqlParser.DIV - 257)))) != 0)):
                 self._errHandler.recoverInline(self)

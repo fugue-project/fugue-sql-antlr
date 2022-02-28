@@ -1669,11 +1669,6 @@ class fugue_sqlVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by fugue_sqlParser#realIdent.
-    def visitRealIdent(self, ctx:fugue_sqlParser.RealIdentContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by fugue_sqlParser#identifier.
     def visitIdentifier(self, ctx:fugue_sqlParser.IdentifierContext):
         return self.visitChildren(ctx)
