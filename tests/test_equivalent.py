@@ -25,7 +25,7 @@ def test_equivalent():
     GROUP BY 1, 2
     YIELD DATAFRAME AS result
     """
-    sql= "SELECT * FROM a AS b"
+    sql= "SELECT * FROM a AS bf"
     stream = InputStream(sql)
     py = parse_tree(stream, "fugueLanguage", mode="py")
     cpp = parse_tree(stream, "fugueLanguage", mode="cpp")
