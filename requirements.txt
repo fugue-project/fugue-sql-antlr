@@ -22,5 +22,6 @@ psutil
 wheel
 twine
 
+Cython
 cibuildwheel==2.1.3
 git+https://github.com/goodwanghan/speedy-antlr-tool.git@han/fix
