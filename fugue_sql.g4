@@ -937,7 +937,7 @@ relation
     ;
 
 joinRelation
-    : (joinType) JOIN right=relationPrimary joinCriteria?
+    : joinType JOIN right=relationPrimary joinCriteria?
     | NATURAL joinType JOIN right=relationPrimary
     ;
 

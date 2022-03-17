@@ -4304,9 +4304,9 @@ public:
     fugue_sqlParser::RelationPrimaryContext *right = nullptr;
     JoinRelationContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
+    JoinTypeContext *joinType();
     antlr4::tree::TerminalNode *JOIN();
     RelationPrimaryContext *relationPrimary();
-    JoinTypeContext *joinType();
     JoinCriteriaContext *joinCriteria();
     antlr4::tree::TerminalNode *NATURAL();
 

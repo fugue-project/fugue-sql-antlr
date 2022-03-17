@@ -1,9 +1,11 @@
-from setuptools import setup, find_packages, Extension
-from fugue_sql_antlr_version import __version__
-import os
-from typing import List
 import fnmatch
+import os
 import platform
+from typing import List
+
+from setuptools import Extension, find_packages, setup
+
+from fugue_sql_antlr_version import __version__
 
 with open("README.md") as f:
     _text = ["# Fugue SQL Antlr Parser"] + f.read().splitlines()[1:]
@@ -71,9 +73,9 @@ setup(
     author_email="hello@fugue.ai",
     keywords="distributed spark dask sql dsl domain specific language",
     url="http://github.com/fugue-project/fugue",
-    install_requires=["antlr4-python3-runtime>=4.9.3", "jinja2"],
+    install_requires=["triad", "antlr4-python3-runtime>=4.9.3", "jinja2"],
     extras_require={
-        "test": ["antlr4-python3-runtime>=4.9.3", "jinja2", "speedy_antlr_tool"],
+        "test": ["speedy_antlr_tool"],
     },
     classifiers=[
         # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"

@@ -19451,15 +19451,15 @@ class fugue_sqlParser ( Parser ):
             self.parser = parser
             self.right = None # RelationPrimaryContext
 
+        def joinType(self):
+            return self.getTypedRuleContext(fugue_sqlParser.JoinTypeContext,0)
+
+
         def JOIN(self):
             return self.getToken(fugue_sqlParser.JOIN, 0)
 
         def relationPrimary(self):
             return self.getTypedRuleContext(fugue_sqlParser.RelationPrimaryContext,0)
-
-
-        def joinType(self):
-            return self.getTypedRuleContext(fugue_sqlParser.JoinTypeContext,0)
 
 
         def joinCriteria(self):
