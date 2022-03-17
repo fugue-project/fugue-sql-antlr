@@ -41,17 +41,20 @@ jobs:
 
 #-------------------------------------------------------------------------------
   build_wheels:
-    needs:
-      - test
-
-    name: Build wheels on ${{ matrix.os }}
+    name: Build wheels on ${{ matrix.os }} ${{ matrix.cpv }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os:
           - ubuntu-18.04
-          - windows-latest
-          - macos-latest
+          #- windows-latest
+          #- macos-latest
+        cpv:
+          #- "cp36*"
+          - "cp37*"
+          - "cp38*"
+          #- "cp39*"
+          #- "cp310*"
 
     steps:
       - uses: actions/checkout@v2
@@ -68,7 +71,7 @@ jobs:
       - name: Build wheels
         env:
           # Only build CPython 3.x targets
-          CIBW_BUILD: "cp3*"
+          CIBW_BUILD:  ${{ matrix.cpv }}
           # Don't build osx 10.6 (no C++11 support)
           CIBW_SKIP: "*macosx_10_6*"
           # Signal setup.py to fail if binary build fails
@@ -82,8 +85,6 @@ jobs:
 
 #-------------------------------------------------------------------------------
   build_sdist:
-    needs:
-      - test
     name: Build source distribution
     runs-on: ubuntu-latest
     steps:
@@ -104,6 +105,7 @@ jobs:
 #-------------------------------------------------------------------------------
   deploy:
     needs:
+      - tests
       - build_wheels
       - build_sdist
 
