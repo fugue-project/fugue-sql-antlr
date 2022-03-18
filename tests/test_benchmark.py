@@ -1,6 +1,6 @@
 import timeit
 
-from fugue_sql_antlr.parse import parse_tree
+from fugue_sql_antlr import FugueSQLParser
 
 
 def test_benchmark():
@@ -27,10 +27,12 @@ def test_benchmark():
     count = 10
 
     cpp_elapsed = timeit.timeit(
-        lambda: parse_tree(sql, "fugueLanguage", mode="cpp"), number=count
+        lambda: FugueSQLParser(sql, "fugueLanguage", False, parse_mode="cpp").tree,
+        number=count,
     )
     py_elapsed = timeit.timeit(
-        lambda: parse_tree(sql, "fugueLanguage", mode="py"), number=count
+        lambda: FugueSQLParser(sql, "fugueLanguage", False, parse_mode="py").tree,
+        number=count,
     )
 
     py_elapsed = py_elapsed / count

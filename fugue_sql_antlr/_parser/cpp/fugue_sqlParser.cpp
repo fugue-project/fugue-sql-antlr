@@ -24266,16 +24266,16 @@ fugue_sqlParser::JoinRelationContext::JoinRelationContext(ParserRuleContext *par
   : ParserRuleContext(parent, invokingState) {
 }
 
+fugue_sqlParser::JoinTypeContext* fugue_sqlParser::JoinRelationContext::joinType() {
+  return getRuleContext<fugue_sqlParser::JoinTypeContext>(0);
+}
+
 tree::TerminalNode* fugue_sqlParser::JoinRelationContext::JOIN() {
   return getToken(fugue_sqlParser::JOIN, 0);
 }
 
 fugue_sqlParser::RelationPrimaryContext* fugue_sqlParser::JoinRelationContext::relationPrimary() {
   return getRuleContext<fugue_sqlParser::RelationPrimaryContext>(0);
-}
-
-fugue_sqlParser::JoinTypeContext* fugue_sqlParser::JoinRelationContext::joinType() {
-  return getRuleContext<fugue_sqlParser::JoinTypeContext>(0);
 }
 
 fugue_sqlParser::JoinCriteriaContext* fugue_sqlParser::JoinRelationContext::joinCriteria() {
