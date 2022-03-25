@@ -86,7 +86,8 @@ jobs:
 
       - name: Build wheels
         env:
-          CIBW_ARCHS_LINUX: "auto aarch64"
+          CIBW_ARCHS_LINUX: "auto"
+          CIBW_ARCHS_WINDOWS: "auto"
           CIBW_PLATFORM: ${{ matrix.os }}
           CIBW_BUILD:  ${{ matrix.cpv }}
           # Don't build osx 10.6 (no C++11 support)
