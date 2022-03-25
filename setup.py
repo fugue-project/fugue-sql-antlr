@@ -8,7 +8,7 @@ from setuptools import Extension, setup
 
 from fugue_sql_antlr_version import __version__
 
-_BUILD_CPP = bool(os.environ.get("FUGUE_SQL_BUILD_CPP", False))
+_BUILD_CPP = bool(os.environ.get("FUGUE_SQL_BUILD_CPP", "0") == "1")
 
 with open("README.md") as f:
     _text = ["# Fugue SQL Antlr Parser"] + f.read().splitlines()[1:]
