@@ -7,6 +7,10 @@ on:
     types:
       - published
 
+concurrency:
+  group: cicd
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
