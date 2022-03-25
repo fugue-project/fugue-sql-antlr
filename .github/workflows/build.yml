@@ -33,15 +33,15 @@ jobs:
 
       - name: Install
         run: |
-          pip install -e .
+          make installlocal
 
       - name: Test
         run: |
-          pytest
+          make test
 
 #-------------------------------------------------------------------------------
-  build_wheels:
-    name: Build wheels on ${{ matrix.os }} ${{ matrix.cpv }}
+  build_cpp_wheels:
+    name: Build CPP wheels on ${{ matrix.os }} ${{ matrix.cpv }}
     runs-on: ${{ matrix.os }}
     if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
 
@@ -76,15 +76,17 @@ jobs:
           CIBW_BUILD:  ${{ matrix.cpv }}
           # Don't build osx 10.6 (no C++11 support)
           CIBW_SKIP: "*macosx_10_6*"
+          FUGUE_SQL_BUILD_CPP: 1
         run: |
           python -m cibuildwheel --output-dir wheelhouse
 
       - uses: actions/upload-artifact@v2
         with:
+          name: cpp
           path: ./wheelhouse/*.whl
 
 #-------------------------------------------------------------------------------
-  build_sdist:
+  build_cpp_sdist:
     name: Build source distribution
     runs-on: ubuntu-latest
     steps:
@@ -96,18 +98,42 @@ jobs:
           python-version: 3.8
 
       - name: Build sdist
+        env:
+          FUGUE_SQL_BUILD_CPP: 1
         run: python setup.py sdist
 
       - uses: actions/upload-artifact@v2
         with:
+          name: cpp
+          path: dist/*.tar.gz
+
+  build_py_sdist:
+    name: Build source distribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        name: Install Python
+        with:
+          python-version: 3.8
+
+      - name: Build sdist
+        env:
+          FUGUE_SQL_BUILD_CPP: 0
+        run: python setup.py sdist
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: py
           path: dist/*.tar.gz
 
 #-------------------------------------------------------------------------------
-  deploy:
+  deploy_cpp:
     needs:
       - test
-      - build_wheels
-      - build_sdist
+      - build_cpp_wheels
+      - build_cpp_sdist
 
     runs-on: ubuntu-latest
 
@@ -116,7 +142,27 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: artifact
+          name: cpp
+          path: dist
+
+      - uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_TOKEN }}
+
+  deploy_py:
+    needs:
+      - test
+      - build_py_sdist
+
+    runs-on: ubuntu-latest
+
+    # Only publish when a GitHub Release is created.
+    if: github.event_name == 'release' && github.event.action == 'published'
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: py
           path: dist
 
       - uses: pypa/gh-action-pypi-publish@master

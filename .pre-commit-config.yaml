@@ -6,7 +6,8 @@ exclude: |
         ^tests/|
         ^docs/|
         ^scripts/|
-        ^fugue_sql_antlr/_parser/
+        ^fugue_sql_antlr/_parser/|
+        ^fugue_sql_antlr_cpp/
     )
 repos:
     - repo: https://github.com/pre-commit/pre-commit-hooks

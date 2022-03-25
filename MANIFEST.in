@@ -1,2 +1,0 @@
-recursive-include fugue_sql_antlr/_parser/cpp *
-recursive-include fugue_sql_antlr/antlr4-cpp-runtime *
