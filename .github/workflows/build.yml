@@ -50,13 +50,15 @@ jobs:
 #-------------------------------------------------------------------------------
   build_cpp_wheels:
     name: Build CPP wheels on ${{ matrix.os }} ${{ matrix.cpv }}
-    runs-on: ${{ matrix.os }}
-    if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
+    runs-on: ubuntu-latest
+    #if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
 
     strategy:
       matrix:
         os:
-          - ubuntu-18.04
+          - linux
+          - windows
+          #- macos
           #- windows-latest
           #- macos-latest
         cpv:
@@ -80,10 +82,10 @@ jobs:
 
       - name: Build wheels
         env:
-          # Only build CPython 3.x targets
+          CIBW_PLATFORM: ${{ matrix.os }}
           CIBW_BUILD:  ${{ matrix.cpv }}
           # Don't build osx 10.6 (no C++11 support)
-          CIBW_SKIP: "*macosx_10_6*"
+          # CIBW_SKIP: "*macosx_10_6*"
           FUGUE_SQL_BUILD_CPP: 1
         run: |
           python -m cibuildwheel --output-dir wheelhouse
