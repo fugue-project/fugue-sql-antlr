@@ -31,9 +31,17 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Install
+      - name: Install Python version
+        env:
+          FUGUE_SQL_BUILD_CPP: 0
         run: |
-          make installlocal
+          pip install -e .
+
+      - name: Install CPP version
+        env:
+          FUGUE_SQL_BUILD_CPP: 1
+        run: |
+          pip install -e .
 
       - name: Test
         run: |
@@ -87,7 +95,7 @@ jobs:
 
 #-------------------------------------------------------------------------------
   build_cpp_sdist:
-    name: Build source distribution
+    name: Build CPP source distribution
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -108,7 +116,7 @@ jobs:
           path: dist/*.tar.gz
 
   build_py_sdist:
-    name: Build source distribution
+    name: Build Python source distribution
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
