@@ -55,7 +55,7 @@ jobs:
   build_cpp_wheels:
     name: Build CPP wheels on ${{ matrix.os }} ${{ matrix.cpv }}
     runs-on: ${{ matrix.os }}
-    #if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
+    if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
 
     strategy:
       matrix:
