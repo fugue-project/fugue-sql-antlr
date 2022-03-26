@@ -42,29 +42,11 @@ jupyter:
 test:
 	python3 -bb -m pytest --reruns 2 --only-rerun 'Overflow in cast' --only-rerun 'Table or view not found' tests/
 
-testcore:
-	python3 -bb -m pytest tests/fugue
-
-testspark:
-	python3 -bb -m pytest --reruns 2 --only-rerun 'Table or view not found' tests/fugue_spark
-
-testdask:
-	python3 -bb -m pytest tests/fugue_dask
-
-testduck:
-	python3 -bb -m pytest --reruns 2 --only-rerun 'Overflow in cast' tests/fugue_duckdb
-
-testsql:
-	python3 -bb -m pytest tests/fugue_sql
-
-testibis:
-	python3 -bb -m pytest tests/fugue_ibis
-
-testnotebook:
-	pip install .
-	jupyter nbextension install --user --py fugue_notebook
-	jupyter nbextension enable fugue_notebook --py
-	jupyter nbconvert --execute --clear-output tests/fugue_notebook/test_notebook.ipynb
+installlocal:
+	export FUGUE_SQL_BUILD_CPP=0
+	pip install -e .
+	export FUGUE_SQL_BUILD_CPP=1
+	pip install -e .
 
 sql:
 	scripts/generate_code.sh

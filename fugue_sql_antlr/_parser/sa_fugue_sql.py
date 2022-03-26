@@ -89,7 +89,7 @@ def parse(stream:InputStream, entry_rule_name:str, sa_err_listener:SA_ErrorListe
 #-------------------------------------------------------------------------------
 
 try:
-    from . import sa_fugue_sql_cpp_parser
+    from fugue_sql_antlr_cpp import sa_fugue_sql_cpp_parser
 except ImportError:
     USE_CPP_IMPLEMENTATION = False
 

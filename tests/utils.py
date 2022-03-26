@@ -24,7 +24,7 @@ def good_syntax(
             if show:
                 _print_tree(s.tree)
         else:
-            assert FUGUE_SQL_CPP_PARSER_AVAILABLE
+            assert FUGUE_SQL_CPP_PARSER_AVAILABLE, "CPP parser is not available"
             py = FugueSQLParser(c, rule, ignore_case=ignore_case, parse_mode="py")
             cpp = FugueSQLParser(c, rule, ignore_case=ignore_case, parse_mode="cpp")
             if show:

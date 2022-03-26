@@ -1,15 +1,23 @@
 import fnmatch
 import os
 import platform
-from typing import List
+from pathlib import Path
+from typing import Iterable, List
 
-from setuptools import Extension, find_packages, setup
+from setuptools import Extension, setup
 
 from fugue_sql_antlr_version import __version__
+
+_BUILD_CPP = bool(os.environ.get("FUGUE_SQL_BUILD_CPP", "0") == "1")
 
 with open("README.md") as f:
     _text = ["# Fugue SQL Antlr Parser"] + f.read().splitlines()[1:]
     LONG_DESCRIPTION = "\n".join(_text)
+
+
+def package_files(directory: str) -> Iterable[str]:
+    files = [str(x)[len(directory) + 1 :] for x in Path(directory).glob("*/**/*")]
+    return files
 
 
 def get_version() -> str:
@@ -41,6 +49,8 @@ def get_target() -> str:
 
 
 def get_ext_modules() -> List[str]:
+    if not _BUILD_CPP:
+        return []
     extra_compile_args = {
         "windows": ["/DANTLR4CPP_STATIC", "/Zc:__cplusplus"],
         "linux": ["-std=c++11"],
@@ -50,22 +60,30 @@ def get_ext_modules() -> List[str]:
 
     # Define an Extension object that describes the Antlr accelerator
     parser_ext = Extension(
-        name="fugue_sql_antlr._parser.sa_fugue_sql_cpp_parser",
-        include_dirs=["fugue_sql_antlr/antlr4-cpp-runtime"],
-        sources=get_files("fugue_sql_antlr/_parser/cpp", "*.cpp")
-        + get_files("fugue_sql_antlr/antlr4-cpp-runtime", "*.cpp"),
-        depends=get_files("fugue_sql_antlr/_parser/cpp", "*.h")
-        + get_files("fugue_sql_antlr/antlr4-cpp-runtime", "*.h"),
+        name="fugue_sql_antlr_cpp.sa_fugue_sql_cpp_parser",
+        include_dirs=["fugue_sql_antlr_cpp/antlr4-cpp-runtime"],
+        sources=get_files("fugue_sql_antlr_cpp/src", "*.cpp")
+        + get_files("fugue_sql_antlr_cpp/antlr4-cpp-runtime", "*.cpp"),
+        depends=get_files("fugue_sql_antlr_cpp/src", "*.h")
+        + get_files("fugue_sql_antlr_cpp/antlr4-cpp-runtime", "*.h"),
         extra_compile_args=extra_compile_args.get(get_target(), []),
     )
     return [parser_ext]
 
 
+def get_packages():
+    if _BUILD_CPP:
+        return ["fugue_sql_antlr_cpp"]
+    return ["fugue_sql_antlr", "fugue_sql_antlr_version"]
+
+
 setup(
-    name="fugue-sql-antlr",
+    name="fugue-sql-antlr-cpp" if _BUILD_CPP else "fugue-sql-antlr",
     version=get_version(),
-    packages=find_packages(),
-    description="Fugue SQL Antlr Parser",
+    packages=get_packages(),
+    description="Fugue SQL Antlr C++ Parser"
+    if _BUILD_CPP
+    else "Fugue SQL Antlr Parser",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     license="Apache-2.0",
@@ -79,7 +97,7 @@ setup(
     },
     classifiers=[
         # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: Apache Software License",
@@ -92,6 +110,7 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
     ],
     python_requires=">=3.6",
-    include_package_data=True,
+    include_package_data=False,
+    package_data={"fugue-sql-antlr-cpp": list(package_files("fugue_sql_antlr_cpp"))},
     ext_modules=get_ext_modules(),
 )
