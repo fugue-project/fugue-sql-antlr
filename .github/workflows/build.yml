@@ -86,8 +86,8 @@ jobs:
         env:
           CIBW_BUILD:  ${{ matrix.cpv }}
           # Don't build osx 10.6 (no C++11 support)
-          IBW_SKIP: "*macosx_10_6*"
-          FUGUE_SQL_BUILD_CPP: 1
+          CIBW_SKIP: "*macosx_10_6*"
+          CIBW_ENVIRONMENT: FUGUE_SQL_BUILD_CPP=1
         run: |
           python -m cibuildwheel --output-dir wheelhouse
 
