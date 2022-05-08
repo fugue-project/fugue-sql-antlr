@@ -7,6 +7,7 @@
 #include <Python.h>
 
 #include <cstring>
+#include <any>
 
 #include "antlr4-runtime.h"
 #include "fugue_sqlLexer.h"
@@ -521,7 +522,7 @@ PyObject* do_parse(PyObject *self, PyObject *args) {
 
         // Translate Parse tree to Python
         SA_fugue_sqlTranslator visitor(&translator);
-        result = visitor.visit(parse_tree).as<PyObject *>();
+        result = std::any_cast<PyObject *>(visitor.visit(parse_tree));
 
         // Clean up data
         Py_XDECREF(token_module);

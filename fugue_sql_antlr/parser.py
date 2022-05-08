@@ -1,8 +1,8 @@
-from typing import List, Optional, Tuple
+from typing import Iterable, List, Optional, Tuple
 
 from antlr4 import InputStream, Token
 from antlr4.Token import CommonToken
-from antlr4.tree.Tree import ParseTree
+from antlr4.tree.Tree import ParseTree, TerminalNode
 
 from fugue_sql_antlr._parser.sa_fugue_sql import (
     SA_ErrorListener,
@@ -44,6 +44,9 @@ class FugueSQLParser:
                     raise SyntaxError(msg).with_traceback(None) from None
                 else:
                     raise SyntaxError(str(e)) from None
+        self._tokens = list(self._get_tokens(self.tree))
+        for i, token in enumerate(self._tokens):
+            token._arr_pos = i
 
     @property
     def code(self) -> str:
@@ -53,7 +56,21 @@ class FugueSQLParser:
     def tree(self) -> ParseTree:
         return self._tree
 
-    def get_text(self, node: ParseTree, add_lineno: bool = True) -> str:
+    def get_norm_text(self, node: Optional[ParseTree], delimiter: str = " ") -> str:
+        if node is None:
+            return ""
+        tp = self._get_range(node)
+        if tp is None:
+            return ""
+        if tp[0] is tp[1]:
+            return tp[0].text
+        return delimiter.join(
+            self._tokens[i].text for i in range(tp[0]._arr_pos, tp[1]._arr_pos + 1)
+        )
+
+    def get_raw_text(self, node: Optional[ParseTree], add_lineno: bool = False) -> str:
+        if node is None:
+            return ""
         tp = self._get_range(node)
         if tp is None:
             return ""
@@ -67,6 +84,19 @@ class FugueSQLParser:
             lines.append(prefix + self._raw_lines[start - 1])
             start += 1
         return "\n".join(lines)
+
+    def _get_tokens(self, node: Optional[ParseTree]) -> Iterable[CommonToken]:
+        if node is None:
+            return
+        elif isinstance(node, Token):
+            if isinstance(node, CommonToken) and node.type != Token.EOF:
+                yield node
+        elif isinstance(node, TerminalNode):
+            yield from self._get_tokens(node.getSymbol())
+        else:
+            for i in range(node.getChildCount()):
+                for x in self._get_tokens(node.getChild(i)):
+                    yield x
 
     def _get_range(self, node: ParseTree) -> Optional[Tuple[CommonToken, CommonToken]]:
         if isinstance(node, CommonToken):
@@ -119,7 +149,7 @@ class _ErrorListener(SA_ErrorListener):
         column: int,
         msg: str,
     ):
-        message = self._parser.get_text(offendingSymbol, add_lineno=True)
+        message = self._parser.get_raw_text(offendingSymbol, add_lineno=True)
         s = message.split("\t", 1)
         pre = "".join([" "] * len(s[0])) + "\t"
         dots = "".join(["."] * column)

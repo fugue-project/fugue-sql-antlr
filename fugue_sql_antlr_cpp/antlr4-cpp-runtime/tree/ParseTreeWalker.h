@@ -14,7 +14,7 @@ namespace tree {
   public:
     static ParseTreeWalker &DEFAULT;
 
-    virtual ~ParseTreeWalker();
+    virtual ~ParseTreeWalker() = default;
 
     /**
     * <summary>

@@ -53,9 +53,9 @@ def get_ext_modules() -> List[str]:
         return []
     extra_compile_args = {
         "windows": ["/DANTLR4CPP_STATIC", "/Zc:__cplusplus"],
-        "linux": ["-std=c++11"],
-        "darwin": ["-std=c++11"],
-        "cygwin": ["-std=c++11"],
+        "linux": ["-std=c++17"],
+        "darwin": ["-std=c++17"],
+        "cygwin": ["-std=c++17"],
     }
 
     # Define an Extension object that describes the Antlr accelerator
@@ -91,11 +91,15 @@ setup(
     author_email="hello@fugue.ai",
     keywords="distributed spark dask sql dsl domain specific language",
     url="http://github.com/fugue-project/fugue",
-    install_requires=["triad", "antlr4-python3-runtime>=4.9.3", "jinja2"],
+    install_requires=[
+        "triad",
+        "antlr4-python3-runtime>=4.10",
+        "jinja2",
+    ],
     extras_require={}
     if _BUILD_CPP
     else {
-        "cpp": ["fugue-sql-antlr-cpp>=" + get_version()],
+        "cpp": ["fugue-sql-antlr-cpp==" + get_version()],
         "test": ["speedy_antlr_tool"],
     },
     classifiers=[

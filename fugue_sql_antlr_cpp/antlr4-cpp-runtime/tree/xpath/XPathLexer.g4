@@ -61,3 +61,4 @@ NameStartChar
 STRING : '\'' .*? '\'';
 
 //WS : [ \t\r\n]+ -> skip ;
+

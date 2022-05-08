@@ -38,7 +38,7 @@ namespace antlr4 {
 namespace tree {
 
   class ParseTreeListener;
-
+  
   /**
    * An iterative (read: non-recursive) pre-order and post-order tree walker that
    * doesn't use the thread stack but heap-based stacks. Makes it possible to

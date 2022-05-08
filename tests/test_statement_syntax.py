@@ -1,6 +1,6 @@
 import re
 
-from fugue_sql_antlr.parse import _detect_case_issue
+from fugue_sql_antlr.parser import _detect_case_issue
 
 from .utils import bad_single_syntax, bad_syntax, good_single_syntax, good_syntax
 
