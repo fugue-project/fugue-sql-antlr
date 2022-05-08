@@ -5,3 +5,4 @@ from fugue_sql_antlr.constants import (
     FUGUE_SQL_CPP_PARSER_AVAILABLE,
 )
 from fugue_sql_antlr.parser import FugueSQLParser
+from fugue_sql_antlr.visitor import FugueSQLVisitor

@@ -238,3 +238,4 @@ ParseTree * Trees::findNodeSuchThat(ParseTree *t, Ref<Predicate> const& pred) {
 
   return nullptr;
 }
+

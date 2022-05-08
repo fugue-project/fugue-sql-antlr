@@ -59,7 +59,7 @@ namespace antlr4 {
 
     /// Count EOF just once.
     virtual int getNumberOfOnChannelTokens();
-
+    
   protected:
     /**
      * Specifies the channel to use for filtering tokens.
