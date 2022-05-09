@@ -1,2 +1,0 @@
-recursive-include fugue_sql_antlr_cpp *
-recursive-exclude tests *

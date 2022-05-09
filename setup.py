@@ -2,9 +2,9 @@ import fnmatch
 import os
 import platform
 from pathlib import Path
-from typing import Iterable, List
+from typing import List
 
-from setuptools import Extension, setup
+from setuptools import Extension, setup, find_packages
 
 from fugue_sql_antlr_version import __version__
 
@@ -15,7 +15,7 @@ with open("README.md") as f:
     LONG_DESCRIPTION = "\n".join(_text)
 
 
-def package_files(directory: str) -> Iterable[str]:
+def package_files(directory: str) -> List[str]:
     files = [str(x)[len(directory) + 1 :] for x in Path(directory).glob("*/**/*")]
     return files
 
@@ -72,9 +72,19 @@ def get_ext_modules() -> List[str]:
 
 
 def get_packages():
+    pkgs = find_packages()
     if _BUILD_CPP:
-        return ["fugue_sql_antlr_cpp"]
-    return ["fugue_sql_antlr", "fugue_sql_antlr_version"]
+        return [
+            x
+            for x in pkgs
+            if x == "fugue_sql_antlr_cpp" or x.startswith("fugue_sql_antlr_cpp.")
+        ]
+    return [
+        x
+        for x in pkgs
+        if x in ["fugue_sql_antlr", "fugue_sql_antlr_version"]
+        or x.startswith("fugue_sql_antlr.")
+    ]
 
 
 setup(
@@ -117,7 +127,6 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
     ],
     python_requires=">=3.6",
-    include_package_data=False,
-    package_data={"fugue-sql-antlr-cpp": list(package_files("fugue_sql_antlr_cpp"))},
+    package_data={"fugue-sql-antlr-cpp": package_files("fugue_sql_antlr_cpp")},
     ext_modules=get_ext_modules(),
 )
