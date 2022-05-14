@@ -77,13 +77,12 @@ def get_packages():
         return [
             x
             for x in pkgs
-            if x == "fugue_sql_antlr_cpp" or x.startswith("fugue_sql_antlr_cpp.")
+            if x.split(".")[0] in ["fugue_sql_antlr_cpp", "fugue_sql_antlr_version"]
         ]
     return [
         x
         for x in pkgs
-        if x in ["fugue_sql_antlr", "fugue_sql_antlr_version"]
-        or x.startswith("fugue_sql_antlr.")
+        if x.split(".")[0] in ["fugue_sql_antlr", "fugue_sql_antlr_version"]
     ]
 
 
