@@ -43,9 +43,9 @@ test:
 	python3 -bb -m pytest --reruns 2 --only-rerun 'Overflow in cast' --only-rerun 'Table or view not found' tests/
 
 installlocal:
-	export FUGUE_SQL_BUILD_CPP=0
+	scripts/make_setup.sh 1
 	pip install -e .
-	export FUGUE_SQL_BUILD_CPP=1
+	scripts/make_setup.sh 0
 	pip install -e .
 
 sql:

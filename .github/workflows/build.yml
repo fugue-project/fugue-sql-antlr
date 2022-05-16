@@ -36,15 +36,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: Install Python version
-        env:
-          FUGUE_SQL_BUILD_CPP: 0
         run: |
+          scripts/make_setup.sh 0
           pip install -e .
 
       - name: Install CPP version
-        env:
-          FUGUE_SQL_BUILD_CPP: 1
         run: |
+          scripts/make_setup.sh 1
           pip install -e .
 
       - name: Test
@@ -87,8 +85,8 @@ jobs:
           CIBW_BUILD:  ${{ matrix.cpv }}
           # Don't build osx 10.6 (no C++11 support)
           CIBW_SKIP: "*macosx_10_6*"
-          CIBW_ENVIRONMENT: FUGUE_SQL_BUILD_CPP=1
         run: |
+          scripts/make_setup.sh 1
           python -m cibuildwheel --output-dir wheelhouse
 
       - uses: actions/upload-artifact@v2
@@ -109,9 +107,9 @@ jobs:
           python-version: 3.8
 
       - name: Build sdist
-        env:
-          FUGUE_SQL_BUILD_CPP: 1
-        run: python setup.py sdist
+        run: |
+          scripts/make_setup.sh 1
+          python setup.py sdist
 
       - uses: actions/upload-artifact@v2
         with:
@@ -130,9 +128,9 @@ jobs:
           python-version: 3.8
 
       - name: Build sdist
-        env:
-          FUGUE_SQL_BUILD_CPP: 0
-        run: python setup.py sdist
+        run: |
+          scripts/make_setup.sh 0
+          python setup.py sdist
 
       - uses: actions/upload-artifact@v2
         with:
