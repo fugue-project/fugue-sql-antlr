@@ -127,6 +127,6 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
     ],
     python_requires=">=3.6",
-    package_data={"fugue-sql-antlr-cpp": package_files("fugue_sql_antlr_cpp")},
+    package_data={"fugue_sql_antlr_cpp": package_files("fugue_sql_antlr_cpp")},
     ext_modules=get_ext_modules(),
 )
