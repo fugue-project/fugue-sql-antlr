@@ -13,11 +13,14 @@ concurrency:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os:
+          - ubuntu-18.04
+          - windows-latest
+          #- macos-latest
         python-version:
-          - 3.6
           - 3.7
           - 3.8
           - 3.9
@@ -37,12 +40,12 @@ jobs:
 
       - name: Install Python version
         run: |
-          scripts/make_setup.sh 0
+          python scripts/make_setup.py 0
           pip install -e .
 
       - name: Install CPP version
         run: |
-          scripts/make_setup.sh 1
+          python scripts/make_setup.py 1
           pip install -e .
 
       - name: Test
@@ -86,7 +89,7 @@ jobs:
           # Don't build osx 10.6 (no C++11 support)
           CIBW_SKIP: "*macosx_10_6*"
         run: |
-          scripts/make_setup.sh 1
+          python scripts/make_setup.py 1
           python -m cibuildwheel --output-dir wheelhouse
 
       - uses: actions/upload-artifact@v2
@@ -108,7 +111,7 @@ jobs:
 
       - name: Build sdist
         run: |
-          scripts/make_setup.sh 1
+          python scripts/make_setup.py 1
           python setup.py sdist
 
       - uses: actions/upload-artifact@v2
@@ -129,7 +132,7 @@ jobs:
 
       - name: Build sdist
         run: |
-          scripts/make_setup.sh 0
+          python scripts/make_setup.py 0
           python setup.py sdist
 
       - uses: actions/upload-artifact@v2

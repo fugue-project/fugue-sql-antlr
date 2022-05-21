@@ -1,6 +1,7 @@
 # pylint: disable-all
 # flake8: noqa
-_BUILD_CPP = bool(0)
+_BUILD_CPP = False
+
 import fnmatch
 import os
 import platform
@@ -53,7 +54,7 @@ def get_ext_modules() -> List[str]:
     if not _BUILD_CPP:
         return []
     extra_compile_args = {
-        "windows": ["/DANTLR4CPP_STATIC", "/Zc:__cplusplus"],
+        "windows": ["/DANTLR4CPP_STATIC", "/Zc:__cplusplus", "/std:c++17"],
         "linux": ["-std=c++17"],
         "darwin": ["-std=c++17"],
         "cygwin": ["-std=c++17"],

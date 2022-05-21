@@ -43,9 +43,9 @@ test:
 	python3 -bb -m pytest --reruns 2 --only-rerun 'Overflow in cast' --only-rerun 'Table or view not found' tests/
 
 installlocal:
-	scripts/make_setup.sh 1
+	python scripts/make_setup.py 1
 	pip install -e .
-	scripts/make_setup.sh 0
+	python scripts/make_setup.py 0
 	pip install -e .
 
 sql:
