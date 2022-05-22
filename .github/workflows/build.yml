@@ -91,44 +91,6 @@ jobs:
       - name: Build wheels
         env:
           CIBW_BUILD:  ${{ matrix.cpv }}
-          CIBW_SKIP: "*macosx_10_*"
-          CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET='11.6.5'
-        run: |
-          python scripts/make_setup.py 1
-          python -m cibuildwheel --output-dir wheelhouse
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: cpp
-          path: ./wheelhouse/*.whl
-
-  build_mac_cpp_wheels:
-    name: Build Mac CPP wheels on ${{ matrix.os }} ${{ matrix.cpv }}
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os:
-          - macos-11
-        cpv:
-          - "cp310*"
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-python@v2
-        name: Install Python
-        with:
-          python-version: 3.8
-
-      - name: Install cibuildwheel
-        run: |
-          python -m pip install cibuildwheel==2.5.0
-
-      - name: Build wheels
-        env:
-          CIBW_BUILD:  ${{ matrix.cpv }}
-          CIBW_SKIP: "*macosx_10_*"
           CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET='11.6.5'
         run: |
           python scripts/make_setup.py 1
