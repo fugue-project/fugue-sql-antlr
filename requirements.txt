@@ -23,5 +23,5 @@ wheel
 twine
 
 Cython
-cibuildwheel==2.1.3
+cibuildwheel==2.5.0
 git+https://github.com/goodwanghan/speedy-antlr-tool.git@han/fix
