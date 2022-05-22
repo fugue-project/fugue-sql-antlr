@@ -49,8 +49,13 @@ jobs:
           pip install -e .
 
       - name: Test
-        run: |
-          make test
+        run: make test
+
+      - name: "Upload coverage to Codecov"
+        if: matrix.python-version == 3.8 && matrix.os == 'ubuntu-18.04'
+        uses: codecov/codecov-action@v1
+        with:
+          fail_ci_if_error: true
 
 #-------------------------------------------------------------------------------
   build_cpp_wheels:
