@@ -63,9 +63,10 @@ class FugueSQLParser:
         if tp is None:
             return ""
         if tp[0] is tp[1]:
-            return tp[0].text
+            return self.code[tp[0].start : tp[0].stop + 1]
         return delimiter.join(
-            self._tokens[i].text for i in range(tp[0]._arr_pos, tp[1]._arr_pos + 1)
+            self.code[self._tokens[i].start : self._tokens[i].stop + 1]
+            for i in range(tp[0]._arr_pos, tp[1]._arr_pos + 1)
         )
 
     def get_raw_text(self, node: Optional[ParseTree], add_lineno: bool = False) -> str:
