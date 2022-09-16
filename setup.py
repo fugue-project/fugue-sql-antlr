@@ -1,6 +1,6 @@
 # pylint: disable-all
 # flake8: noqa
-_BUILD_CPP = True
+_BUILD_CPP = False
 
 import fnmatch
 import os
@@ -103,8 +103,8 @@ setup(
     keywords="distributed spark dask sql dsl domain specific language",
     url="http://github.com/fugue-project/fugue",
     install_requires=[
-        "triad",
-        "antlr4-python3-runtime>=4.10",
+        "triad>=0.6.8",
+        "antlr4-python3-runtime>=4.11.1,<4.12",
         "jinja2",
     ],
     extras_require={}

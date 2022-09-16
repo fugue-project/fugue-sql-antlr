@@ -1,5 +1,5 @@
 
-// Generated from fugue_sql.g4 by ANTLR 4.10.1
+// Generated from fugue_sql.g4 by ANTLR 4.11.1
 
 
 #include "fugue_sqlLexer.h"
@@ -41,7 +41,7 @@ struct Fugue_sqlLexerStaticData final {
   std::unique_ptr<antlr4::atn::ATN> atn;
 };
 
-std::once_flag fugue_sqllexerLexerOnceFlag;
+::antlr4::internal::OnceFlag fugue_sqllexerLexerOnceFlag;
 Fugue_sqlLexerStaticData *fugue_sqllexerLexerStaticData = nullptr;
 
 void fugue_sqllexerLexerInitialize() {
@@ -1367,5 +1367,5 @@ const atn::ATN& fugue_sqlLexer::getATN() const {
 
 
 void fugue_sqlLexer::initialize() {
-  std::call_once(fugue_sqllexerLexerOnceFlag, fugue_sqllexerLexerInitialize);
+  ::antlr4::internal::call_once(fugue_sqllexerLexerOnceFlag, fugue_sqllexerLexerInitialize);
 }
