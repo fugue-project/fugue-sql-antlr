@@ -43,12 +43,14 @@ jobs:
           python scripts/make_setup.py 0
           pip install -e .
 
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+          version: 10
+          platform: x64
+
       - name: Install CPP version
         run: |
-          apt update -y
-          apt upgrade -y
-          apt install -y build-essential
-          apt install -y gcc-10 g++-10 cpp-10
           gcc --version
           python scripts/make_setup.py 1
           pip install -e .
