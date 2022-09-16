@@ -45,6 +45,10 @@ jobs:
 
       - name: Install CPP version
         run: |
+          apt update -y
+          apt upgrade -y
+          apt install -y build-essential
+          apt install -y gcc-10 g++-10 cpp-10
           gcc --version
           python scripts/make_setup.py 1
           pip install -e .
