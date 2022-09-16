@@ -137,3 +137,4 @@ dist/
 .eggs/
 .coverage
 fugue
+tmp/

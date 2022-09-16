@@ -1,6 +1,6 @@
 # pylint: disable-all
 # flake8: noqa
-_BUILD_CPP = False
+_BUILD_CPP = True
 
 import fnmatch
 import os
