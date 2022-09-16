@@ -1623,6 +1623,18 @@ public:
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
   };
 
+  class  FugueSchemaMapTypeContext : public FugueSchemaTypeContext {
+  public:
+    FugueSchemaMapTypeContext(FugueSchemaTypeContext *ctx);
+
+    antlr4::tree::TerminalNode *LT();
+    std::vector<FugueSchemaTypeContext *> fugueSchemaType();
+    FugueSchemaTypeContext* fugueSchemaType(size_t i);
+    antlr4::tree::TerminalNode *GT();
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
   class  FugueSchemaStructTypeContext : public FugueSchemaTypeContext {
   public:
     FugueSchemaStructTypeContext(FugueSchemaTypeContext *ctx);

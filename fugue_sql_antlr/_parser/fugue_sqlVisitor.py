@@ -354,6 +354,11 @@ class fugue_sqlVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by fugue_sqlParser#fugueSchemaMapType.
+    def visitFugueSchemaMapType(self, ctx:fugue_sqlParser.FugueSchemaMapTypeContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by fugue_sqlParser#fugueRenamePair.
     def visitFugueRenamePair(self, ctx:fugue_sqlParser.FugueRenamePairContext):
         return self.visitChildren(ctx)

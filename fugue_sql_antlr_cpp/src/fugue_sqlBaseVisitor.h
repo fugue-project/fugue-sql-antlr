@@ -291,6 +291,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual std::any visitFugueSchemaMapType(fugue_sqlParser::FugueSchemaMapTypeContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual std::any visitFugueRenamePair(fugue_sqlParser::FugueRenamePairContext *ctx) override {
     return visitChildren(ctx);
   }

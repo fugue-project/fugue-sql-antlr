@@ -157,6 +157,8 @@ public:
 
     virtual std::any visitFugueSchemaStructType(fugue_sqlParser::FugueSchemaStructTypeContext *context) = 0;
 
+    virtual std::any visitFugueSchemaMapType(fugue_sqlParser::FugueSchemaMapTypeContext *context) = 0;
+
     virtual std::any visitFugueRenamePair(fugue_sqlParser::FugueRenamePairContext *context) = 0;
 
     virtual std::any visitFugueJson(fugue_sqlParser::FugueJsonContext *context) = 0;

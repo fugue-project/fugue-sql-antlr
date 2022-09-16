@@ -79,6 +79,7 @@ class SA_fugue_sqlTranslator : public fugue_sqlBaseVisitor {
     PyObject *FugueSchemaPairContext_cls = NULL;
     PyObject *FugueSchemaKeyContext_cls = NULL;
     PyObject *FugueSchemaSimpleTypeContext_cls = NULL;
+    PyObject *FugueSchemaMapTypeContext_cls = NULL;
     PyObject *FugueSchemaStructTypeContext_cls = NULL;
     PyObject *FugueSchemaListTypeContext_cls = NULL;
     PyObject *FugueRenamePairContext_cls = NULL;
@@ -498,6 +499,8 @@ class SA_fugue_sqlTranslator : public fugue_sqlBaseVisitor {
     antlrcpp::Any visitFugueSchemaKey(fugue_sqlParser::FugueSchemaKeyContext *ctx);
 
     antlrcpp::Any visitFugueSchemaSimpleType(fugue_sqlParser::FugueSchemaSimpleTypeContext *ctx);
+
+    antlrcpp::Any visitFugueSchemaMapType(fugue_sqlParser::FugueSchemaMapTypeContext *ctx);
 
     antlrcpp::Any visitFugueSchemaStructType(fugue_sqlParser::FugueSchemaStructTypeContext *ctx);
 

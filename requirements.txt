@@ -1,4 +1,4 @@
-antlr4-python3-runtime>=4.11.1
+antlr4-python3-runtime>=4.11.1,<4.12
 jinja2
 
 # test requirements
