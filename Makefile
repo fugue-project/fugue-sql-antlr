@@ -6,7 +6,7 @@
 devenv:
 	pip3 install -r requirements.txt
 	pre-commit install
-	pip freeze
+	pip3 freeze
 
 docs:
 	rm -rf docs/api

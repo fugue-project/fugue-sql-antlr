@@ -16,7 +16,7 @@ rm fugue_sql_antlr/_parser/*.tokens
 
 touch fugue_sql_antlr/_parser/__init__.py
 
-python scripts/sa_wrapper.py
+python3 scripts/sa_wrapper.py
 
 
 rm -rf fugue_sql_antlr_cpp/antlr4-cpp-runtime

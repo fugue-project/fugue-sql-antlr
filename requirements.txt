@@ -25,3 +25,6 @@ twine
 Cython
 cibuildwheel==2.5.0
 speedy-antlr-tool
+
+# fix
+markupsafe==2.0.1
