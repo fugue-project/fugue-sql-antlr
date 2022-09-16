@@ -309,9 +309,10 @@ fugueSchemaKey:
     ;
 
 fugueSchemaType
-    : fugueIdentifier               #fugueSchemaSimpleType
-    | '[' fugueSchemaType ']'       #fugueSchemaListType
-    | '{' fugueSchema '}'           #fugueSchemaStructType
+    : fugueIdentifier                               #fugueSchemaSimpleType
+    | '[' fugueSchemaType ']'                       #fugueSchemaListType
+    | '{' fugueSchema '}'                           #fugueSchemaStructType
+    | '<' fugueSchemaType ',' fugueSchemaType '>'   #fugueSchemaMapType
     ;
 
 fugueRenamePair:

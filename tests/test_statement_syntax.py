@@ -118,6 +118,8 @@ def test_schema_syntax():
             "*~c",
             "*+c:str,d:int",
             "*,k:str+a:str,b:str-c~x",
+            "a:[int],b:{x:[int]},c:<int,str>",
+            "*,a:[<int,str>]"
         ],
         ignore_case=False,
         rule="fugueWildSchema",

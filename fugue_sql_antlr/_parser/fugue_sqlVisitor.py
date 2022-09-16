@@ -1,4 +1,4 @@
-# Generated from fugue_sql.g4 by ANTLR 4.10.1
+# Generated from fugue_sql.g4 by ANTLR 4.11.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .fugue_sqlParser import fugue_sqlParser
@@ -351,6 +351,11 @@ class fugue_sqlVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by fugue_sqlParser#fugueSchemaStructType.
     def visitFugueSchemaStructType(self, ctx:fugue_sqlParser.FugueSchemaStructTypeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by fugue_sqlParser#fugueSchemaMapType.
+    def visitFugueSchemaMapType(self, ctx:fugue_sqlParser.FugueSchemaMapTypeContext):
         return self.visitChildren(ctx)
 
 

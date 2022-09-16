@@ -4,6 +4,7 @@ from antlr4 import InputStream, Token
 from antlr4.Token import CommonToken
 from antlr4.tree.Tree import ParseTree, TerminalNode
 
+from fugue_sql_antlr._parser.fugue_sqlParser import fugue_sqlParser
 from fugue_sql_antlr._parser.sa_fugue_sql import (
     SA_ErrorListener,
     _cpp_parse,
@@ -29,6 +30,7 @@ class FugueSQLParser:
         self._raw_code = code
         self._raw_lines = code.splitlines()
         self._parse_mode = parse_mode
+        self._ignore_case = ignore_case
         if ignore_case:
             self._tree = self._to_tree(upper=True)
         else:
@@ -56,7 +58,18 @@ class FugueSQLParser:
     def tree(self) -> ParseTree:
         return self._tree
 
-    def get_norm_text(self, node: Optional[ParseTree], delimiter: str = " ") -> str:
+    def get_norm_text(
+        self,
+        node: Optional[ParseTree],
+        delimiter: str = " ",
+        upper_keyword: bool = False,
+    ) -> str:
+        def _get_token_str(token: Token):
+            s = self.code[token.start : token.stop + 1]
+            if upper_keyword and self._ignore_case and hasattr(token, "is_keyword"):
+                return s.upper()
+            return s
+
         if node is None:
             return ""
         tp = self._get_range(node)
@@ -65,7 +78,7 @@ class FugueSQLParser:
         if tp[0] is tp[1]:
             return self.code[tp[0].start : tp[0].stop + 1]
         return delimiter.join(
-            self.code[self._tokens[i].start : self._tokens[i].stop + 1]
+            _get_token_str(self._tokens[i])
             for i in range(tp[0]._arr_pos, tp[1]._arr_pos + 1)
         )
 
@@ -86,17 +99,23 @@ class FugueSQLParser:
             start += 1
         return "\n".join(lines)
 
-    def _get_tokens(self, node: Optional[ParseTree]) -> Iterable[CommonToken]:
+    def _get_tokens(
+        self, node: Optional[ParseTree], parent: Optional[ParseTree] = None
+    ) -> Iterable[CommonToken]:
         if node is None:
             return
         elif isinstance(node, Token):
             if isinstance(node, CommonToken) and node.type != Token.EOF:
+                if not isinstance(
+                    parent, fugue_sqlParser.NonReservedContext
+                ) and hasattr(parent, node.text):
+                    node.is_keyword = True
                 yield node
         elif isinstance(node, TerminalNode):
-            yield from self._get_tokens(node.getSymbol())
+            yield from self._get_tokens(node.getSymbol(), parent)
         else:
             for i in range(node.getChildCount()):
-                for x in self._get_tokens(node.getChild(i)):
+                for x in self._get_tokens(node.getChild(i), node):
                     yield x
 
     def _get_range(self, node: ParseTree) -> Optional[Tuple[CommonToken, CommonToken]]:

@@ -1,5 +1,5 @@
 
-// Generated from fugue_sql.g4 by ANTLR 4.10.1
+// Generated from fugue_sql.g4 by ANTLR 4.11.1
 
 #pragma once
 
@@ -288,6 +288,10 @@ public:
   }
 
   virtual std::any visitFugueSchemaStructType(fugue_sqlParser::FugueSchemaStructTypeContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual std::any visitFugueSchemaMapType(fugue_sqlParser::FugueSchemaMapTypeContext *ctx) override {
     return visitChildren(ctx);
   }
 

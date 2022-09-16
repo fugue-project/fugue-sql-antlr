@@ -1,4 +1,4 @@
-antlr4-python3-runtime>=4.10
+antlr4-python3-runtime>=4.11.1,<4.12
 jinja2
 
 # test requirements
@@ -24,7 +24,7 @@ twine
 
 Cython
 cibuildwheel==2.5.0
-git+https://github.com/goodwanghan/speedy-antlr-tool.git@han/fix
+speedy-antlr-tool
 
 # fix
 markupsafe==2.0.1
