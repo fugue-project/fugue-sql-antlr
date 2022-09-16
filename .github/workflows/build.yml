@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-18.04
+          - ubuntu-latest
           - windows-latest
           # - macos-11
         python-version:
@@ -43,15 +43,8 @@ jobs:
           python scripts/make_setup.py 0
           pip install -e .
 
-      - name: Set up GCC
-        uses: egor-tensin/setup-gcc@v1
-        with:
-          version: 10
-          platform: x64
-
       - name: Install CPP version
         run: |
-          gcc --version
           python scripts/make_setup.py 1
           pip install -e .
 
@@ -73,7 +66,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-18.04
+          - ubuntu-latest
           - windows-latest
           - macos-11
         cpv:
