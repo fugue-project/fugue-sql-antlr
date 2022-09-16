@@ -45,6 +45,7 @@ jobs:
 
       - name: Install CPP version
         run: |
+          gcc --version
           python scripts/make_setup.py 1
           pip install -e .
 
