@@ -494,10 +494,11 @@ antlrcpp::Any SA_fugue_sqlTranslator::visitFugueSampleTask(fugue_sqlParser::Fugu
     speedy_antlr::LabelMap labels[] = {
         {"method", static_cast<void*>(ctx->method)},
         {"seed", static_cast<void*>(ctx->seed)},
-        {"df", static_cast<void*>(ctx->df)}
+        {"df", static_cast<void*>(ctx->df)},
+        {"by", static_cast<void*>(ctx->by)}
     };
     if(!FugueSampleTaskContext_cls) FugueSampleTaskContext_cls = PyObject_GetAttrString(translator->parser_cls, "FugueSampleTaskContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, FugueSampleTaskContext_cls, labels, 3);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FugueSampleTaskContext_cls, labels, 4);
     return py_ctx;
 }
 
@@ -807,8 +808,11 @@ antlrcpp::Any SA_fugue_sqlTranslator::visitFugueSingleOutputExtensionCommon(fugu
 }
 
 antlrcpp::Any SA_fugue_sqlTranslator::visitFugueExtension(fugue_sqlParser::FugueExtensionContext *ctx){
+    speedy_antlr::LabelMap labels[] = {
+        {"domain", static_cast<void*>(ctx->domain)}
+    };
     if(!FugueExtensionContext_cls) FugueExtensionContext_cls = PyObject_GetAttrString(translator->parser_cls, "FugueExtensionContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, FugueExtensionContext_cls);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FugueExtensionContext_cls, labels, 1);
     return py_ctx;
 }
 

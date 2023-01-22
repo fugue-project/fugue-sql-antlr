@@ -153,6 +153,8 @@ def test_yield():
     a=create using mock_create1 yield dataframe
     create using mock_create1 yield local dataframe as aaa
     create using mock_create1 yield file as aa
+    create using mock_create1 yield table as aa
+    create using mock_create1 yield view as aa
     c=create using mock_create1 deterministic checkpoint yield dataframe
     d=create using mock_create1 deterministic checkpoint yield file as bb
     create using mock_create1 deterministic checkpoint yield file as cc
@@ -354,6 +356,8 @@ def test_sample():
     a=create using mock_create1
     sample 10 percent
     sample replace 5 rows seed 7 from a
+    sample replace 5 rows seed 7 from a prepartition by x
+    sample replace approx 5 rows seed 7 prepartition by x
     """
     )
 
