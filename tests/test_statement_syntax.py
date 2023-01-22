@@ -119,7 +119,7 @@ def test_schema_syntax():
             "*+c:str,d:int",
             "*,k:str+a:str,b:str-c~x",
             "a:[int],b:{x:[int]},c:<int,str>",
-            "*,a:[<int,str>]"
+            "*,a:[<int,str>]",
         ],
         ignore_case=False,
         rule="fugueWildSchema",
@@ -191,7 +191,7 @@ def test_output_syntax():
         "output",
         ["", "a,b", "(create using x)"],
         ["prepartition by x"],
-        "using a.b.c",
+        ["using a.b.c", "using xx : a.b"],
         ["(a=1,b=2,)"],
         ignore_case=True,
     )

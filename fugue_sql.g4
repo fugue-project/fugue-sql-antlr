@@ -92,7 +92,7 @@ fugueFillnaTask:
     ;
 
 fugueSampleTask:
-    SAMPLE REPLACE? method=fugueSampleMethod (SEED seed=INTEGER_VALUE)? (FROM df=fugueDataFrame)?
+    SAMPLE REPLACE? method=fugueSampleMethod (SEED seed=INTEGER_VALUE)? (FROM df=fugueDataFrame)? (PREPARTITION BY by=fugueCols)?
     ;
 
 fugueTakeTask:
@@ -176,7 +176,7 @@ fugueCheckpointNamespace
     ;
 
 fugueYield
-    : YIELD FILE (AS name=fugueIdentifier)?
+    : YIELD (FILE | TABLE | VIEW) (AS name=fugueIdentifier)?
     | YIELD LOCAL? DATAFRAME (AS name=fugueIdentifier)?
     ;
 
@@ -219,12 +219,12 @@ fugueSingleOutputExtensionCommon:
     ;
 
 fugueExtension:
-    fugueIdentifier ('.' fugueIdentifier)*
+    (domain=fugueIdentifier ':')? fugueIdentifier ('.' fugueIdentifier)*
     ;
 
 fugueSampleMethod:
     percentage=(INTEGER_VALUE | DECIMAL_VALUE) PERCENTLIT
-    | rows=INTEGER_VALUE ROWS
+    | APPROX? rows=INTEGER_VALUE ROWS
     ;
 
 fugueZipType
@@ -1829,6 +1829,7 @@ CONNECT: 'CONNECT';
 
 SAMPLE: 'SAMPLE';
 SEED: 'SEED';
+APPROX: 'APPROX';
 
 SUB: 'SUB';
 CALLBACK: 'CALLBACK';
