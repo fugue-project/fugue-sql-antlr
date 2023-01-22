@@ -115,7 +115,7 @@ setup(
     },
     classifiers=[
         # "3 - Alpha", "4 - Beta" or "5 - Production/Stable"
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: Apache Software License",
