@@ -5,6 +5,7 @@
 * `SAMPLE` with appox and partition
 * Extensions with domain
 * `YIELD` with table and view
+* Removed 3.6 support
 
 ## 0.1.0 and before
 
