@@ -212,6 +212,13 @@ def test_select():
     select * from a
     select * from a TABLESAMPLE(5 PERCENT)
     select * from a TABLESAMPLE(5 PERCENT) AS x
+    # bigquery
+    select * from a TABLESAMPLE SYSTEM (5 PERCENT)
+    # trino
+    select * from a TABLESAMPLE BERNOULLI (5 PERCENT)
+    # duckdb
+    select * from a TABLESAMPLE SYSTEM (5%)
+    select * from a TABLESAMPLE RESERVOIR (5%)
     # no from
     select *
     select * where t=100
