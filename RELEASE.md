@@ -1,5 +1,9 @@
 # Release Notes
 
+## 0.1.5
+
+* Make `TABLESAMPLE` compatible with different dialects
+
 ## 0.1.2
 
 * `SAMPLE` with appox and partition

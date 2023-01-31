@@ -223,7 +223,7 @@ fugueExtension:
     ;
 
 fugueSampleMethod:
-    percentage=(INTEGER_VALUE | DECIMAL_VALUE) PERCENTLIT
+    percentage=(INTEGER_VALUE | DECIMAL_VALUE) (PERCENTLIT | PERCENT)
     | APPROX? rows=INTEGER_VALUE ROWS
     ;
 
@@ -958,15 +958,15 @@ joinCriteria
     ;
 
 sample
-    : TABLESAMPLE '(' sampleMethod? ')'
+    : TABLESAMPLE (SYSTEM | BERNOULLI | RESERVOIR)? '(' sampleMethod? ')'
     ;
 
 sampleMethod
-    : negativeSign=MINUS? percentage=(INTEGER_VALUE | DECIMAL_VALUE) PERCENTLIT   #sampleByPercentile
-    | expression ROWS                                                             #sampleByRows
+    : negativeSign=MINUS? percentage=(INTEGER_VALUE | DECIMAL_VALUE) (PERCENTLIT | PERCENT)                 #sampleByPercentile
+    | expression ROWS                                                                                       #sampleByRows
     | sampleType=BUCKET numerator=INTEGER_VALUE OUT OF denominator=INTEGER_VALUE
-        (ON (identifier | qualifiedName '(' ')'))?                                #sampleByBucket
-    | bytes=expression                                                            #sampleByBytes
+        (ON (identifier | qualifiedName '(' ')'))?                                                          #sampleByBucket
+    | bytes=expression                                                                                      #sampleByBytes
     ;
 
 identifierList
@@ -1830,6 +1830,9 @@ CONNECT: 'CONNECT';
 SAMPLE: 'SAMPLE';
 SEED: 'SEED';
 APPROX: 'APPROX';
+SYSTEM: 'SYSTEM';
+BERNOULLI: 'BERNOULLI';
+RESERVOIR: 'RESERVOIR';
 
 SUB: 'SUB';
 CALLBACK: 'CALLBACK';
