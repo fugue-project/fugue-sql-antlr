@@ -79,6 +79,8 @@ public:
 
     virtual std::any visitFuguePath(fugue_sqlParser::FuguePathContext *context) = 0;
 
+    virtual std::any visitFuguePaths(fugue_sqlParser::FuguePathsContext *context) = 0;
+
     virtual std::any visitFugueCheckpointWeak(fugue_sqlParser::FugueCheckpointWeakContext *context) = 0;
 
     virtual std::any visitFugueCheckpointStrong(fugue_sqlParser::FugueCheckpointStrongContext *context) = 0;

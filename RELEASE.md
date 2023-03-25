@@ -1,5 +1,10 @@
 # Release Notes
 
+## 0.1.6
+
+* Enable loading multiple files
+* Add `COARSE` partitioning
+
 ## 0.1.5
 
 * Make `TABLESAMPLE` compatible with different dialects

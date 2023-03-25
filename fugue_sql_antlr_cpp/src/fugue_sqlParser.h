@@ -15,68 +15,68 @@ public:
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
     T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, T__11 = 12, T__12 = 13, T__13 = 14, 
     T__14 = 15, T__15 = 16, FILL = 17, TAKE = 18, HASH = 19, RAND = 20, 
-    EVEN = 21, PRESORT = 22, PERSIST = 23, BROADCAST = 24, PARAMS = 25, 
-    PROCESS = 26, OUTPUT = 27, OUTTRANSFORM = 28, ROWCOUNT = 29, CONCURRENCY = 30, 
-    PREPARTITION = 31, ZIP = 32, PRINT = 33, TITLE = 34, SAVE = 35, APPEND = 36, 
-    PARQUET = 37, CSV = 38, JSON = 39, SINGLE = 40, CHECKPOINT = 41, WEAK = 42, 
-    STRONG = 43, DETERMINISTIC = 44, YIELD = 45, CONNECT = 46, SAMPLE = 47, 
-    SEED = 48, APPROX = 49, SYSTEM = 50, BERNOULLI = 51, RESERVOIR = 52, 
-    SUB = 53, CALLBACK = 54, DATAFRAME = 55, FILE = 56, ADD = 57, AFTER = 58, 
-    ALL = 59, ALTER = 60, ANALYZE = 61, AND = 62, ANTI = 63, ANY = 64, ARCHIVE = 65, 
-    ARRAY = 66, AS = 67, ASC = 68, AT = 69, AUTHORIZATION = 70, BETWEEN = 71, 
-    BOTH = 72, BUCKET = 73, BUCKETS = 74, BY = 75, CACHE = 76, CASCADE = 77, 
-    CASE = 78, CAST = 79, CHANGE = 80, CHECK = 81, CLEAR = 82, CLUSTER = 83, 
-    CLUSTERED = 84, CODEGEN = 85, COLLATE = 86, COLLECTION = 87, COLUMN = 88, 
-    COLUMNS = 89, COMMENT = 90, COMMIT = 91, COMPACT = 92, COMPACTIONS = 93, 
-    COMPUTE = 94, CONCATENATE = 95, CONSTRAINT = 96, COST = 97, CREATE = 98, 
-    CROSS = 99, CUBE = 100, CURRENT = 101, CURRENT_DATE = 102, CURRENT_TIME = 103, 
-    CURRENT_TIMESTAMP = 104, CURRENT_USER = 105, DATA = 106, DATABASE = 107, 
-    DATABASES = 108, DAY = 109, DBPROPERTIES = 110, DEFINED = 111, DELETE = 112, 
-    DELIMITED = 113, DESC = 114, DESCRIBE = 115, DFS = 116, DIRECTORIES = 117, 
-    DIRECTORY = 118, DISTINCT = 119, DISTRIBUTE = 120, DROP = 121, ELSE = 122, 
-    END = 123, ESCAPE = 124, ESCAPED = 125, EXCEPT = 126, EXCHANGE = 127, 
-    EXISTS = 128, EXPLAIN = 129, EXPORT = 130, EXTENDED = 131, EXTERNAL = 132, 
-    EXTRACT = 133, FALSE = 134, FETCH = 135, FIELDS = 136, FILTER = 137, 
-    FILEFORMAT = 138, FIRST = 139, FOLLOWING = 140, FOR = 141, FOREIGN = 142, 
-    FORMAT = 143, FORMATTED = 144, FROM = 145, FULL = 146, FUNCTION = 147, 
-    FUNCTIONS = 148, GLOBAL = 149, GRANT = 150, GROUP = 151, GROUPING = 152, 
-    HAVING = 153, HOUR = 154, IF = 155, IGNORE = 156, IMPORT = 157, IN = 158, 
-    INDEX = 159, INDEXES = 160, INNER = 161, INPATH = 162, INPUTFORMAT = 163, 
-    INSERT = 164, INTERSECT = 165, INTERVAL = 166, INTO = 167, IS = 168, 
-    ITEMS = 169, JOIN = 170, KEYS = 171, LAST = 172, LATERAL = 173, LAZY = 174, 
-    LEADING = 175, LEFT = 176, LIKE = 177, LIMIT = 178, LINES = 179, LIST = 180, 
-    LOAD = 181, LOCAL = 182, LOCATION = 183, LOCK = 184, LOCKS = 185, LOGICAL = 186, 
-    MACRO = 187, MAP = 188, MATCHED = 189, MERGE = 190, MINUTE = 191, MONTH = 192, 
-    MSCK = 193, NAMESPACE = 194, NAMESPACES = 195, NATURAL = 196, NO = 197, 
-    NOT = 198, THENULL = 199, THENULLS = 200, OF = 201, ON = 202, ONLY = 203, 
-    OPTION = 204, OPTIONS = 205, OR = 206, ORDER = 207, OUT = 208, OUTER = 209, 
-    OUTPUTFORMAT = 210, OVER = 211, OVERLAPS = 212, OVERLAY = 213, OVERWRITE = 214, 
-    PARTITION = 215, PARTITIONED = 216, PARTITIONS = 217, PERCENTLIT = 218, 
-    PIVOT = 219, PLACING = 220, POSITION = 221, PRECEDING = 222, PRIMARY = 223, 
-    PRINCIPALS = 224, PROPERTIES = 225, PURGE = 226, QUERY = 227, RANGE = 228, 
-    RECORDREADER = 229, RECORDWRITER = 230, RECOVER = 231, REDUCE = 232, 
-    REFERENCES = 233, REFRESH = 234, RENAME = 235, REPAIR = 236, REPLACE = 237, 
-    RESET = 238, RESTRICT = 239, REVOKE = 240, RIGHT = 241, RLIKE = 242, 
-    ROLE = 243, ROLES = 244, ROLLBACK = 245, ROLLUP = 246, ROW = 247, ROWS = 248, 
-    SCHEMA = 249, SECOND = 250, SELECT = 251, SEMI = 252, SEPARATED = 253, 
-    SERDE = 254, SERDEPROPERTIES = 255, SESSION_USER = 256, SET = 257, SETMINUS = 258, 
-    SETS = 259, SHOW = 260, SKEWED = 261, SOME = 262, SORT = 263, SORTED = 264, 
-    START = 265, STATISTICS = 266, STORED = 267, STRATIFY = 268, STRUCT = 269, 
-    SUBSTR = 270, SUBSTRING = 271, TABLE = 272, TABLES = 273, TABLESAMPLE = 274, 
-    TBLPROPERTIES = 275, TEMPORARY = 276, TERMINATED = 277, THEN = 278, 
-    TO = 279, TOUCH = 280, TRAILING = 281, TRANSACTION = 282, TRANSACTIONS = 283, 
-    TRANSFORM = 284, TRIM = 285, TRUE = 286, TRUNCATE = 287, TYPE = 288, 
-    UNARCHIVE = 289, UNBOUNDED = 290, UNCACHE = 291, UNION = 292, UNIQUE = 293, 
-    UNKNOWN = 294, UNLOCK = 295, UNSET = 296, UPDATE = 297, USE = 298, USER = 299, 
-    USING = 300, VALUES = 301, VIEW = 302, VIEWS = 303, WHEN = 304, WHERE = 305, 
-    WINDOW = 306, WITH = 307, YEAR = 308, EQUAL = 309, DOUBLEEQUAL = 310, 
-    NSEQ = 311, NEQ = 312, NEQJ = 313, LT = 314, LTE = 315, GT = 316, GTE = 317, 
-    PLUS = 318, MINUS = 319, ASTERISK = 320, SLASH = 321, PERCENT = 322, 
-    DIV = 323, TILDE = 324, AMPERSAND = 325, PIPE = 326, CONCAT_PIPE = 327, 
-    HAT = 328, STRING = 329, BIGINT_LITERAL = 330, SMALLINT_LITERAL = 331, 
-    TINYINT_LITERAL = 332, INTEGER_VALUE = 333, EXPONENT_VALUE = 334, DECIMAL_VALUE = 335, 
-    DOUBLE_LITERAL = 336, BIGDECIMAL_LITERAL = 337, IDENTIFIER = 338, BACKQUOTED_IDENTIFIER = 339, 
-    SIMPLE_COMMENT = 340, BRACKETED_COMMENT = 341, WS = 342, UNRECOGNIZED = 343
+    EVEN = 21, COARSE = 22, PRESORT = 23, PERSIST = 24, BROADCAST = 25, 
+    PARAMS = 26, PROCESS = 27, OUTPUT = 28, OUTTRANSFORM = 29, ROWCOUNT = 30, 
+    CONCURRENCY = 31, PREPARTITION = 32, ZIP = 33, PRINT = 34, TITLE = 35, 
+    SAVE = 36, APPEND = 37, PARQUET = 38, CSV = 39, JSON = 40, SINGLE = 41, 
+    CHECKPOINT = 42, WEAK = 43, STRONG = 44, DETERMINISTIC = 45, YIELD = 46, 
+    CONNECT = 47, SAMPLE = 48, SEED = 49, APPROX = 50, SYSTEM = 51, BERNOULLI = 52, 
+    RESERVOIR = 53, SUB = 54, CALLBACK = 55, DATAFRAME = 56, FILE = 57, 
+    ADD = 58, AFTER = 59, ALL = 60, ALTER = 61, ANALYZE = 62, AND = 63, 
+    ANTI = 64, ANY = 65, ARCHIVE = 66, ARRAY = 67, AS = 68, ASC = 69, AT = 70, 
+    AUTHORIZATION = 71, BETWEEN = 72, BOTH = 73, BUCKET = 74, BUCKETS = 75, 
+    BY = 76, CACHE = 77, CASCADE = 78, CASE = 79, CAST = 80, CHANGE = 81, 
+    CHECK = 82, CLEAR = 83, CLUSTER = 84, CLUSTERED = 85, CODEGEN = 86, 
+    COLLATE = 87, COLLECTION = 88, COLUMN = 89, COLUMNS = 90, COMMENT = 91, 
+    COMMIT = 92, COMPACT = 93, COMPACTIONS = 94, COMPUTE = 95, CONCATENATE = 96, 
+    CONSTRAINT = 97, COST = 98, CREATE = 99, CROSS = 100, CUBE = 101, CURRENT = 102, 
+    CURRENT_DATE = 103, CURRENT_TIME = 104, CURRENT_TIMESTAMP = 105, CURRENT_USER = 106, 
+    DATA = 107, DATABASE = 108, DATABASES = 109, DAY = 110, DBPROPERTIES = 111, 
+    DEFINED = 112, DELETE = 113, DELIMITED = 114, DESC = 115, DESCRIBE = 116, 
+    DFS = 117, DIRECTORIES = 118, DIRECTORY = 119, DISTINCT = 120, DISTRIBUTE = 121, 
+    DROP = 122, ELSE = 123, END = 124, ESCAPE = 125, ESCAPED = 126, EXCEPT = 127, 
+    EXCHANGE = 128, EXISTS = 129, EXPLAIN = 130, EXPORT = 131, EXTENDED = 132, 
+    EXTERNAL = 133, EXTRACT = 134, FALSE = 135, FETCH = 136, FIELDS = 137, 
+    FILTER = 138, FILEFORMAT = 139, FIRST = 140, FOLLOWING = 141, FOR = 142, 
+    FOREIGN = 143, FORMAT = 144, FORMATTED = 145, FROM = 146, FULL = 147, 
+    FUNCTION = 148, FUNCTIONS = 149, GLOBAL = 150, GRANT = 151, GROUP = 152, 
+    GROUPING = 153, HAVING = 154, HOUR = 155, IF = 156, IGNORE = 157, IMPORT = 158, 
+    IN = 159, INDEX = 160, INDEXES = 161, INNER = 162, INPATH = 163, INPUTFORMAT = 164, 
+    INSERT = 165, INTERSECT = 166, INTERVAL = 167, INTO = 168, IS = 169, 
+    ITEMS = 170, JOIN = 171, KEYS = 172, LAST = 173, LATERAL = 174, LAZY = 175, 
+    LEADING = 176, LEFT = 177, LIKE = 178, LIMIT = 179, LINES = 180, LIST = 181, 
+    LOAD = 182, LOCAL = 183, LOCATION = 184, LOCK = 185, LOCKS = 186, LOGICAL = 187, 
+    MACRO = 188, MAP = 189, MATCHED = 190, MERGE = 191, MINUTE = 192, MONTH = 193, 
+    MSCK = 194, NAMESPACE = 195, NAMESPACES = 196, NATURAL = 197, NO = 198, 
+    NOT = 199, THENULL = 200, THENULLS = 201, OF = 202, ON = 203, ONLY = 204, 
+    OPTION = 205, OPTIONS = 206, OR = 207, ORDER = 208, OUT = 209, OUTER = 210, 
+    OUTPUTFORMAT = 211, OVER = 212, OVERLAPS = 213, OVERLAY = 214, OVERWRITE = 215, 
+    PARTITION = 216, PARTITIONED = 217, PARTITIONS = 218, PERCENTLIT = 219, 
+    PIVOT = 220, PLACING = 221, POSITION = 222, PRECEDING = 223, PRIMARY = 224, 
+    PRINCIPALS = 225, PROPERTIES = 226, PURGE = 227, QUERY = 228, RANGE = 229, 
+    RECORDREADER = 230, RECORDWRITER = 231, RECOVER = 232, REDUCE = 233, 
+    REFERENCES = 234, REFRESH = 235, RENAME = 236, REPAIR = 237, REPLACE = 238, 
+    RESET = 239, RESTRICT = 240, REVOKE = 241, RIGHT = 242, RLIKE = 243, 
+    ROLE = 244, ROLES = 245, ROLLBACK = 246, ROLLUP = 247, ROW = 248, ROWS = 249, 
+    SCHEMA = 250, SECOND = 251, SELECT = 252, SEMI = 253, SEPARATED = 254, 
+    SERDE = 255, SERDEPROPERTIES = 256, SESSION_USER = 257, SET = 258, SETMINUS = 259, 
+    SETS = 260, SHOW = 261, SKEWED = 262, SOME = 263, SORT = 264, SORTED = 265, 
+    START = 266, STATISTICS = 267, STORED = 268, STRATIFY = 269, STRUCT = 270, 
+    SUBSTR = 271, SUBSTRING = 272, TABLE = 273, TABLES = 274, TABLESAMPLE = 275, 
+    TBLPROPERTIES = 276, TEMPORARY = 277, TERMINATED = 278, THEN = 279, 
+    TO = 280, TOUCH = 281, TRAILING = 282, TRANSACTION = 283, TRANSACTIONS = 284, 
+    TRANSFORM = 285, TRIM = 286, TRUE = 287, TRUNCATE = 288, TYPE = 289, 
+    UNARCHIVE = 290, UNBOUNDED = 291, UNCACHE = 292, UNION = 293, UNIQUE = 294, 
+    UNKNOWN = 295, UNLOCK = 296, UNSET = 297, UPDATE = 298, USE = 299, USER = 300, 
+    USING = 301, VALUES = 302, VIEW = 303, VIEWS = 304, WHEN = 305, WHERE = 306, 
+    WINDOW = 307, WITH = 308, YEAR = 309, EQUAL = 310, DOUBLEEQUAL = 311, 
+    NSEQ = 312, NEQ = 313, NEQJ = 314, LT = 315, LTE = 316, GT = 317, GTE = 318, 
+    PLUS = 319, MINUS = 320, ASTERISK = 321, SLASH = 322, PERCENT = 323, 
+    DIV = 324, TILDE = 325, AMPERSAND = 326, PIPE = 327, CONCAT_PIPE = 328, 
+    HAT = 329, STRING = 330, BIGINT_LITERAL = 331, SMALLINT_LITERAL = 332, 
+    TINYINT_LITERAL = 333, INTEGER_VALUE = 334, EXPONENT_VALUE = 335, DECIMAL_VALUE = 336, 
+    DOUBLE_LITERAL = 337, BIGDECIMAL_LITERAL = 338, IDENTIFIER = 339, BACKQUOTED_IDENTIFIER = 340, 
+    SIMPLE_COMMENT = 341, BRACKETED_COMMENT = 342, WS = 343, UNRECOGNIZED = 344
   };
 
   enum {
@@ -90,67 +90,67 @@ public:
     RuleFuguePrintTask = 20, RuleFugueSaveTask = 21, RuleFugueOutputTransformTask = 22, 
     RuleFugueModuleTask = 23, RuleFugueSqlEngine = 24, RuleFugueSingleFile = 25, 
     RuleFugueLoadColumns = 26, RuleFugueSaveMode = 27, RuleFugueFileFormat = 28, 
-    RuleFuguePath = 29, RuleFugueCheckpoint = 30, RuleFugueCheckpointNamespace = 31, 
-    RuleFugueYield = 32, RuleFugueBroadcast = 33, RuleFugueDataFrames = 34, 
-    RuleFugueDataFramePair = 35, RuleFugueDataFrame = 36, RuleFugueDataFrameMember = 37, 
-    RuleFugueAssignment = 38, RuleFugueAssignmentSign = 39, RuleFugueSingleOutputExtensionCommonWild = 40, 
-    RuleFugueSingleOutputExtensionCommon = 41, RuleFugueExtension = 42, 
-    RuleFugueSampleMethod = 43, RuleFugueZipType = 44, RuleFuguePrepartition = 45, 
-    RuleFuguePartitionAlgo = 46, RuleFuguePartitionNum = 47, RuleFuguePartitionNumber = 48, 
-    RuleFugueParams = 49, RuleFugueCols = 50, RuleFugueColsSort = 51, RuleFugueColSort = 52, 
-    RuleFugueColumnIdentifier = 53, RuleFugueRenameExpression = 54, RuleFugueWildSchema = 55, 
-    RuleFugueWildSchemaPair = 56, RuleFugueSchemaOp = 57, RuleFugueSchema = 58, 
-    RuleFugueSchemaPair = 59, RuleFugueSchemaKey = 60, RuleFugueSchemaType = 61, 
-    RuleFugueRenamePair = 62, RuleFugueJson = 63, RuleFugueJsonObj = 64, 
-    RuleFugueJsonPairs = 65, RuleFugueJsonPair = 66, RuleFugueJsonKey = 67, 
-    RuleFugueJsonArray = 68, RuleFugueJsonValue = 69, RuleFugueJsonNumber = 70, 
-    RuleFugueJsonString = 71, RuleFugueJsonBool = 72, RuleFugueJsonNull = 73, 
-    RuleFugueIdentifier = 74, RuleSingleStatement = 75, RuleSingleExpression = 76, 
-    RuleSingleTableIdentifier = 77, RuleSingleMultipartIdentifier = 78, 
-    RuleSingleFunctionIdentifier = 79, RuleSingleDataType = 80, RuleSingleTableSchema = 81, 
-    RuleStatement = 82, RuleUnsupportedHiveNativeCommands = 83, RuleCreateTableHeader = 84, 
-    RuleReplaceTableHeader = 85, RuleBucketSpec = 86, RuleSkewSpec = 87, 
-    RuleLocationSpec = 88, RuleCommentSpec = 89, RuleQuery = 90, RuleInsertInto = 91, 
-    RulePartitionSpecLocation = 92, RulePartitionSpec = 93, RulePartitionVal = 94, 
-    RuleTheNamespace = 95, RuleDescribeFuncName = 96, RuleDescribeColName = 97, 
-    RuleCtes = 98, RuleNamedQuery = 99, RuleTableProvider = 100, RuleCreateTableClauses = 101, 
-    RuleTablePropertyList = 102, RuleTableProperty = 103, RuleTablePropertyKey = 104, 
-    RuleTablePropertyValue = 105, RuleConstantList = 106, RuleNestedConstantList = 107, 
-    RuleCreateFileFormat = 108, RuleFileFormat = 109, RuleStorageHandler = 110, 
-    RuleResource = 111, RuleDmlStatementNoWith = 112, RuleQueryOrganization = 113, 
-    RuleMultiInsertQueryBody = 114, RuleQueryTerm = 115, RuleQueryPrimary = 116, 
-    RuleSortItem = 117, RuleFromStatement = 118, RuleFromStatementBody = 119, 
-    RuleQuerySpecification = 120, RuleOptionalFromClause = 121, RuleTransformClause = 122, 
-    RuleSelectClause = 123, RuleSetClause = 124, RuleMatchedClause = 125, 
-    RuleNotMatchedClause = 126, RuleMatchedAction = 127, RuleNotMatchedAction = 128, 
-    RuleAssignmentList = 129, RuleAssignment = 130, RuleWhereClause = 131, 
-    RuleHavingClause = 132, RuleHint = 133, RuleHintStatement = 134, RuleFromClause = 135, 
-    RuleAggregationClause = 136, RuleGroupingSet = 137, RulePivotClause = 138, 
-    RulePivotColumn = 139, RulePivotValue = 140, RuleLateralView = 141, 
-    RuleSetQuantifier = 142, RuleRelation = 143, RuleJoinRelation = 144, 
-    RuleJoinType = 145, RuleJoinCriteria = 146, RuleSample = 147, RuleSampleMethod = 148, 
-    RuleIdentifierList = 149, RuleIdentifierSeq = 150, RuleOrderedIdentifierList = 151, 
-    RuleOrderedIdentifier = 152, RuleIdentifierCommentList = 153, RuleIdentifierComment = 154, 
-    RuleRelationPrimary = 155, RuleInlineTable = 156, RuleFunctionTable = 157, 
-    RuleTableAlias = 158, RuleRowFormat = 159, RuleMultipartIdentifierList = 160, 
-    RuleMultipartIdentifier = 161, RuleTableIdentifier = 162, RuleFunctionIdentifier = 163, 
-    RuleNamedExpression = 164, RuleNamedExpressionSeq = 165, RuleTransformList = 166, 
-    RuleTransform = 167, RuleTransformArgument = 168, RuleExpression = 169, 
-    RuleBooleanExpression = 170, RulePredicate = 171, RuleValueExpression = 172, 
-    RulePrimaryExpression = 173, RuleConstant = 174, RuleComparisonOperator = 175, 
-    RuleComparisonEqualOperator = 176, RuleArithmeticOperator = 177, RulePredicateOperator = 178, 
-    RuleBooleanValue = 179, RuleInterval = 180, RuleErrorCapturingMultiUnitsInterval = 181, 
-    RuleMultiUnitsInterval = 182, RuleErrorCapturingUnitToUnitInterval = 183, 
-    RuleUnitToUnitInterval = 184, RuleIntervalValue = 185, RuleIntervalUnit = 186, 
-    RuleColPosition = 187, RuleDataType = 188, RuleQualifiedColTypeWithPositionList = 189, 
-    RuleQualifiedColTypeWithPosition = 190, RuleColTypeList = 191, RuleColType = 192, 
-    RuleComplexColTypeList = 193, RuleComplexColType = 194, RuleWhenClause = 195, 
-    RuleWindowClause = 196, RuleNamedWindow = 197, RuleWindowSpec = 198, 
-    RuleWindowFrame = 199, RuleFrameBound = 200, RuleQualifiedNameList = 201, 
-    RuleFunctionName = 202, RuleQualifiedName = 203, RuleErrorCapturingIdentifier = 204, 
-    RuleErrorCapturingIdentifierExtra = 205, RuleIdentifier = 206, RuleStrictIdentifier = 207, 
-    RuleQuotedIdentifier = 208, RuleNumber = 209, RuleAlterColumnAction = 210, 
-    RuleAnsiNonReserved = 211, RuleStrictNonReserved = 212, RuleNonReserved = 213
+    RuleFuguePath = 29, RuleFuguePaths = 30, RuleFugueCheckpoint = 31, RuleFugueCheckpointNamespace = 32, 
+    RuleFugueYield = 33, RuleFugueBroadcast = 34, RuleFugueDataFrames = 35, 
+    RuleFugueDataFramePair = 36, RuleFugueDataFrame = 37, RuleFugueDataFrameMember = 38, 
+    RuleFugueAssignment = 39, RuleFugueAssignmentSign = 40, RuleFugueSingleOutputExtensionCommonWild = 41, 
+    RuleFugueSingleOutputExtensionCommon = 42, RuleFugueExtension = 43, 
+    RuleFugueSampleMethod = 44, RuleFugueZipType = 45, RuleFuguePrepartition = 46, 
+    RuleFuguePartitionAlgo = 47, RuleFuguePartitionNum = 48, RuleFuguePartitionNumber = 49, 
+    RuleFugueParams = 50, RuleFugueCols = 51, RuleFugueColsSort = 52, RuleFugueColSort = 53, 
+    RuleFugueColumnIdentifier = 54, RuleFugueRenameExpression = 55, RuleFugueWildSchema = 56, 
+    RuleFugueWildSchemaPair = 57, RuleFugueSchemaOp = 58, RuleFugueSchema = 59, 
+    RuleFugueSchemaPair = 60, RuleFugueSchemaKey = 61, RuleFugueSchemaType = 62, 
+    RuleFugueRenamePair = 63, RuleFugueJson = 64, RuleFugueJsonObj = 65, 
+    RuleFugueJsonPairs = 66, RuleFugueJsonPair = 67, RuleFugueJsonKey = 68, 
+    RuleFugueJsonArray = 69, RuleFugueJsonValue = 70, RuleFugueJsonNumber = 71, 
+    RuleFugueJsonString = 72, RuleFugueJsonBool = 73, RuleFugueJsonNull = 74, 
+    RuleFugueIdentifier = 75, RuleSingleStatement = 76, RuleSingleExpression = 77, 
+    RuleSingleTableIdentifier = 78, RuleSingleMultipartIdentifier = 79, 
+    RuleSingleFunctionIdentifier = 80, RuleSingleDataType = 81, RuleSingleTableSchema = 82, 
+    RuleStatement = 83, RuleUnsupportedHiveNativeCommands = 84, RuleCreateTableHeader = 85, 
+    RuleReplaceTableHeader = 86, RuleBucketSpec = 87, RuleSkewSpec = 88, 
+    RuleLocationSpec = 89, RuleCommentSpec = 90, RuleQuery = 91, RuleInsertInto = 92, 
+    RulePartitionSpecLocation = 93, RulePartitionSpec = 94, RulePartitionVal = 95, 
+    RuleTheNamespace = 96, RuleDescribeFuncName = 97, RuleDescribeColName = 98, 
+    RuleCtes = 99, RuleNamedQuery = 100, RuleTableProvider = 101, RuleCreateTableClauses = 102, 
+    RuleTablePropertyList = 103, RuleTableProperty = 104, RuleTablePropertyKey = 105, 
+    RuleTablePropertyValue = 106, RuleConstantList = 107, RuleNestedConstantList = 108, 
+    RuleCreateFileFormat = 109, RuleFileFormat = 110, RuleStorageHandler = 111, 
+    RuleResource = 112, RuleDmlStatementNoWith = 113, RuleQueryOrganization = 114, 
+    RuleMultiInsertQueryBody = 115, RuleQueryTerm = 116, RuleQueryPrimary = 117, 
+    RuleSortItem = 118, RuleFromStatement = 119, RuleFromStatementBody = 120, 
+    RuleQuerySpecification = 121, RuleOptionalFromClause = 122, RuleTransformClause = 123, 
+    RuleSelectClause = 124, RuleSetClause = 125, RuleMatchedClause = 126, 
+    RuleNotMatchedClause = 127, RuleMatchedAction = 128, RuleNotMatchedAction = 129, 
+    RuleAssignmentList = 130, RuleAssignment = 131, RuleWhereClause = 132, 
+    RuleHavingClause = 133, RuleHint = 134, RuleHintStatement = 135, RuleFromClause = 136, 
+    RuleAggregationClause = 137, RuleGroupingSet = 138, RulePivotClause = 139, 
+    RulePivotColumn = 140, RulePivotValue = 141, RuleLateralView = 142, 
+    RuleSetQuantifier = 143, RuleRelation = 144, RuleJoinRelation = 145, 
+    RuleJoinType = 146, RuleJoinCriteria = 147, RuleSample = 148, RuleSampleMethod = 149, 
+    RuleIdentifierList = 150, RuleIdentifierSeq = 151, RuleOrderedIdentifierList = 152, 
+    RuleOrderedIdentifier = 153, RuleIdentifierCommentList = 154, RuleIdentifierComment = 155, 
+    RuleRelationPrimary = 156, RuleInlineTable = 157, RuleFunctionTable = 158, 
+    RuleTableAlias = 159, RuleRowFormat = 160, RuleMultipartIdentifierList = 161, 
+    RuleMultipartIdentifier = 162, RuleTableIdentifier = 163, RuleFunctionIdentifier = 164, 
+    RuleNamedExpression = 165, RuleNamedExpressionSeq = 166, RuleTransformList = 167, 
+    RuleTransform = 168, RuleTransformArgument = 169, RuleExpression = 170, 
+    RuleBooleanExpression = 171, RulePredicate = 172, RuleValueExpression = 173, 
+    RulePrimaryExpression = 174, RuleConstant = 175, RuleComparisonOperator = 176, 
+    RuleComparisonEqualOperator = 177, RuleArithmeticOperator = 178, RulePredicateOperator = 179, 
+    RuleBooleanValue = 180, RuleInterval = 181, RuleErrorCapturingMultiUnitsInterval = 182, 
+    RuleMultiUnitsInterval = 183, RuleErrorCapturingUnitToUnitInterval = 184, 
+    RuleUnitToUnitInterval = 185, RuleIntervalValue = 186, RuleIntervalUnit = 187, 
+    RuleColPosition = 188, RuleDataType = 189, RuleQualifiedColTypeWithPositionList = 190, 
+    RuleQualifiedColTypeWithPosition = 191, RuleColTypeList = 192, RuleColType = 193, 
+    RuleComplexColTypeList = 194, RuleComplexColType = 195, RuleWhenClause = 196, 
+    RuleWindowClause = 197, RuleNamedWindow = 198, RuleWindowSpec = 199, 
+    RuleWindowFrame = 200, RuleFrameBound = 201, RuleQualifiedNameList = 202, 
+    RuleFunctionName = 203, RuleQualifiedName = 204, RuleErrorCapturingIdentifier = 205, 
+    RuleErrorCapturingIdentifierExtra = 206, RuleIdentifier = 207, RuleStrictIdentifier = 208, 
+    RuleQuotedIdentifier = 209, RuleNumber = 210, RuleAlterColumnAction = 211, 
+    RuleAnsiNonReserved = 212, RuleStrictNonReserved = 213, RuleNonReserved = 214
   };
 
   explicit fugue_sqlParser(antlr4::TokenStream *input);
@@ -200,6 +200,7 @@ public:
   class FugueSaveModeContext;
   class FugueFileFormatContext;
   class FuguePathContext;
+  class FuguePathsContext;
   class FugueCheckpointContext;
   class FugueCheckpointNamespaceContext;
   class FugueYieldContext;
@@ -772,16 +773,18 @@ public:
   public:
     fugue_sqlParser::FugueFileFormatContext *fmt = nullptr;
     fugue_sqlParser::FuguePathContext *path = nullptr;
+    fugue_sqlParser::FuguePathsContext *paths = nullptr;
     fugue_sqlParser::FugueParamsContext *params = nullptr;
     fugue_sqlParser::FugueLoadColumnsContext *columns = nullptr;
     FugueLoadTaskContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *LOAD();
-    FuguePathContext *fuguePath();
     antlr4::tree::TerminalNode *COLUMNS();
     FugueFileFormatContext *fugueFileFormat();
     FugueParamsContext *fugueParams();
     FugueLoadColumnsContext *fugueLoadColumns();
+    FuguePathContext *fuguePath();
+    FuguePathsContext *fuguePaths();
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
@@ -1000,6 +1003,20 @@ public:
   };
 
   FuguePathContext* fuguePath();
+
+  class  FuguePathsContext : public antlr4::ParserRuleContext {
+  public:
+    FuguePathsContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+    virtual size_t getRuleIndex() const override;
+    std::vector<FuguePathContext *> fuguePath();
+    FuguePathContext* fuguePath(size_t i);
+
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+   
+  };
+
+  FuguePathsContext* fuguePaths();
 
   class  FugueCheckpointContext : public antlr4::ParserRuleContext {
   public:
@@ -1368,6 +1385,7 @@ public:
     antlr4::tree::TerminalNode *HASH();
     antlr4::tree::TerminalNode *RAND();
     antlr4::tree::TerminalNode *EVEN();
+    antlr4::tree::TerminalNode *COARSE();
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;

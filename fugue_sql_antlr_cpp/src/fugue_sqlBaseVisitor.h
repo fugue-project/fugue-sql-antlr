@@ -135,6 +135,10 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual std::any visitFuguePaths(fugue_sqlParser::FuguePathsContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual std::any visitFugueCheckpointWeak(fugue_sqlParser::FugueCheckpointWeakContext *ctx) override {
     return visitChildren(ctx);
   }

@@ -112,7 +112,7 @@ fugueCreateDataTask:
     ;
 
 fugueLoadTask:
-    LOAD (fmt=fugueFileFormat)? path=fuguePath (params=fugueParams)? (COLUMNS columns=fugueLoadColumns)?
+    LOAD (fmt=fugueFileFormat)? ((path=fuguePath)|(paths=fuguePaths)) (params=fugueParams)? (COLUMNS columns=fugueLoadColumns)?
     ;
 
 fugueOutputTask:
@@ -163,6 +163,10 @@ fugueFileFormat
 
 fuguePath
     : STRING
+    ;
+
+fuguePaths
+    : '[' fuguePath (',' fuguePath)* ']'
     ;
 
 fugueCheckpoint
@@ -241,7 +245,7 @@ fuguePrepartition
     ;
 
 fuguePartitionAlgo
-    : HASH | RAND | EVEN
+    : HASH | RAND | EVEN | COARSE
     ;
 
 fuguePartitionNum
@@ -1798,6 +1802,7 @@ TAKE: 'TAKE';
 HASH: 'HASH';
 RAND: 'RAND';
 EVEN: 'EVEN';
+COARSE: 'COARSE';
 PRESORT: 'PRESORT';
 PERSIST: 'PERSIST';
 BROADCAST: 'BROADCAST';
