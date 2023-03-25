@@ -45,6 +45,7 @@ antlr4::tree::ParseTree* get_parse_tree_fugueLoadColumns(fugue_sqlParser *parser
 antlr4::tree::ParseTree* get_parse_tree_fugueSaveMode(fugue_sqlParser *parser) {return parser->fugueSaveMode();}
 antlr4::tree::ParseTree* get_parse_tree_fugueFileFormat(fugue_sqlParser *parser) {return parser->fugueFileFormat();}
 antlr4::tree::ParseTree* get_parse_tree_fuguePath(fugue_sqlParser *parser) {return parser->fuguePath();}
+antlr4::tree::ParseTree* get_parse_tree_fuguePaths(fugue_sqlParser *parser) {return parser->fuguePaths();}
 antlr4::tree::ParseTree* get_parse_tree_fugueCheckpoint(fugue_sqlParser *parser) {return parser->fugueCheckpoint();}
 antlr4::tree::ParseTree* get_parse_tree_fugueCheckpointNamespace(fugue_sqlParser *parser) {return parser->fugueCheckpointNamespace();}
 antlr4::tree::ParseTree* get_parse_tree_fugueYield(fugue_sqlParser *parser) {return parser->fugueYield();}
@@ -263,6 +264,7 @@ antlr4::tree::ParseTree* get_parse_tree(fugue_sqlParser *parser, const char *ent
         {"fugueSaveMode", &get_parse_tree_fugueSaveMode},
         {"fugueFileFormat", &get_parse_tree_fugueFileFormat},
         {"fuguePath", &get_parse_tree_fuguePath},
+        {"fuguePaths", &get_parse_tree_fuguePaths},
         {"fugueCheckpoint", &get_parse_tree_fugueCheckpoint},
         {"fugueCheckpointNamespace", &get_parse_tree_fugueCheckpointNamespace},
         {"fugueYield", &get_parse_tree_fugueYield},

@@ -42,6 +42,7 @@ class SA_fugue_sqlTranslator : public fugue_sqlBaseVisitor {
     PyObject *FugueSaveModeContext_cls = NULL;
     PyObject *FugueFileFormatContext_cls = NULL;
     PyObject *FuguePathContext_cls = NULL;
+    PyObject *FuguePathsContext_cls = NULL;
     PyObject *FugueCheckpointDeterministicContext_cls = NULL;
     PyObject *FugueCheckpointWeakContext_cls = NULL;
     PyObject *FugueCheckpointStrongContext_cls = NULL;
@@ -425,6 +426,8 @@ class SA_fugue_sqlTranslator : public fugue_sqlBaseVisitor {
     antlrcpp::Any visitFugueFileFormat(fugue_sqlParser::FugueFileFormatContext *ctx);
 
     antlrcpp::Any visitFuguePath(fugue_sqlParser::FuguePathContext *ctx);
+
+    antlrcpp::Any visitFuguePaths(fugue_sqlParser::FuguePathsContext *ctx);
 
     antlrcpp::Any visitFugueCheckpointDeterministic(fugue_sqlParser::FugueCheckpointDeterministicContext *ctx);
 

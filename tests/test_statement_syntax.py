@@ -38,7 +38,7 @@ def test_assign_syntax():
 def test_partition_syntax():
     good_single_syntax(
         "a = transform",
-        ["", "hash", "even", "rand"],
+        ["", "hash", "even", "rand", "coarse"],
         "  prepartition 100 using a",
         ignore_case=True,
     )
@@ -218,7 +218,7 @@ def test_load_save_syntax():
     good_single_syntax(
         "load",
         ["", "csv", "parquet", "json"],
-        '"x"',
+        ['"x"', '["a","b"]', "['a','b']"],
         ["(a=1)"],
         ["", "columns a,b", "columns a:int,b:int"],
         ignore_case=True,

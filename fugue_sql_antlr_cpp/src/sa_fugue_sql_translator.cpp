@@ -41,6 +41,7 @@ SA_fugue_sqlTranslator::~SA_fugue_sqlTranslator() {
     Py_XDECREF(FugueSaveModeContext_cls);
     Py_XDECREF(FugueFileFormatContext_cls);
     Py_XDECREF(FuguePathContext_cls);
+    Py_XDECREF(FuguePathsContext_cls);
     Py_XDECREF(FugueCheckpointDeterministicContext_cls);
     Py_XDECREF(FugueCheckpointWeakContext_cls);
     Py_XDECREF(FugueCheckpointStrongContext_cls);
@@ -550,11 +551,12 @@ antlrcpp::Any SA_fugue_sqlTranslator::visitFugueLoadTask(fugue_sqlParser::FugueL
     speedy_antlr::LabelMap labels[] = {
         {"fmt", static_cast<void*>(ctx->fmt)},
         {"path", static_cast<void*>(ctx->path)},
+        {"paths", static_cast<void*>(ctx->paths)},
         {"params", static_cast<void*>(ctx->params)},
         {"columns", static_cast<void*>(ctx->columns)}
     };
     if(!FugueLoadTaskContext_cls) FugueLoadTaskContext_cls = PyObject_GetAttrString(translator->parser_cls, "FugueLoadTaskContext");
-    PyObject *py_ctx = translator->convert_ctx(this, ctx, FugueLoadTaskContext_cls, labels, 4);
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FugueLoadTaskContext_cls, labels, 5);
     return py_ctx;
 }
 
@@ -666,6 +668,12 @@ antlrcpp::Any SA_fugue_sqlTranslator::visitFugueFileFormat(fugue_sqlParser::Fugu
 antlrcpp::Any SA_fugue_sqlTranslator::visitFuguePath(fugue_sqlParser::FuguePathContext *ctx){
     if(!FuguePathContext_cls) FuguePathContext_cls = PyObject_GetAttrString(translator->parser_cls, "FuguePathContext");
     PyObject *py_ctx = translator->convert_ctx(this, ctx, FuguePathContext_cls);
+    return py_ctx;
+}
+
+antlrcpp::Any SA_fugue_sqlTranslator::visitFuguePaths(fugue_sqlParser::FuguePathsContext *ctx){
+    if(!FuguePathsContext_cls) FuguePathsContext_cls = PyObject_GetAttrString(translator->parser_cls, "FuguePathsContext");
+    PyObject *py_ctx = translator->convert_ctx(this, ctx, FuguePathsContext_cls);
     return py_ctx;
 }
 
