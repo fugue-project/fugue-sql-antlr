@@ -1,5 +1,9 @@
 # Release Notes
 
+## 0.1.7
+
+* Remove the lower constraint of antlr dependency (will revert this change)
+
 ## 0.1.6
 
 * Enable loading multiple files

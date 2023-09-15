@@ -1,8 +1,10 @@
 from typing import Iterable, List, Optional, Tuple
 
+import pkg_resources
 from antlr4 import InputStream, Token
 from antlr4.Token import CommonToken
 from antlr4.tree.Tree import ParseTree, TerminalNode
+from packaging import version
 
 from fugue_sql_antlr._parser.fugue_sqlParser import fugue_sqlParser
 from fugue_sql_antlr._parser.sa_fugue_sql import (
@@ -26,6 +28,12 @@ class FugueSQLParser:
         ignore_case: bool,
         parse_mode: str,
     ):
+        a_version = pkg_resources.get_distribution("antlr4-python3-runtime").version
+        if version.parse(a_version) < version.parse("4.11.1"):  # pragma: no cover
+            raise RuntimeError(
+                "antlr4-python3-runtime>=4.11.1,<4.12 is required, "
+                f"current version is {a_version}"
+            )
         self._rule = rule
         self._raw_code = code
         self._raw_lines = code.splitlines()
