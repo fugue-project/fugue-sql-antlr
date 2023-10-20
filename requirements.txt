@@ -1,4 +1,5 @@
-antlr4-python3-runtime>=4.11.1,<4.12
+# TODO: add back the lower bound of antlr4-python3-runtime
+antlr4-python3-runtime<4.12
 jinja2
 
 # test requirements
