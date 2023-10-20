@@ -1,5 +1,10 @@
 # Release Notes
 
+# 0.1.8
+
+* Remove the lower constraint of antlr dependency from requirements.txt and template
+* Add packaging to dependency
+
 ## 0.1.7
 
 * Remove the lower constraint of antlr dependency (will revert this change)
