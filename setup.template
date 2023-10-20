@@ -102,6 +102,7 @@ setup(
         "triad>=0.6.8",
         "antlr4-python3-runtime>=4.11.1,<4.12",
         "jinja2",
+        "packaging",
     ],
     extras_require={}
     if _BUILD_CPP
