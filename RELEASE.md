@@ -1,5 +1,9 @@
 # Release Notes
 
+# 0.2.0
+
+* Remove Python 3.6 3.7 support, add 3.11 support
+
 # 0.1.8
 
 * Remove the lower constraint of antlr dependency from requirements.txt and template
