@@ -70,11 +70,10 @@ jobs:
           - windows-latest
           - macos-11
         cpv:
-          #- "cp36*"
-          - "cp37*"
           - "cp38*"
           - "cp39*"
           - "cp310*"
+          - "cp311*"
 
     steps:
       - uses: actions/checkout@v2
