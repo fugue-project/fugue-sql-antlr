@@ -1,5 +1,9 @@
 # Release Notes
 
+# 0.2.1
+
+* Support Python 3.12
+
 # 0.2.0
 
 * Remove Python 3.6 3.7 support, add 3.11 support
