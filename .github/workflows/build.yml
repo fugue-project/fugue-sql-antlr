@@ -64,14 +64,14 @@ jobs:
   build_cpp_wheels:
     name: Build CPP wheels on ${{ matrix.os }} ${{ matrix.cpv }}
     runs-on: ${{ matrix.os }}
-    if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
+    # if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
 
     strategy:
       matrix:
         os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-11
+          # - ubuntu-latest
+          # - windows-latest
+          - macos-latest
         cpv:
           - "cp38*"
           - "cp39*"
@@ -89,12 +89,12 @@ jobs:
 
       - name: Install cibuildwheel
         run: |
-          python -m pip install cibuildwheel==2.16.2
+          python -m pip install cibuildwheel
 
       - name: Build wheels
         env:
           CIBW_BUILD:  ${{ matrix.cpv }}
-          CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET='11.6.5'
+          # CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET='11.6.5'
         run: |
           python scripts/make_setup.py 1
           python -m cibuildwheel --output-dir wheelhouse
