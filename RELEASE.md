@@ -1,6 +1,6 @@
 # Release Notes
 
-# 0.2.1
+# 0.2.2
 
 * Support Python 3.12
 
