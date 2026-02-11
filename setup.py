@@ -104,7 +104,6 @@ setup(
     url="http://github.com/fugue-project/fugue",
     install_requires=[
         "triad>=0.6.8",
-        # >=4.11.1 is also required but will be checked in runtime
         "antlr4-python3-runtime<4.12",
         "jinja2",
         "packaging",

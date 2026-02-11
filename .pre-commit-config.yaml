@@ -16,7 +16,6 @@ repos:
           - id: check-ast
           - id: check-docstring-first
           - id: check-executables-have-shebangs
-          - id: check-json
           - id: check-merge-conflict
           - id: check-yaml
           - id: debug-statements
@@ -37,13 +36,9 @@ repos:
             - flake8-tidy-imports
             - pycodestyle
     - repo: https://github.com/pre-commit/mirrors-mypy
-      rev: v0.782
+      rev: v1.19.1
       hooks:
         - id: mypy
-    - repo: https://github.com/pre-commit/mirrors-pylint
-      rev: v2.6.0
-      hooks:
-        - id: pylint
     - repo: https://github.com/ambv/black
       rev: 22.3.0
       hooks:

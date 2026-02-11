@@ -95,7 +95,7 @@ jobs:
           python scripts/make_setup.py 1
           python -m cibuildwheel --output-dir wheelhouse
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v6
         with:
           name: cpp
           path: ./wheelhouse/*.whl
@@ -117,7 +117,7 @@ jobs:
           python scripts/make_setup.py 1
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v6
         with:
           name: cpp
           path: dist/*.tar.gz
@@ -138,7 +138,7 @@ jobs:
           python scripts/make_setup.py 0
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v6
         with:
           name: py
           path: dist/*.tar.gz
@@ -155,7 +155,7 @@ jobs:
     # Only publish when a GitHub Release is created.
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v7
         with:
           name: cpp
           path: dist
@@ -175,7 +175,7 @@ jobs:
     # Only publish when a GitHub Release is created.
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v7
         with:
           name: py
           path: dist
