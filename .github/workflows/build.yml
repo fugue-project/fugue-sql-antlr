@@ -18,7 +18,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          # - windows-latest
+          - windows-2022
           # - macos-11
         python-version:
           - "3.10"
@@ -62,13 +62,13 @@ jobs:
   build_cpp_wheels:
     name: Build CPP wheels on ${{ matrix.os }} ${{ matrix.cpv }}
     runs-on: ${{ matrix.os }}
-    if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
+    # if: github.event_name == 'release' && github.event.action == 'published' && !github.event.release.prerelease
 
     strategy:
       matrix:
         os:
           - ubuntu-latest
-          # - windows-latest
+          - windows-latest
           - macos-latest
         cpv:
           - "cp310*"
