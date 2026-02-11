@@ -1,5 +1,5 @@
 # TODO: add back the lower bound of antlr4-python3-runtime
-antlr4-python3-runtime<4.12
+antlr4-python3-runtime>=4.13.2,<4.14
 jinja2
 packaging
 

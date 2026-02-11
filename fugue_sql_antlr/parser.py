@@ -29,9 +29,11 @@ class FugueSQLParser:
         parse_mode: str,
     ):
         a_version = version("antlr4-python3-runtime")
-        if version_parser.parse(a_version) < version_parser.parse("4.11.1"):  # pragma: no cover
+        if version_parser.parse(a_version) < version_parser.parse(
+            "4.13.2"
+        ):  # pragma: no cover
             raise RuntimeError(
-                "antlr4-python3-runtime>=4.11.1,<4.12 is required, "
+                "antlr4-python3-runtime>=4.13.2,<4.14 is required, "
                 f"current version is {a_version}"
             )
         self._rule = rule

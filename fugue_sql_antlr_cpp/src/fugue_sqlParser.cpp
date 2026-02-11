@@ -1,5 +1,5 @@
 
-// Generated from fugue_sql.g4 by ANTLR 4.11.1
+// Generated from fugue_sql.g4 by ANTLR 4.13.2
 
 
 #include "fugue_sqlVisitor.h"
@@ -37,10 +37,19 @@ struct Fugue_sqlParserStaticData final {
 };
 
 ::antlr4::internal::OnceFlag fugue_sqlParserOnceFlag;
-Fugue_sqlParserStaticData *fugue_sqlParserStaticData = nullptr;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
+std::unique_ptr<Fugue_sqlParserStaticData> fugue_sqlParserStaticData = nullptr;
 
 void fugue_sqlParserInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (fugue_sqlParserStaticData != nullptr) {
+    return;
+  }
+#else
   assert(fugue_sqlParserStaticData == nullptr);
+#endif
   auto staticData = std::make_unique<Fugue_sqlParserStaticData>(
     std::vector<std::string>{
       "fugueLanguage", "fugueSingleStatement", "fugueSingleTask", "fugueNestableTask", 
@@ -1800,7 +1809,7 @@ void fugue_sqlParserInitialize() {
   for (size_t i = 0; i < count; i++) { 
     staticData->decisionToDFA.emplace_back(staticData->atn->getDecisionState(i), i);
   }
-  fugue_sqlParserStaticData = staticData.release();
+  fugue_sqlParserStaticData = std::move(staticData);
 }
 
 }
@@ -1891,13 +1900,13 @@ fugue_sqlParser::FugueLanguageContext* fugue_sqlParser::fugueLanguage() {
       setState(433); 
       _errHandler->sync(this);
       _la = _input->LA(1);
-    } while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -269793669747965952) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 256)) & 18014398509481983) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 324)) & 98305) != 0);
+    } while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -269793669747965952) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 256)) & 18014398509481983) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 324)) & 98305) != 0));
     setState(435);
     match(fugue_sqlParser::EOF);
    
@@ -2466,8 +2475,8 @@ fugue_sqlParser::FugueTransformTaskContext* fugue_sqlParser::fugueTransformTask(
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 4302831616) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 4302831616) != 0)) {
       setState(481);
       antlrcpp::downCast<FugueTransformTaskContext *>(_localctx)->partition = fuguePrepartition();
     }
@@ -2567,8 +2576,8 @@ fugue_sqlParser::FugueProcessTaskContext* fugue_sqlParser::fugueProcessTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 4302831616) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 4302831616) != 0)) {
       setState(493);
       antlrcpp::downCast<FugueProcessTaskContext *>(_localctx)->partition = fuguePrepartition();
     }
@@ -2681,8 +2690,8 @@ fugue_sqlParser::FugueSaveAndUseTaskContext* fugue_sqlParser::fugueSaveAndUseTas
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 4302831616) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 4302831616) != 0)) {
       setState(504);
       antlrcpp::downCast<FugueSaveAndUseTaskContext *>(_localctx)->partition = fuguePrepartition();
     }
@@ -2700,8 +2709,8 @@ fugue_sqlParser::FugueSaveAndUseTaskContext* fugue_sqlParser::fugueSaveAndUseTas
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 1924145348608) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 1924145348608) != 0)) {
       setState(511);
       antlrcpp::downCast<FugueSaveAndUseTaskContext *>(_localctx)->fmt = fugueFileFormat();
     }
@@ -3906,8 +3915,8 @@ fugue_sqlParser::FugueLoadTaskContext* fugue_sqlParser::fugueLoadTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 1924145348608) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 1924145348608) != 0)) {
       setState(624);
       antlrcpp::downCast<FugueLoadTaskContext *>(_localctx)->fmt = fugueFileFormat();
     }
@@ -4044,8 +4053,8 @@ fugue_sqlParser::FugueOutputTaskContext* fugue_sqlParser::fugueOutputTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 4302831616) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 4302831616) != 0)) {
       setState(642);
       antlrcpp::downCast<FugueOutputTaskContext *>(_localctx)->partition = fuguePrepartition();
     }
@@ -4057,8 +4066,8 @@ fugue_sqlParser::FugueOutputTaskContext* fugue_sqlParser::fugueOutputTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 67109152) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 67109152) != 0)) {
       setState(647);
       antlrcpp::downCast<FugueOutputTaskContext *>(_localctx)->params = fugueParams();
     }
@@ -4333,8 +4342,8 @@ fugue_sqlParser::FugueSaveTaskContext* fugue_sqlParser::fugueSaveTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 4302831616) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 4302831616) != 0)) {
       setState(681);
       antlrcpp::downCast<FugueSaveTaskContext *>(_localctx)->partition = fuguePrepartition();
     }
@@ -4352,8 +4361,8 @@ fugue_sqlParser::FugueSaveTaskContext* fugue_sqlParser::fugueSaveTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 1924145348608) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 1924145348608) != 0)) {
       setState(688);
       antlrcpp::downCast<FugueSaveTaskContext *>(_localctx)->fmt = fugueFileFormat();
     }
@@ -4363,8 +4372,8 @@ fugue_sqlParser::FugueSaveTaskContext* fugue_sqlParser::fugueSaveTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 67109152) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 67109152) != 0)) {
       setState(692);
       antlrcpp::downCast<FugueSaveTaskContext *>(_localctx)->params = fugueParams();
     }
@@ -4463,8 +4472,8 @@ fugue_sqlParser::FugueOutputTransformTaskContext* fugue_sqlParser::fugueOutputTr
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 4302831616) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 4302831616) != 0)) {
       setState(699);
       antlrcpp::downCast<FugueOutputTransformTaskContext *>(_localctx)->partition = fuguePrepartition();
     }
@@ -4476,8 +4485,8 @@ fugue_sqlParser::FugueOutputTransformTaskContext* fugue_sqlParser::fugueOutputTr
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 67109152) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 67109152) != 0)) {
       setState(704);
       antlrcpp::downCast<FugueOutputTransformTaskContext *>(_localctx)->params = fugueParams();
     }
@@ -4563,12 +4572,12 @@ fugue_sqlParser::FugueModuleTaskContext* fugue_sqlParser::fugueModuleTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if ((((_la - 58) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 58)) & -1) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 122)) & -1) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 186)) & -1) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 250)) & 1152921504606846975) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 324)) & 98305) != 0) {
+    if (((((_la - 58) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 58)) & -1) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 122)) & -1) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 186)) & -1) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 250)) & 1152921504606846975) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 324)) & 98305) != 0)) {
       setState(711);
       antlrcpp::downCast<FugueModuleTaskContext *>(_localctx)->assign = fugueAssignment();
     }
@@ -4595,8 +4604,8 @@ fugue_sqlParser::FugueModuleTaskContext* fugue_sqlParser::fugueModuleTask() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 67109152) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 67109152) != 0)) {
       setState(720);
       antlrcpp::downCast<FugueModuleTaskContext *>(_localctx)->params = fugueParams();
     }
@@ -4664,8 +4673,8 @@ fugue_sqlParser::FugueSqlEngineContext* fugue_sqlParser::fugueSqlEngine() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 67109152) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 67109152) != 0)) {
       setState(725);
       antlrcpp::downCast<FugueSqlEngineContext *>(_localctx)->params = fugueParams();
     }
@@ -4911,8 +4920,8 @@ fugue_sqlParser::FugueFileFormatContext* fugue_sqlParser::fugueFileFormat() {
     enterOuterAlt(_localctx, 1);
     setState(736);
     _la = _input->LA(1);
-    if (!(((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 1924145348608) != 0)) {
+    if (!((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 1924145348608) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -5220,8 +5229,8 @@ fugue_sqlParser::FugueCheckpointContext* fugue_sqlParser::fugueCheckpoint() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 67109152) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 67109152) != 0)) {
         setState(759);
         antlrcpp::downCast<FugueCheckpointWeakContext *>(_localctx)->params = fugueParams();
       }
@@ -5253,8 +5262,8 @@ fugue_sqlParser::FugueCheckpointContext* fugue_sqlParser::fugueCheckpoint() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 4302831616) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 4302831616) != 0)) {
         setState(769);
         antlrcpp::downCast<FugueCheckpointStrongContext *>(_localctx)->partition = fuguePrepartition();
       }
@@ -5270,8 +5279,8 @@ fugue_sqlParser::FugueCheckpointContext* fugue_sqlParser::fugueCheckpoint() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 67109152) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 67109152) != 0)) {
         setState(775);
         antlrcpp::downCast<FugueCheckpointStrongContext *>(_localctx)->params = fugueParams();
       }
@@ -5305,8 +5314,8 @@ fugue_sqlParser::FugueCheckpointContext* fugue_sqlParser::fugueCheckpoint() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 4302831616) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 4302831616) != 0)) {
         setState(786);
         antlrcpp::downCast<FugueCheckpointDeterministicContext *>(_localctx)->partition = fuguePrepartition();
       }
@@ -5322,8 +5331,8 @@ fugue_sqlParser::FugueCheckpointContext* fugue_sqlParser::fugueCheckpoint() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 67109152) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 67109152) != 0)) {
         setState(792);
         antlrcpp::downCast<FugueCheckpointDeterministicContext *>(_localctx)->params = fugueParams();
       }
@@ -7151,8 +7160,8 @@ fugue_sqlParser::FuguePrepartitionContext* fugue_sqlParser::fuguePrepartition() 
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 7864320) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 7864320) != 0)) {
         setState(912);
         antlrcpp::downCast<FuguePrepartitionContext *>(_localctx)->algo = fuguePartitionAlgo();
       }
@@ -7199,8 +7208,8 @@ fugue_sqlParser::FuguePrepartitionContext* fugue_sqlParser::fuguePrepartition() 
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 7864320) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 7864320) != 0)) {
         setState(925);
         antlrcpp::downCast<FuguePrepartitionContext *>(_localctx)->algo = fuguePartitionAlgo();
       }
@@ -7293,8 +7302,8 @@ fugue_sqlParser::FuguePartitionAlgoContext* fugue_sqlParser::fuguePartitionAlgo(
     enterOuterAlt(_localctx, 1);
     setState(937);
     _la = _input->LA(1);
-    if (!(((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 7864320) != 0)) {
+    if (!((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 7864320) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -7427,8 +7436,8 @@ fugue_sqlParser::FuguePartitionNumContext* fugue_sqlParser::fuguePartitionNum(in
         if (!(precpred(_ctx, 1))) throw FailedPredicateException(this, "precpred(_ctx, 1)");
         setState(948);
         _la = _input->LA(1);
-        if (!((((_la - 319) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 319)) & 15) != 0)) {
+        if (!(((((_la - 319) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 319)) & 15) != 0))) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -13514,11 +13523,11 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 17) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 17)) & 2269395221545987) != 0 || (((_la - 99) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 99)) & 140737496743937) != 0 || (((_la - 182) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 182)) & 20266198323167361) != 0 || (((_la - 252) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 252)) & 73183502536802305) != 0) {
+      if (((((_la - 17) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 17)) & 2269395221545987) != 0) || ((((_la - 99) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 99)) & 140737496743937) != 0) || ((((_la - 182) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 182)) & 20266198323167361) != 0) || ((((_la - 252) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 252)) & 73183502536802305) != 0)) {
         setState(1245);
         _errHandler->sync(this);
 
@@ -13557,8 +13566,8 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
 
       || _la == fugue_sqlParser::COMMENT || _la == fugue_sqlParser::LOCATION
 
-      || _la == fugue_sqlParser::PARTITIONED || (((_la - 248) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 248)) & 269500417) != 0) {
+      || _la == fugue_sqlParser::PARTITIONED || ((((_la - 248) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 248)) & 269500417) != 0)) {
         setState(1276);
         _errHandler->sync(this);
         switch (_input->LA(1)) {
@@ -13651,11 +13660,11 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 17) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 17)) & 2269395221545987) != 0 || (((_la - 99) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 99)) & 140737496743937) != 0 || (((_la - 182) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 182)) & 20266198323167361) != 0 || (((_la - 252) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 252)) & 73183502536802305) != 0) {
+      if (((((_la - 17) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 17)) & 2269395221545987) != 0) || ((((_la - 99) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 99)) & 140737496743937) != 0) || ((((_la - 182) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 182)) & 20266198323167361) != 0) || ((((_la - 252) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 252)) & 73183502536802305) != 0)) {
         setState(1282);
         _errHandler->sync(this);
 
@@ -13703,8 +13712,8 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       setState(1305);
       _errHandler->sync(this);
       _la = _input->LA(1);
-      while (_la == fugue_sqlParser::LOCATION || (((_la - 248) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 248)) & 9007199524225025) != 0) {
+      while (_la == fugue_sqlParser::LOCATION || ((((_la - 248) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 248)) & 9007199524225025) != 0)) {
         setState(1303);
         _errHandler->sync(this);
         switch (_input->LA(1)) {
@@ -13775,11 +13784,11 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 17) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 17)) & 2269395221545987) != 0 || (((_la - 99) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 99)) & 140737496743937) != 0 || (((_la - 182) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 182)) & 20266198323167361) != 0 || (((_la - 252) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 252)) & 73183502536802305) != 0) {
+      if (((((_la - 17) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 17)) & 2269395221545987) != 0) || ((((_la - 99) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 99)) & 140737496743937) != 0) || ((((_la - 182) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 182)) & 20266198323167361) != 0) || ((((_la - 252) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 252)) & 73183502536802305) != 0)) {
         setState(1318);
         _errHandler->sync(this);
 
@@ -14119,8 +14128,8 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (_la == fugue_sqlParser::AFTER || (((_la - 91) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 91)) & 562952100904961) != 0 || _la == fugue_sqlParser::SET
+      if (_la == fugue_sqlParser::AFTER || ((((_la - 91) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 91)) & 562952100904961) != 0) || _la == fugue_sqlParser::SET
 
       || _la == fugue_sqlParser::TYPE) {
         setState(1414);
@@ -14794,12 +14803,12 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 86) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 86)) & 576531121047605249) != 0 || _la == fugue_sqlParser::LOGICAL) {
+      if (((((_la - 86) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 86)) & 576531121047605249) != 0) || _la == fugue_sqlParser::LOGICAL) {
         setState(1645);
         _la = _input->LA(1);
-        if (!((((_la - 86) & ~ 0x3fULL) == 0) &&
-          ((1ULL << (_la - 86)) & 576531121047605249) != 0 || _la == fugue_sqlParser::LOGICAL)) {
+        if (!(((((_la - 86) & ~ 0x3fULL) == 0) &&
+          ((1ULL << (_la - 86)) & 576531121047605249) != 0) || _la == fugue_sqlParser::LOGICAL)) {
         _errHandler->recoverInline(this);
         }
         else {
@@ -15063,12 +15072,12 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 58) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 58)) & -1) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 122)) & -1) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 186)) & -1) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 250)) & 1152921504606846975) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 324)) & 98369) != 0) {
+      if (((((_la - 58) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 58)) & -1) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 122)) & -1) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 186)) & -1) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 250)) & 1152921504606846975) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 324)) & 98369) != 0)) {
         setState(1714);
         _errHandler->sync(this);
 
@@ -15531,12 +15540,12 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 58) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 58)) & -1) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 122)) & -1) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 186)) & -1) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 250)) & 1152921504606846975) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 324)) & 98305) != 0) {
+      if (((((_la - 58) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 58)) & -1) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 122)) & -1) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 186)) & -1) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 250)) & 1152921504606846975) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 324)) & 98305) != 0)) {
         setState(1757);
         describeColName();
       }
@@ -15701,11 +15710,11 @@ fugue_sqlParser::StatementContext* fugue_sqlParser::statement() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if ((((_la - 17) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 17)) & 2269395221545987) != 0 || (((_la - 99) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 99)) & 140737496743937) != 0 || (((_la - 182) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 182)) & 20266198323167361) != 0 || (((_la - 252) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 252)) & 73183502536802305) != 0) {
+      if (((((_la - 17) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 17)) & 2269395221545987) != 0) || ((((_la - 99) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 99)) & 140737496743937) != 0) || ((((_la - 182) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 182)) & 20266198323167361) != 0) || ((((_la - 252) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 252)) & 73183502536802305) != 0)) {
         setState(1803);
         _errHandler->sync(this);
 
@@ -18531,8 +18540,8 @@ fugue_sqlParser::CreateTableClausesContext* fugue_sqlParser::createTableClauses(
     _la = _input->LA(1);
     while (_la == fugue_sqlParser::CLUSTERED
 
-    || _la == fugue_sqlParser::COMMENT || (((_la - 184) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 184)) & 8594128897) != 0 || _la == fugue_sqlParser::TBLPROPERTIES) {
+    || _la == fugue_sqlParser::COMMENT || ((((_la - 184) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 184)) & 8594128897) != 0) || _la == fugue_sqlParser::TBLPROPERTIES) {
       setState(2240);
       _errHandler->sync(this);
       switch (_input->LA(1)) {
@@ -18719,8 +18728,8 @@ fugue_sqlParser::TablePropertyContext* fugue_sqlParser::tableProperty() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (_la == fugue_sqlParser::FALSE || (((_la - 287) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 287)) & 712483543187457) != 0) {
+    if (_la == fugue_sqlParser::FALSE || ((((_la - 287) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 287)) & 712483543187457) != 0)) {
       setState(2258);
       _errHandler->sync(this);
 
@@ -22723,13 +22732,13 @@ fugue_sqlParser::HintContext* fugue_sqlParser::hint() {
     setState(2679);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -288230376151711740) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 256)) & 18014398509481983) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 324)) & 98305) != 0) {
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -288230376151711740) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 256)) & 18014398509481983) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 324)) & 98305) != 0)) {
       setState(2674);
       _errHandler->sync(this);
 
@@ -23216,13 +23225,13 @@ fugue_sqlParser::GroupingSetContext* fugue_sqlParser::groupingSet() {
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & -288230376151711712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 256)) & -9205357638345293825) != 0 || (((_la - 320) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 320)) & 2096179) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & -288230376151711712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 256)) & -9205357638345293825) != 0) || ((((_la - 320) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 320)) & 2096179) != 0)) {
         setState(2764);
         expression();
         setState(2769);
@@ -23765,12 +23774,12 @@ fugue_sqlParser::PivotValueContext* fugue_sqlParser::pivotValue() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if ((((_la - 58) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 58)) & -1) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 122)) & -1) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 186)) & -1) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 250)) & 1152921504606846975) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 324)) & 98305) != 0) {
+    if (((((_la - 58) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 58)) & -1) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 122)) & -1) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 186)) & -1) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 250)) & 1152921504606846975) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 324)) & 98305) != 0)) {
       setState(2812);
       _errHandler->sync(this);
 
@@ -23893,13 +23902,13 @@ fugue_sqlParser::LateralViewContext* fugue_sqlParser::lateralView() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -288230376151711712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 256)) & -9205357638345293825) != 0 || (((_la - 320) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 320)) & 2096179) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -288230376151711712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 256)) & -9205357638345293825) != 0) || ((((_la - 320) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 320)) & 2096179) != 0)) {
       setState(2824);
       expression();
       setState(2829);
@@ -24534,12 +24543,12 @@ fugue_sqlParser::SampleContext* fugue_sqlParser::sample() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & 15762598695796736) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 15762598695796736) != 0)) {
       setState(2904);
       _la = _input->LA(1);
-      if (!(((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & 15762598695796736) != 0)) {
+      if (!((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & 15762598695796736) != 0))) {
       _errHandler->recoverInline(this);
       }
       else {
@@ -24553,13 +24562,13 @@ fugue_sqlParser::SampleContext* fugue_sqlParser::sample() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -288230376151711712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 256)) & -9205357638345293825) != 0 || (((_la - 320) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 320)) & 2096179) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -288230376151711712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 256)) & -9205357638345293825) != 0) || ((((_la - 320) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 320)) & 2096179) != 0)) {
       setState(2908);
       sampleMethod();
     }
@@ -25621,13 +25630,13 @@ fugue_sqlParser::FunctionTableContext* fugue_sqlParser::functionTable() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & -288230376151711712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 256)) & -9205357638345293825) != 0 || (((_la - 320) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 320)) & 2096179) != 0) {
+    if ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & -288230376151711712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 256)) & -9205357638345293825) != 0) || ((((_la - 320) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 320)) & 2096179) != 0)) {
       setState(3023);
       expression();
       setState(3028);
@@ -27905,8 +27914,8 @@ fugue_sqlParser::ValueExpressionContext* fugue_sqlParser::valueExpression(int pr
       setState(3287);
       antlrcpp::downCast<ArithmeticUnaryContext *>(_localctx)->theOperator = _input->LT(1);
       _la = _input->LA(1);
-      if (!((((_la - 319) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 319)) & 67) != 0)) {
+      if (!(((((_la - 319) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 319)) & 67) != 0))) {
         antlrcpp::downCast<ArithmeticUnaryContext *>(_localctx)->theOperator = _errHandler->recoverInline(this);
       }
       else {
@@ -27944,8 +27953,8 @@ fugue_sqlParser::ValueExpressionContext* fugue_sqlParser::valueExpression(int pr
           setState(3292);
           antlrcpp::downCast<ArithmeticBinaryContext *>(_localctx)->theOperator = _input->LT(1);
           _la = _input->LA(1);
-          if (!((((_la - 321) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 321)) & 15) != 0)) {
+          if (!(((((_la - 321) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 321)) & 15) != 0))) {
             antlrcpp::downCast<ArithmeticBinaryContext *>(_localctx)->theOperator = _errHandler->recoverInline(this);
           }
           else {
@@ -27968,8 +27977,8 @@ fugue_sqlParser::ValueExpressionContext* fugue_sqlParser::valueExpression(int pr
           setState(3295);
           antlrcpp::downCast<ArithmeticBinaryContext *>(_localctx)->theOperator = _input->LT(1);
           _la = _input->LA(1);
-          if (!((((_la - 319) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 319)) & 515) != 0)) {
+          if (!(((((_la - 319) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 319)) & 515) != 0))) {
             antlrcpp::downCast<ArithmeticBinaryContext *>(_localctx)->theOperator = _errHandler->recoverInline(this);
           }
           else {
@@ -28783,13 +28792,13 @@ fugue_sqlParser::PrimaryExpressionContext* fugue_sqlParser::primaryExpression(in
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & -288230376151711712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 256)) & -9205357638345293825) != 0 || (((_la - 320) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 320)) & 2096179) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & -288230376151711712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 256)) & -9205357638345293825) != 0) || ((((_la - 320) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 320)) & 2096179) != 0)) {
         setState(3351);
         antlrcpp::downCast<StructContext *>(_localctx)->namedExpressionContext = namedExpression();
         antlrcpp::downCast<StructContext *>(_localctx)->argument.push_back(antlrcpp::downCast<StructContext *>(_localctx)->namedExpressionContext);
@@ -28962,13 +28971,13 @@ fugue_sqlParser::PrimaryExpressionContext* fugue_sqlParser::primaryExpression(in
       _errHandler->sync(this);
 
       _la = _input->LA(1);
-      if (((_la & ~ 0x3fULL) == 0) &&
-        ((1ULL << _la) & -288230376151711712) != 0 || (((_la - 64) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 64)) & -1) != 0 || (((_la - 128) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 128)) & -1) != 0 || (((_la - 192) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 192)) & -1) != 0 || (((_la - 256) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 256)) & -9205357638345293825) != 0 || (((_la - 320) & ~ 0x3fULL) == 0) &&
-        ((1ULL << (_la - 320)) & 2096179) != 0) {
+      if ((((_la & ~ 0x3fULL) == 0) &&
+        ((1ULL << _la) & -288230376151711712) != 0) || ((((_la - 64) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 64)) & -1) != 0) || ((((_la - 128) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 128)) & -1) != 0) || ((((_la - 192) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 192)) & -1) != 0) || ((((_la - 256) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 256)) & -9205357638345293825) != 0) || ((((_la - 320) & ~ 0x3fULL) == 0) &&
+        ((1ULL << (_la - 320)) & 2096179) != 0)) {
         setState(3410);
         _errHandler->sync(this);
 
@@ -29811,8 +29820,8 @@ fugue_sqlParser::ArithmeticOperatorContext* fugue_sqlParser::arithmeticOperator(
     enterOuterAlt(_localctx, 1);
     setState(3540);
     _la = _input->LA(1);
-    if (!((((_la - 319) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 319)) & 2047) != 0)) {
+    if (!(((((_la - 319) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 319)) & 2047) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -29881,8 +29890,8 @@ fugue_sqlParser::PredicateOperatorContext* fugue_sqlParser::predicateOperator() 
     enterOuterAlt(_localctx, 1);
     setState(3542);
     _la = _input->LA(1);
-    if (!(_la == fugue_sqlParser::AND || (((_la - 159) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 159)) & 282574488338433) != 0)) {
+    if (!(_la == fugue_sqlParser::AND || ((((_la - 159) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 159)) & 282574488338433) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -30789,12 +30798,12 @@ fugue_sqlParser::DataTypeContext* fugue_sqlParser::dataType() {
           _errHandler->sync(this);
 
           _la = _input->LA(1);
-          if ((((_la - 58) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 58)) & -1) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 122)) & -1) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 186)) & -1) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 250)) & 1152921504606846975) != 0 || (((_la - 324) & ~ 0x3fULL) == 0) &&
-            ((1ULL << (_la - 324)) & 98305) != 0) {
+          if (((((_la - 58) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 58)) & -1) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 122)) & -1) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 186)) & -1) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 250)) & 1152921504606846975) != 0) || ((((_la - 324) & ~ 0x3fULL) == 0) &&
+            ((1ULL << (_la - 324)) & 98305) != 0)) {
             setState(3607);
             complexColTypeList();
           }
@@ -34351,11 +34360,11 @@ fugue_sqlParser::AnsiNonReservedContext* fugue_sqlParser::ansiNonReserved() {
     enterOuterAlt(_localctx, 1);
     setState(3865);
     _la = _input->LA(1);
-    if (!((((_la - 58) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 58)) & -4616724533169136869) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 122)) & -54836095400108079) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 186)) & -72339344050251969) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 250)) & 176704157053345137) != 0 || _la == fugue_sqlParser::DIV)) {
+    if (!(((((_la - 58) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 58)) & -4616724533169136869) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 122)) & -54836095400108079) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 186)) & -72339344050251969) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 250)) & 176704157053345137) != 0) || _la == fugue_sqlParser::DIV)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -34468,10 +34477,10 @@ fugue_sqlParser::StrictNonReservedContext* fugue_sqlParser::strictNonReserved() 
     enterOuterAlt(_localctx, 1);
     setState(3867);
     _la = _input->LA(1);
-    if (!((((_la - 64) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 64)) & -9223371968135299071) != 0 || (((_la - 147) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 147)) & 73183495035846657) != 0 || (((_la - 242) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 242)) & 578712552117241857) != 0)) {
+    if (!(((((_la - 64) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 64)) & -9223371968135299071) != 0) || ((((_la - 147) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 147)) & 73183495035846657) != 0) || ((((_la - 242) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 242)) & 578712552117241857) != 0))) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -35476,11 +35485,11 @@ fugue_sqlParser::NonReservedContext* fugue_sqlParser::nonReserved() {
     enterOuterAlt(_localctx, 1);
     setState(3869);
     _la = _input->LA(1);
-    if (!((((_la - 58) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 58)) & -4398046511169) != 0 || (((_la - 122) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 122)) & -36610438703611937) != 0 || (((_la - 186) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 186)) & -72057594038061057) != 0 || (((_la - 250) & ~ 0x3fULL) == 0) &&
-      ((1ULL << (_la - 250)) & 1150660908700138999) != 0 || _la == fugue_sqlParser::DIV)) {
+    if (!(((((_la - 58) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 58)) & -4398046511169) != 0) || ((((_la - 122) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 122)) & -36610438703611937) != 0) || ((((_la - 186) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 186)) & -72057594038061057) != 0) || ((((_la - 250) & ~ 0x3fULL) == 0) &&
+      ((1ULL << (_la - 250)) & 1150660908700138999) != 0) || _la == fugue_sqlParser::DIV)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -35572,5 +35581,9 @@ bool fugue_sqlParser::primaryExpressionSempred(PrimaryExpressionContext *_localc
 }
 
 void fugue_sqlParser::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  fugue_sqlParserInitialize();
+#else
   ::antlr4::internal::call_once(fugue_sqlParserOnceFlag, fugue_sqlParserInitialize);
+#endif
 }
