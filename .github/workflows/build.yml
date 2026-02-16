@@ -73,10 +73,10 @@ jobs:
           # - windows-latest
           - macos-latest
         cpv:
-          - "cp310*"
-          - "cp311*"
-          - "cp312*"
-          - "cp313*"
+          - "cp310"
+          - "cp311"
+          - "cp312"
+          - "cp313"
 
     steps:
       - uses: actions/checkout@v2
@@ -92,7 +92,7 @@ jobs:
 
       - name: Build wheels
         env:
-          CIBW_BUILD:  ${{ matrix.cpv }}
+          CIBW_BUILD:  ${{ matrix.cpv }}*
           # CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET='11.6.5'
         run: |
           python scripts/make_setup.py 1
