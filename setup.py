@@ -104,8 +104,7 @@ setup(
     url="http://github.com/fugue-project/fugue",
     install_requires=[
         "triad>=0.6.8",
-        # >=4.11.1 is also required but will be checked in runtime
-        "antlr4-python3-runtime<4.12",
+        "antlr4-python3-runtime>=4.13.2,<4.14",
         "jinja2",
         "packaging",
     ],
@@ -122,14 +121,14 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: Apache Software License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Programming Language :: Python :: 3 :: Only",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.10",
     package_data={"fugue_sql_antlr_cpp": package_files("fugue_sql_antlr_cpp")},
     ext_modules=get_ext_modules(),
 )

@@ -1,4 +1,4 @@
-# Generated from fugue_sql.g4 by ANTLR 4.11.1
+# Generated from fugue_sql.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -2496,7 +2496,7 @@ class fugue_sqlParser ( Parser ):
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.11.1")
+        self.checkVersion("4.13.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -2548,7 +2548,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 433 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (((_la) & ~0x3f) == 0 and ((1 << _la) & -269793669747965952) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & 18014398509481983) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & -269793669747965952) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & 18014398509481983) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0)):
                     break
 
             self.state = 435
@@ -3040,7 +3040,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 482
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                 self.state = 481
                 localctx.partition = self.fuguePrepartition()
 
@@ -3123,7 +3123,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 494
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                 self.state = 493
                 localctx.partition = self.fuguePrepartition()
 
@@ -3226,7 +3226,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 505
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                 self.state = 504
                 localctx.partition = self.fuguePrepartition()
 
@@ -3244,7 +3244,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 512
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0):
                 self.state = 511
                 localctx.fmt = self.fugueFileFormat()
 
@@ -4216,7 +4216,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 625
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0):
                 self.state = 624
                 localctx.fmt = self.fugueFileFormat()
 
@@ -4327,7 +4327,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 643
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                 self.state = 642
                 localctx.partition = self.fuguePrepartition()
 
@@ -4339,7 +4339,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 648
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                 self.state = 647
                 localctx.params = self.fugueParams()
 
@@ -4575,7 +4575,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 682
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                 self.state = 681
                 localctx.partition = self.fuguePrepartition()
 
@@ -4593,7 +4593,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 689
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0):
                 self.state = 688
                 localctx.fmt = self.fugueFileFormat()
 
@@ -4603,7 +4603,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 693
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                 self.state = 692
                 localctx.params = self.fugueParams()
 
@@ -4689,7 +4689,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 700
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                 self.state = 699
                 localctx.partition = self.fuguePrepartition()
 
@@ -4701,7 +4701,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 705
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                 self.state = 704
                 localctx.params = self.fugueParams()
 
@@ -4780,7 +4780,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 712
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0:
+            if ((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0):
                 self.state = 711
                 localctx.assign = self.fugueAssignment()
 
@@ -4802,7 +4802,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 721
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                 self.state = 720
                 localctx.params = self.fugueParams()
 
@@ -4862,7 +4862,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 726
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                 self.state = 725
                 localctx.params = self.fugueParams()
 
@@ -5063,7 +5063,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 736
             _la = self._input.LA(1)
-            if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1924145348608) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -5327,7 +5327,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 760
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                     self.state = 759
                     localctx.params = self.fugueParams()
 
@@ -5358,7 +5358,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 770
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                     self.state = 769
                     localctx.partition = self.fuguePrepartition()
 
@@ -5374,7 +5374,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 776
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                     self.state = 775
                     localctx.params = self.fugueParams()
 
@@ -5407,7 +5407,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 787
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 4302831616) != 0):
                     self.state = 786
                     localctx.partition = self.fuguePrepartition()
 
@@ -5423,7 +5423,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 793
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 67109152) != 0):
                     self.state = 792
                     localctx.params = self.fugueParams()
 
@@ -6518,7 +6518,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 913
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0):
                     self.state = 912
                     localctx.algo = self.fuguePartitionAlgo()
 
@@ -6554,7 +6554,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 926
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0):
                     self.state = 925
                     localctx.algo = self.fuguePartitionAlgo()
 
@@ -6627,7 +6627,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 937
             _la = self._input.LA(1)
-            if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 7864320) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -6727,7 +6727,7 @@ class fugue_sqlParser ( Parser ):
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
                     self.state = 948
                     _la = self._input.LA(1)
-                    if not((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 15) != 0):
+                    if not(((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 15) != 0)):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -11071,7 +11071,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1248
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0 or (((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0 or (((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0 or (((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0:
+                if ((((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0) or ((((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0) or ((((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0) or ((((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0):
                     self.state = 1245
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -11106,7 +11106,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1278
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==85 or _la==91 or _la==184 or _la==217 or (((_la - 248)) & ~0x3f) == 0 and ((1 << (_la - 248)) & 269500417) != 0:
+                while _la==85 or _la==91 or _la==184 or _la==217 or ((((_la - 248)) & ~0x3f) == 0 and ((1 << (_la - 248)) & 269500417) != 0):
                     self.state = 1276
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -11178,7 +11178,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1285
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0 or (((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0 or (((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0 or (((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0:
+                if ((((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0) or ((((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0) or ((((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0) or ((((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0):
                     self.state = 1282
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -11221,7 +11221,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1305
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==184 or (((_la - 248)) & ~0x3f) == 0 and ((1 << (_la - 248)) & 9007199524225025) != 0:
+                while _la==184 or ((((_la - 248)) & ~0x3f) == 0 and ((1 << (_la - 248)) & 9007199524225025) != 0):
                     self.state = 1303
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
@@ -11280,7 +11280,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1321
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0 or (((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0 or (((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0 or (((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0:
+                if ((((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0) or ((((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0) or ((((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0) or ((((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0):
                     self.state = 1318
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -11564,7 +11564,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1415
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==59 or (((_la - 91)) & ~0x3f) == 0 and ((1 << (_la - 91)) & 562952100904961) != 0 or _la==258 or _la==289:
+                if _la==59 or ((((_la - 91)) & ~0x3f) == 0 and ((1 << (_la - 91)) & 562952100904961) != 0) or _la==258 or _la==289:
                     self.state = 1414
                     self.alterColumnAction()
 
@@ -12175,10 +12175,10 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1646
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 86)) & ~0x3f) == 0 and ((1 << (_la - 86)) & 576531121047605249) != 0 or _la==187:
+                if ((((_la - 86)) & ~0x3f) == 0 and ((1 << (_la - 86)) & 576531121047605249) != 0) or _la==187:
                     self.state = 1645
                     _la = self._input.LA(1)
-                    if not((((_la - 86)) & ~0x3f) == 0 and ((1 << (_la - 86)) & 576531121047605249) != 0 or _la==187):
+                    if not(((((_la - 86)) & ~0x3f) == 0 and ((1 << (_la - 86)) & 576531121047605249) != 0) or _la==187):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
@@ -12400,7 +12400,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1720
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98369) != 0:
+                if ((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98369) != 0):
                     self.state = 1714
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,210,self._ctx)
@@ -12554,7 +12554,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1758
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0:
+                if ((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0):
                     self.state = 1757
                     self.describeColName()
 
@@ -12700,7 +12700,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 1806
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0 or (((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0 or (((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0 or (((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0:
+                if ((((_la - 17)) & ~0x3f) == 0 and ((1 << (_la - 17)) & 2269395221545987) != 0) or ((((_la - 99)) & ~0x3f) == 0 and ((1 << (_la - 99)) & 140737496743937) != 0) or ((((_la - 182)) & ~0x3f) == 0 and ((1 << (_la - 182)) & 20266198323167361) != 0) or ((((_la - 252)) & ~0x3f) == 0 and ((1 << (_la - 252)) & 73183502536802305) != 0):
                     self.state = 1803
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -15095,7 +15095,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 2242
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==85 or _la==91 or (((_la - 184)) & ~0x3f) == 0 and ((1 << (_la - 184)) & 8594128897) != 0 or _la==276:
+            while _la==85 or _la==91 or ((((_la - 184)) & ~0x3f) == 0 and ((1 << (_la - 184)) & 8594128897) != 0) or _la==276:
                 self.state = 2240
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -15251,7 +15251,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 2261
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==135 or (((_la - 287)) & ~0x3f) == 0 and ((1 << (_la - 287)) & 712483543187457) != 0:
+            if _la==135 or ((((_la - 287)) & ~0x3f) == 0 and ((1 << (_la - 287)) & 712483543187457) != 0):
                 self.state = 2258
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -18160,7 +18160,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 2679
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711740) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & 18014398509481983) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711740) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & 18014398509481983) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0):
                 self.state = 2674
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -18575,7 +18575,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 2772
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0 or (((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0) or ((((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0):
                     self.state = 2764
                     self.expression()
                     self.state = 2769
@@ -18828,7 +18828,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 2815
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0:
+            if ((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0):
                 self.state = 2812
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,366,self._ctx)
@@ -18928,7 +18928,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 2832
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0 or (((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0) or ((((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0):
                 self.state = 2824
                 self.expression()
                 self.state = 2829
@@ -19445,10 +19445,10 @@ class fugue_sqlParser ( Parser ):
             self.state = 2905
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & 15762598695796736) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 15762598695796736) != 0):
                 self.state = 2904
                 _la = self._input.LA(1)
-                if not(((_la) & ~0x3f) == 0 and ((1 << _la) & 15762598695796736) != 0):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 15762598695796736) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -19460,7 +19460,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 2909
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0 or (((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0) or ((((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0):
                 self.state = 2908
                 self.sampleMethod()
 
@@ -20376,7 +20376,7 @@ class fugue_sqlParser ( Parser ):
             self.state = 3031
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0 or (((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0:
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0) or ((((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0):
                 self.state = 3023
                 self.expression()
                 self.state = 3028
@@ -22070,7 +22070,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 3287
                 localctx.theOperator = self._input.LT(1)
                 _la = self._input.LA(1)
-                if not((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 67) != 0):
+                if not(((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 67) != 0)):
                     localctx.theOperator = self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
@@ -22103,7 +22103,7 @@ class fugue_sqlParser ( Parser ):
                         self.state = 3292
                         localctx.theOperator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la - 321)) & ~0x3f) == 0 and ((1 << (_la - 321)) & 15) != 0):
+                        if not(((((_la - 321)) & ~0x3f) == 0 and ((1 << (_la - 321)) & 15) != 0)):
                             localctx.theOperator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -22123,7 +22123,7 @@ class fugue_sqlParser ( Parser ):
                         self.state = 3295
                         localctx.theOperator = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 515) != 0):
+                        if not(((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 515) != 0)):
                             localctx.theOperator = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -22882,7 +22882,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 3359
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0 or (((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0) or ((((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0):
                     self.state = 3351
                     localctx._namedExpression = self.namedExpression()
                     localctx.argument.append(localctx._namedExpression)
@@ -23048,7 +23048,7 @@ class fugue_sqlParser ( Parser ):
                 self.state = 3420
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if ((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0 or (((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0 or (((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0 or (((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0 or (((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0 or (((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0:
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & -288230376151711712) != 0) or ((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -1) != 0) or ((((_la - 128)) & ~0x3f) == 0 and ((1 << (_la - 128)) & -1) != 0) or ((((_la - 192)) & ~0x3f) == 0 and ((1 << (_la - 192)) & -1) != 0) or ((((_la - 256)) & ~0x3f) == 0 and ((1 << (_la - 256)) & -9205357638345293825) != 0) or ((((_la - 320)) & ~0x3f) == 0 and ((1 << (_la - 320)) & 2096179) != 0):
                     self.state = 3410
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,457,self._ctx)
@@ -23765,7 +23765,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 3540
             _la = self._input.LA(1)
-            if not((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 2047) != 0):
+            if not(((((_la - 319)) & ~0x3f) == 0 and ((1 << (_la - 319)) & 2047) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -23819,7 +23819,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 3542
             _la = self._input.LA(1)
-            if not(_la==63 or (((_la - 159)) & ~0x3f) == 0 and ((1 << (_la - 159)) & 282574488338433) != 0):
+            if not(_la==63 or ((((_la - 159)) & ~0x3f) == 0 and ((1 << (_la - 159)) & 282574488338433) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -24553,7 +24553,7 @@ class fugue_sqlParser ( Parser ):
                     self.state = 3608
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0 or (((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0:
+                    if ((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -1) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -1) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -1) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1152921504606846975) != 0) or ((((_la - 324)) & ~0x3f) == 0 and ((1 << (_la - 324)) & 98305) != 0):
                         self.state = 3607
                         self.complexColTypeList()
 
@@ -27094,7 +27094,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 3865
             _la = self._input.LA(1)
-            if not((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -4616724533169136869) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -54836095400108079) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -72339344050251969) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 176704157053345137) != 0 or _la==324):
+            if not(((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -4616724533169136869) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -54836095400108079) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -72339344050251969) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 176704157053345137) != 0) or _la==324):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -27181,7 +27181,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 3867
             _la = self._input.LA(1)
-            if not((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -9223371968135299071) != 0 or (((_la - 147)) & ~0x3f) == 0 and ((1 << (_la - 147)) & 73183495035846657) != 0 or (((_la - 242)) & ~0x3f) == 0 and ((1 << (_la - 242)) & 578712552117241857) != 0):
+            if not(((((_la - 64)) & ~0x3f) == 0 and ((1 << (_la - 64)) & -9223371968135299071) != 0) or ((((_la - 147)) & ~0x3f) == 0 and ((1 << (_la - 147)) & 73183495035846657) != 0) or ((((_la - 242)) & ~0x3f) == 0 and ((1 << (_la - 242)) & 578712552117241857) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -27937,7 +27937,7 @@ class fugue_sqlParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 3869
             _la = self._input.LA(1)
-            if not((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -4398046511169) != 0 or (((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -36610438703611937) != 0 or (((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -72057594038061057) != 0 or (((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1150660908700138999) != 0 or _la==324):
+            if not(((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & -4398046511169) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & -36610438703611937) != 0) or ((((_la - 186)) & ~0x3f) == 0 and ((1 << (_la - 186)) & -72057594038061057) != 0) or ((((_la - 250)) & ~0x3f) == 0 and ((1 << (_la - 250)) & 1150660908700138999) != 0) or _la==324):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)

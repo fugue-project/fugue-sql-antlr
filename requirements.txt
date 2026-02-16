@@ -1,5 +1,5 @@
 # TODO: add back the lower bound of antlr4-python3-runtime
-antlr4-python3-runtime<4.12
+antlr4-python3-runtime>=4.13.2,<4.14
 jinja2
 packaging
 
@@ -13,7 +13,6 @@ pylint
 pytest
 pytest-cov
 pytest-mock
-pytest-spark
 pytest-rerunfailures
 sphinx>=2.4.0
 sphinx-rtd-theme

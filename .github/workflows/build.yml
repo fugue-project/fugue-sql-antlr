@@ -18,14 +18,14 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
-          # - macos-11
+          # - windows-latest
+          - macos-latest
         python-version:
-          - 3.8
-          - 3.9
           - "3.10"
           - "3.11"
           - "3.12"
+          - "3.13"
+          - "3.14"
 
     steps:
       - uses: actions/checkout@v2
@@ -70,14 +70,13 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
+          # - windows-latest
           - macos-latest
         cpv:
-          - "cp38*"
-          - "cp39*"
-          - "cp310*"
-          - "cp311*"
-          - "cp312*"
+          - "cp310"
+          - "cp311"
+          - "cp312"
+          - "cp313"
 
     steps:
       - uses: actions/checkout@v2
@@ -93,15 +92,15 @@ jobs:
 
       - name: Build wheels
         env:
-          CIBW_BUILD:  ${{ matrix.cpv }}
+          CIBW_BUILD:  ${{ matrix.cpv }}*
           # CIBW_ENVIRONMENT: MACOSX_DEPLOYMENT_TARGET='11.6.5'
         run: |
           python scripts/make_setup.py 1
           python -m cibuildwheel --output-dir wheelhouse
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
-          name: cpp
+          name: cibw-wheels-${{ matrix.os }}-${{ matrix.cpv }}
           path: ./wheelhouse/*.whl
 
 #-------------------------------------------------------------------------------
@@ -121,9 +120,9 @@ jobs:
           python scripts/make_setup.py 1
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
-          name: cpp
+          name: cibw-sdist-cpp
           path: dist/*.tar.gz
 
   build_py_sdist:
@@ -142,9 +141,9 @@ jobs:
           python scripts/make_setup.py 0
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
-          name: py
+          name: cibw-sdist-py
           path: dist/*.tar.gz
 
 #-------------------------------------------------------------------------------
@@ -159,10 +158,11 @@ jobs:
     # Only publish when a GitHub Release is created.
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
-          name: cpp
+          pattern: cibw-*-cpp*
           path: dist
+          merge-multiple: true
 
       - uses: pypa/gh-action-pypi-publish@master
         with:
@@ -179,9 +179,9 @@ jobs:
     # Only publish when a GitHub Release is created.
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
-          name: py
+          name: cibw-sdist-py
           path: dist
 
       - uses: pypa/gh-action-pypi-publish@master

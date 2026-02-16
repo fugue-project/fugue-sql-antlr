@@ -1,5 +1,5 @@
 
-// Generated from fugue_sql.g4 by ANTLR 4.11.1
+// Generated from fugue_sql.g4 by ANTLR 4.13.2
 
 
 #include "fugue_sqlLexer.h"
@@ -42,10 +42,19 @@ struct Fugue_sqlLexerStaticData final {
 };
 
 ::antlr4::internal::OnceFlag fugue_sqllexerLexerOnceFlag;
-Fugue_sqlLexerStaticData *fugue_sqllexerLexerStaticData = nullptr;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
+std::unique_ptr<Fugue_sqlLexerStaticData> fugue_sqllexerLexerStaticData = nullptr;
 
 void fugue_sqllexerLexerInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (fugue_sqllexerLexerStaticData != nullptr) {
+    return;
+  }
+#else
   assert(fugue_sqllexerLexerStaticData == nullptr);
+#endif
   auto staticData = std::make_unique<Fugue_sqlLexerStaticData>(
     std::vector<std::string>{
       "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
@@ -1343,7 +1352,7 @@ void fugue_sqllexerLexerInitialize() {
   for (size_t i = 0; i < count; i++) { 
     staticData->decisionToDFA.emplace_back(staticData->atn->getDecisionState(i), i);
   }
-  fugue_sqllexerLexerStaticData = staticData.release();
+  fugue_sqllexerLexerStaticData = std::move(staticData);
 }
 
 }
@@ -1389,5 +1398,9 @@ const atn::ATN& fugue_sqlLexer::getATN() const {
 
 
 void fugue_sqlLexer::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  fugue_sqllexerLexerInitialize();
+#else
   ::antlr4::internal::call_once(fugue_sqllexerLexerOnceFlag, fugue_sqllexerLexerInitialize);
+#endif
 }

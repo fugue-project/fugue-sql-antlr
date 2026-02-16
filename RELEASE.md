@@ -1,5 +1,9 @@
 # Release Notes
 
+# 0.2.3
+
+* Deprecate pkg_resource
+
 # 0.2.2
 
 * Support Python 3.12
