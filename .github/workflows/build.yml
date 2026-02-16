@@ -98,11 +98,10 @@ jobs:
           python scripts/make_setup.py 1
           python -m cibuildwheel --output-dir wheelhouse
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         with:
-          name: cpp
+          name: cibw-wheels-${{ matrix.os }}-${{ matrix.cpv }}
           path: ./wheelhouse/*.whl
-          overwrite: true
 
 #-------------------------------------------------------------------------------
   build_cpp_sdist:
@@ -121,9 +120,9 @@ jobs:
           python scripts/make_setup.py 1
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         with:
-          name: cpp
+          name: cibw-sdist-cpp
           path: dist/*.tar.gz
 
   build_py_sdist:
@@ -142,9 +141,9 @@ jobs:
           python scripts/make_setup.py 0
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v4
         with:
-          name: py
+          name: cibw-sdist-py
           path: dist/*.tar.gz
 
 #-------------------------------------------------------------------------------
@@ -159,10 +158,11 @@ jobs:
     # Only publish when a GitHub Release is created.
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v4
         with:
-          name: cpp
+          pattern: cibw-*-cpp*
           path: dist
+          merge-multiple: true
 
       - uses: pypa/gh-action-pypi-publish@master
         with:
@@ -179,9 +179,9 @@ jobs:
     # Only publish when a GitHub Release is created.
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-      - uses: actions/download-artifact@v7
+      - uses: actions/download-artifact@v4
         with:
-          name: py
+          name: cibw-sdist-py
           path: dist
 
       - uses: pypa/gh-action-pypi-publish@master
