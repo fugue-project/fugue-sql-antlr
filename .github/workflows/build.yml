@@ -160,7 +160,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          pattern: cibw-*-cpp*
+          pattern: cibw-*-cp*
           path: dist
           merge-multiple: true
 
