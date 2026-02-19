@@ -1,5 +1,9 @@
 # Release Notes
 
+# 0.2.4
+
+* Fix build issues, add back Windows support
+
 # 0.2.3
 
 * Deprecate pkg_resource
