@@ -18,7 +18,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          # - windows-latest
+          - windows-latest
           - macos-latest
         python-version:
           - "3.10"
@@ -70,7 +70,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          # - windows-latest
+          - windows-latest
           - macos-latest
         cpv:
           - "cp310"
@@ -160,7 +160,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          pattern: cibw-*-cpp*
+          pattern: cibw-*-cp*
           path: dist
           merge-multiple: true
 
