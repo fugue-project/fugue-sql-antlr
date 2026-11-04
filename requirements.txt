@@ -5,11 +5,8 @@ packaging
 
 # test requirements
 pre-commit
-black
+ruff>=0.14.14
 mypy
-flake8
-autopep8
-pylint
 pytest
 pytest-cov
 pytest-mock

@@ -1,0 +1,8 @@
+line-length = 88
+extend-exclude = [
+    "fugue_sql_antlr/_parser",
+    "fugue_sql_antlr_cpp",
+]
+
+[lint.mccabe]
+max-complexity = 10

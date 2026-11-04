@@ -1,5 +1,9 @@
 # Release Notes
 
+# 0.2.5
+
+* Remove Python 3.10 support, add 3.15 support
+
 # 0.2.4
 
 * Fix build issues, add back Windows support
